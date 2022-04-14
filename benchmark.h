@@ -33,3 +33,10 @@
 //#define CHACHA
 //#define SEED
 #define SM4
+
+
+/* PUBLIC KEY*/
+#define RSAPK
+#define DSA
+#define DH
+#define EC

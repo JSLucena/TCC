@@ -1,6 +1,7 @@
 #include <openssl/conf.h>
 #include <openssl/evp.h>
 #include <openssl/err.h>
+#include <openssl/rsa.h>
 #include <stdio.h>
 #include <string.h>
 #include "benchmark.h"
@@ -269,6 +270,119 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
 
     return plaintext_len;
 }
+
+int RSASign( const unsigned char* Msg,
+              size_t MsgLen,
+              unsigned char** EncMsg,
+              size_t* MsgLenEnc, EVP_PKEY* priKey) {
+  EVP_MD_CTX* m_RSASignCtx = EVP_MD_CTX_create();
+  if (EVP_DigestSignInit(m_RSASignCtx,NULL, EVP_sha256(), NULL,priKey)<=0) {
+      return 0;
+  }
+  if (EVP_DigestSignUpdate(m_RSASignCtx, Msg, MsgLen) <= 0) {
+      return 0;
+  }
+  if (EVP_DigestSignFinal(m_RSASignCtx, NULL, MsgLenEnc) <=0) {
+      return 0;
+  }
+  *EncMsg = (unsigned char*)malloc(*MsgLenEnc);
+  if (EVP_DigestSignFinal(m_RSASignCtx, *EncMsg, MsgLenEnc) <= 0) {
+      return 0;
+  }
+  #ifdef DEBUG
+  for (size_t i = 0; i < *MsgLenEnc; ++i) printf("%c", EncMsg[i]);
+        printf("\n");
+    #endif
+  EVP_MD_CTX_free(m_RSASignCtx);
+  return 1;
+}
+void sign(EVP_PKEY* pkey,unsigned char* msg,const EVP_MD* type)
+{
+    EVP_MD_CTX *mdctx;
+    int ret = 0;
+    
+    unsigned char *sig = NULL;
+    size_t *slen;
+    //*slen = 2048;
+    /* Create the Message Digest Context */
+    if(!(mdctx = EVP_MD_CTX_new())) 
+        printf("sign error 0\n");
+
+    /* Initialise the DigestSign operation - SHA-256 has been selected as the message digest function in this example */
+    if(1 != EVP_DigestSignInit(mdctx, NULL,type, EVP_PKEY_get0_engine(pkey), pkey))
+        printf("sign error 1\n");
+    
+    /* Call update with the message */
+    if(1 != EVP_DigestSignUpdate(mdctx, msg, strlen(msg)))
+        printf("sign error 2\n");
+    
+    /* Finalise the DigestSign operation */
+    /* First call EVP_DigestSignFinal with a NULL sig parameter to obtain the length of the
+    * signature. Length is returned in slen */
+    if(1 != EVP_DigestSignFinal(mdctx, NULL, slen))
+        printf("sign error 3\n");
+   
+    /* Allocate memory for the signature based on size in slen */
+    if(!(sig = OPENSSL_malloc(sizeof(unsigned char) * (*slen))))
+        printf("sign error 4\n");
+    /* Obtain the signature */
+    if(1 != EVP_DigestSignFinal(mdctx, sig, slen))
+        printf("sign error 5\n");
+    printf("OI\n");
+    /* Success */
+    /* Clean up */
+    if(*sig && !ret) OPENSSL_free(sig);
+    if(mdctx) EVP_MD_CTX_destroy(mdctx);
+
+    return;
+}
+void generate_RSA(int key_size,unsigned char * msg)
+{
+    clock_t tick,tock;
+    double spent;
+
+    EVP_PKEY_CTX *ctx;
+    EVP_PKEY *pkey = NULL;
+    
+
+
+
+    ctx = EVP_PKEY_CTX_new_id(EVP_PKEY_RSA, NULL);
+    if(!ctx)
+        printf("Erro 0\n");
+
+
+    tick = clock();
+    if(EVP_PKEY_keygen_init(ctx) <= 0)
+        printf("Erro 1\n");
+    if(EVP_PKEY_CTX_set_rsa_keygen_bits(ctx, key_size) <= 0)
+        printf("Erro 2\n");
+
+    /* Generate key */
+    if(EVP_PKEY_keygen(ctx, &pkey) <= 0)
+       printf("Erro 3\n");
+
+
+
+    tock = clock();
+    spent = (double)(tock - tick) / (double)CLOCKS_PER_SEC;
+    printf("time elapsed: %lf seconds\n", spent);
+     #ifdef DEBUG
+       // BIO *bio = BIO_new_fp(stdout, BIO_NOCLOSE);
+       // EVP_PKEY_print_private(bio,pkey,3,NULL);
+       // BIO_free(bio);
+        printf("\n");
+    #endif
+    
+    unsigned char *encmsg;
+    size_t* msg_len;
+    //sign(pkey,msg,EVP_sha256());
+    RSASign(msg,strlen(msg),&encmsg,msg_len,pkey);
+    EVP_PKEY_free(pkey);
+    
+    EVP_PKEY_CTX_free(ctx);
+}
+
 int main(void)
 {
 
@@ -519,8 +633,18 @@ int main(void)
             #endif
         #endif
 
-         #ifdef EXEC_PK
-            printf("--##Hashing Function Test##--\n");
+        #ifdef EXEC_PK
+            printf("--##Public Key Algorithm Test##--\n");
+
+            #ifdef RSAPK
+                printf("Generating RSA Keys\n");
+                printf("1024 bits\n");
+                generate_RSA(1024,plaintext);
+                printf("2048 bits\n");
+              //  generate_RSA(2048);
+                printf("4096 bits\n");
+              //  generate_RSA(4096);
+            #endif
         #endif
     return 0;
 }
