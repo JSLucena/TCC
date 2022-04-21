@@ -259,7 +259,7 @@ extern "C" {
 
 /* DES3 */
 #undef NO_DES3
-#if 0
+#if 1
 #else
     #define NO_DES3
 #endif
@@ -267,7 +267,7 @@ extern "C" {
 /* ChaCha20 / Poly1305 */
 #undef HAVE_CHACHA
 #undef HAVE_POLY1305
-#if 0
+#if 1
     #define HAVE_CHACHA
     #define HAVE_POLY1305
 
@@ -647,6 +647,11 @@ extern struct tm* user_XGMTime(const time_t* timer, struct tm* tmp);
 #define HAVE_BLAKE2B
 #define HAVE_BLAKE2S
 #undef WOLFSSL_NO_SHAKE256
+#undef NO_RABBIT
+#undef NO_RC4
+#undef NO_HC128
+#define HAVE_CAMELLIA
+#define HAVE_IDEA
 #ifdef __cplusplus
 }
 #endif
