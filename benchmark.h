@@ -1,8 +1,9 @@
-#define DEBUG 
+#define DEBUG
+#define REPEAT 
 //#define EXEC_BURN
 //#define EXEC_HASH 
-//#define EXEC_CIPHER
-#define EXEC_PK
+#define EXEC_CIPHER
+//#define EXEC_PK
 #define BURNTIME 2
 
 
@@ -11,10 +12,15 @@
 
 /*  Hash  */
 #define MD5
-//#define SHA1
-//#define SHA2
-//#define SHA3
-//#define BLAKE2
+#define SHA1
+#define SHA2_224
+#define SHA2_256
+#define SHA2_384
+#define SHA2_512
+#define SHA2_512_224
+#define SHA2_512_256
+#define SHA3
+#define BLAKE2
 #define SHAKE
 #define RIPEMD
 #define WHIRLPOOL
@@ -32,7 +38,7 @@
 //#define CAMELLIA
 //#define CHACHA
 //#define SEED
-#define SM4
+//#define SM4
 
 
 /* PUBLIC KEY*/

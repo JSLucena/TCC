@@ -7,18 +7,19 @@
 #include "benchmark.h"
 #include <sys/time.h>
 
-void digest_message(const unsigned char *message, size_t message_len, unsigned char *digest, unsigned int *digest_len,const EVP_MD *type)
+void digest_message(const unsigned char *message, size_t message_len,const EVP_MD *type)
 {
 	EVP_MD_CTX *mdctx;
-    clock_t tick,tock;
+    struct timespec tick,tock;
     double spent;
 
-    
+    unsigned char *digest;
+    unsigned int digest_len;
 
     if((mdctx = EVP_MD_CTX_new()) == NULL)
     printf("Error creating structure\n");
 
-    tick = clock();
+    clock_gettime(CLOCK_MONOTONIC_RAW,&tick);
 
     if(1 != EVP_DigestInit_ex(mdctx, type, NULL))
         printf("Error initializing evp\n");
@@ -28,23 +29,24 @@ void digest_message(const unsigned char *message, size_t message_len, unsigned c
 
     int size = EVP_MD_size(type);
     digest = malloc(size);
+    digest_len = size;
     if(digest == NULL)
         printf("Error allocating digest memory\n");
 
-    if(1 != EVP_DigestFinal_ex(mdctx, digest, digest_len))
+    if(1 != EVP_DigestFinal_ex(mdctx, digest, &digest_len))
         printf("Error finalizing evp\n");
 
-    tock = clock();
-    spent = (double)(tock - tick) / (double)CLOCKS_PER_SEC;
-    printf("Elapsed time: %lf seconds\n", spent);
+    clock_gettime(CLOCK_MONOTONIC_RAW,&tock);
+    spent = (double)(tock.tv_nsec - tick.tv_nsec);// / (double)CLOCKS_PER_SEC;
+    printf("Elapsed time: %.0lf nanoseconds\n", spent);
     
     EVP_MD_CTX_free(mdctx);
-
     #ifdef DEBUG
         for (size_t i = 0; i < strlen(digest); ++i) printf("%x", digest[i]);
         printf("\n");
     #endif
-
+    free(digest);
+   // free(digest_len);
     #ifdef EXEC_BURN 
         clock_t begin = clock();
         clock_t end = clock();
@@ -74,6 +76,9 @@ void digest_message(const unsigned char *message, size_t message_len, unsigned c
 
             clock_t end = clock();
             time_spent = (double)(end - begin)/ CLOCKS_PER_SEC;
+
+            free(digest);
+         //   free(digest_len);
         }
     #endif
    
@@ -84,7 +89,7 @@ int encrypt(unsigned char *plaintext, int plaintext_len, unsigned char *key,
             unsigned char *iv, unsigned char *ciphertext, const EVP_CIPHER* type)
 {
     EVP_CIPHER_CTX *ctx;
-    clock_t tick,tock;
+    struct timespec tick,tock;
     double spent;
     int len;
     int starting_len = plaintext_len;
@@ -102,7 +107,7 @@ int encrypt(unsigned char *plaintext, int plaintext_len, unsigned char *key,
      * is 128 bits
      */
 
-    tick = clock();    
+    clock_gettime(CLOCK_MONOTONIC_RAW,&tick); 
 
     if(1 != EVP_EncryptInit_ex(ctx, type, NULL, key, iv))
         printf("failed to initialize encrypt\n");
@@ -123,9 +128,9 @@ int encrypt(unsigned char *plaintext, int plaintext_len, unsigned char *key,
         printf("failed to finalize\n");
     ciphertext_len += len;
 
-    tock = clock();
-    spent = (double)(tock - tick) / (double)CLOCKS_PER_SEC;
-    printf("Encription time: %lf seconds\n", spent);
+    clock_gettime(CLOCK_MONOTONIC_RAW,&tock);
+    spent = (double)(tock.tv_nsec - tick.tv_nsec);// / (double)CLOCKS_PER_SEC;
+    printf("Encription time: %.0lf nanoseconds\n", spent);
     /* Clean up */
     EVP_CIPHER_CTX_free(ctx);
 
@@ -181,7 +186,7 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
             unsigned char *iv, unsigned char *plaintext, const EVP_CIPHER* type)
 {
     EVP_CIPHER_CTX *ctx;
-    clock_t tick,tock;
+    struct timespec tick,tock;
     double spent;
     int len;
     int starting_len = ciphertext_len;
@@ -198,7 +203,7 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
      * IV size for *most* modes is the same as the block size. For AES this
      * is 128 bits
      */
-    tick = clock();
+    clock_gettime(CLOCK_MONOTONIC_RAW,&tick); 
     if(1 != EVP_DecryptInit_ex(ctx, type, NULL, key, iv))
         printf("failed to initialize decrypt\n");
 
@@ -218,14 +223,14 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
         printf("failed to end\n");
     plaintext_len += len;
 
-    tock = clock();
-    spent = (double)(tock - tick) / (double)CLOCKS_PER_SEC;
-    printf("Decription time: %lf seconds\n", spent);
+    clock_gettime(CLOCK_MONOTONIC_RAW,&tock); 
+    spent = (double)(tock.tv_nsec - tick.tv_nsec) ;// / (double)CLOCKS_PER_SEC;
+    printf("Decription time: %.0lf nanoseconds\n", spent);
     /* Clean up */
     EVP_CIPHER_CTX_free(ctx);
 
     #ifdef DEBUG
-        for (size_t i = 0; i < plaintext_len; ++i) printf("%c", plaintext[i]);
+        for (size_t i = 0; i < plaintext_len; ++i) printf("%x", plaintext[i]);
         printf("\n");
     #endif
 
@@ -411,94 +416,163 @@ int main(void)
 
         unsigned char *plaintext= (unsigned char*)"The quick brown fox jumps over the lazy dog";
 
-        unsigned char* digest;
-        unsigned int* digest_len;
+        int i;
        
 
         #ifdef EXEC_HASH
             printf("--##Hashing Function Test##--\n");
 
             #ifdef MD5
+
                 printf("Starting MD5 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_md5());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_md5());
                 printf("Finished MD5 Test\n\n");
+               
             #endif
 
             #ifdef SHA1
                 printf("Starting SHA1 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_sha1());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_sha1());
                 printf("Finished SHA1 Test\n\n");
             #endif
 
-            #ifdef SHA2
+            #ifdef SHA2_224
                 printf("Starting SHA2-224 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_sha224());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_sha224());
                 printf("Finished SHA2-224 Test\n\n");
+            #endif
+            #ifdef SHA2_256
                 printf("Starting SHA2-256 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_sha256());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_sha256());
                 printf("Finished SHA2-256 Test\n\n");
+            #endif
+            #ifdef SHA2_384
                 printf("Starting SHA2-384 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_sha384());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_sha384());
                 printf("Finished SHA2-384 Test\n\n");
+            #endif
+            #ifdef SHA2_512
                 printf("Starting SHA2-512 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_sha512());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_sha512());
                 printf("Finished SHA2-512 Test\n\n");
+            #endif
+            #ifdef SHA2_512_224
                 printf("Starting SHA2-512_224 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_sha512_224());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_sha512_224());
                 printf("Finished SHA2-512_224 Test\n\n");
+            #endif
+            #ifdef SHA2_512_256
                 printf("Starting SHA2-512_256 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_sha512_256());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_sha512_256());
                 printf("Finished SHA2-512_256 Test\n\n");
             #endif
 
             #ifdef SHA3
                 printf("Starting SHA3-224 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_sha3_224());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_sha3_224());
                 printf("Finished SHA3-224 Test\n\n");
                 printf("Starting SHA3-256 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_sha3_256());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_sha3_256());
                 printf("Finished SHA3-256 Test\n\n");
+                
                 printf("Starting SHA3-384 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_sha3_384());
-                printf("Finished SHA3-384 Test\n\n");
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_sha3_384());
+                printf("Finished SHA3-384 Test\n\n"); 
                 printf("Starting SHA3-512 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_sha3_512());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_sha3_512());
                 printf("Finished SHA3-512 Test\n\n");
             #endif
 
             #ifdef BLAKE2
                 printf("Starting BLAKE2b512 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_blake2b512());
-                printf("Finished BLAKE2b512 Test\n\n");
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_blake2b512());
+                printf("Finished BLAKE2b512 Test\n\n");   
                 printf("Starting BLAKE2s256 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_blake2s256());
+                 #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_blake2s256());
                 printf("Finished BLAKE2s256 Test\n\n");
             #endif
 
             #ifdef SHAKE
                 printf("Starting SHAKE128 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_shake128());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_shake128());
                 printf("Finished SHAKE128 Test\n\n");
                 printf("Starting SHAKE256 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_shake256());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_shake256());
                 printf("Finished SHAKE256 Test\n\n");
             #endif 
 
             #ifdef RIPEMD
                 printf("Starting RMD160 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_ripemd160());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_ripemd160());
                 printf("Finished RMD160 Test\n\n");
             #endif
 
             #ifdef WHIRLPOOL
                 printf("Starting WHIRLPOOL Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_whirlpool());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_whirlpool());
                 printf("Finished WHIRLPOOL Test\n\n");
             #endif
 
             #ifdef SM3
                 printf("Starting SM3 Test\n");
-                digest_message(plaintext,strlen(plaintext),digest,digest_len,EVP_sm3());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                #endif
+                    digest_message(plaintext,strlen(plaintext),EVP_sm3());
                 printf("Finished SM3 Test\n\n");
             #endif
         #endif 
@@ -508,12 +582,16 @@ int main(void)
 
             /* A 256 bit key */
             unsigned char *key = (unsigned char *)"01234567890123456789012345678901";
-            unsigned char *key192 = (unsigned char *)"012345678901234567890123";
+            unsigned char *key192 = (unsigned char *)"012345678901234567890121";
             /* A 128 bit IV */
-            unsigned char *iv = (unsigned char *)"0123456789012345";
-            unsigned char *iv54 = (unsigned char *)"0123456";
+            unsigned char *iv = (unsigned char *)"0123456789012341";
+            unsigned char *iv54 = (unsigned char *)"01234561";
+
+            int in[4] = { 0xDEADBEEF, 0xA5A5A5A5, 0xDEADBEEF, 0xA5A5A5A5};
+           // unsigned char *in = (unsigned char*)"DEADBEEFA5A5A5A5DEADBEEFA5A5A5A5";
             unsigned char ciphertext[128];
             unsigned char decryptedtext[128];
+            int ret;
 
             #ifdef AES 
                 //Alem disso o AES-192 ta bugado, tive q fazer uma magica com ele
@@ -523,112 +601,264 @@ int main(void)
                // decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_aes_128_cbc());
                // printf("Finished AES128CBC Test\n\n");
                 printf("Starting AES128CBC Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_aes_128_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_aes_128_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+                
+                #endif
+                  ret =  encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_aes_128_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_aes_128_cbc());
                 printf("Finished AES128CBC Test\n\n");
                 printf("Starting AES192CBC Test\n");
-                encrypt(plaintext,strlen(plaintext),key192,iv54,ciphertext,EVP_aes_192_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key192,iv54,decryptedtext,EVP_aes_192_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                   ret = encrypt((unsigned char*)in,sizeof(in),key192,iv54,ciphertext,EVP_aes_192_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    decrypt(ciphertext,ret,key192,iv54,decryptedtext,EVP_aes_192_cbc());
                 printf("Finished AES192CBC Test\n\n");
                 printf("Starting AES256CBC Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_aes_256_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_aes_256_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                   ret= encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_aes_256_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_aes_256_cbc());
                 printf("Finished AES256CBC Test\n\n");
             #endif
 
             #ifdef DES
                 printf("Starting DES-CBC Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_des_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_des_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    ret= encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_des_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_des_cbc());
                 printf("Finished DES-CBC Test\n\n");
                 
             #endif
 
             #ifdef TDES
                 printf("Starting 3DES-CBC 2 keys Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_des_ede_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_des_ede_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_des_ede_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_des_ede_cbc());
                 printf("Finished 3DES-CBC 2 keys Test\n\n");
                 printf("Starting 3DES-CBC 3 keys Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_des_ede3_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_des_ede3_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_des_ede3_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_des_ede3_cbc());
                 printf("Finished 3DES-CBC 3 keys Test\n\n");
             #endif
 
             #ifdef RC4
                 printf("Starting RC4 Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_rc4());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_rc4());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_rc4());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_rc4());
                 printf("Finished RC4 Test\n\n");
             #endif
 
             #ifdef BF //modo cbc tava com erro no decrypt, por causa da frase
                 printf("Starting BF Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_bf_cfb());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_bf_cfb());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_bf_cfb());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_bf_cfb());
                 printf("Finished BF Test\n\n");
             #endif
 
             #ifdef CAST5
                 
                 printf("Starting CAST5 Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_cast5_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_cast5_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_cast5_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_cast5_cbc());
                 printf("Finished CAST5 Test\n\n");
             #endif
 
             #ifdef ARIA
                 printf("Starting ARIA128CBC Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_aria_128_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_aria_128_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_aria_128_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_aria_128_cbc());
                 printf("Finished ARIA128CBC Test\n\n");
                 printf("Starting ARIA192CBC Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_aria_192_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_aria_192_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_aria_192_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_aria_192_cbc());
                 printf("Finished ARIA192CBC Test\n\n");
                 printf("Starting ARIA256CBC Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_aria_256_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_aria_256_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_aria_256_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_aria_256_cbc());
                 printf("Finished ARIA256CBC Test\n\n");
             #endif
 
             #ifdef CAMELLIA
                 printf("Starting CAMELLIA-128CBC Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_camellia_128_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_camellia_128_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_camellia_128_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_camellia_128_cbc());
                 printf("Finished CAMELLIA-128CBC Test\n\n");
                 printf("Starting CAMELLIA-196CBC Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_camellia_192_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_camellia_192_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_camellia_192_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_camellia_192_cbc());
                 printf("Finished CAMELLIA-196CBC Test\n\n");
                 printf("Starting CAMELLIA-256CBC Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_camellia_256_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_camellia_256_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_camellia_256_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_camellia_256_cbc());
                 printf("Finished CAMELLIA-256CBC Test\n\n");
             #endif
 
             #ifdef CHACHA
                 printf("Starting CHACHA20 Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_chacha20());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_chacha20());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_chacha20());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_chacha20());
                 printf("Finished CHACHA20 Test\n\n");
                 printf("Starting CHACHA20-POLY1305 Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_chacha20_poly1305());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_chacha20_poly1305());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_chacha20_poly1305());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_chacha20_poly1305());
                 printf("Finished CHACHA20-POLY1305 Test\n\n");
             #endif
 
             #ifdef SEED
                 printf("Starting SEED Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_seed_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_seed_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_seed_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_seed_cbc());
                 printf("Finished SEED Test\n\n");
             #endif
 
             #ifdef SM4
                 printf("Starting SM4 Test\n");
-                encrypt(plaintext,strlen(plaintext),key,iv,ciphertext,EVP_sm4_cbc());
-                decrypt(ciphertext,strlen(ciphertext),key,iv,decryptedtext,EVP_sm4_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    ret = encrypt((unsigned char*)in,sizeof(in),key,iv,ciphertext,EVP_sm4_cbc());
+                #ifdef REPEAT
+                for(i = 0; i < 15;i++)
+            
+                #endif
+                    decrypt(ciphertext,ret,key,iv,decryptedtext,EVP_sm4_cbc());
                 printf("Finished SM4 Test\n\n");
             #endif
         #endif
