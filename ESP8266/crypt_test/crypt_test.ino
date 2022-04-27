@@ -10,8 +10,10 @@
 #include <wolfssl/wolfcrypt/idea.h>
 //#include <wolfssl/wolfcrypt/hc_128.h>
 #include <wolfssl/wolfcrypt/wc_encrypt.h>
-#define DEBUG
 
+//#define DEBUG
+#define REPEAT
+#define REP_TIMES 15
 
 void test_DES(byte* key, byte* iv, word32* data, word32 size)
 {
@@ -454,70 +456,109 @@ void loop(){
   
   Serial.println("#######################");
   Serial.println("Starting DES CBC");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif
   test_DES(key,iv,in,16);
   Serial.println("Finished DES CBC");
   Serial.println("#######################");
   Serial.println("#######################");
   Serial.println("Starting DES3 CBC");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif
   test_3DES(key,iv,in,16);
   Serial.println("Finished DES3 CBC");
   Serial.println("#######################");
 
   Serial.println("#######################");
   Serial.println("Starting AES-128 CBC");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif
   test_AES(key,16,iv,in,16);
   Serial.println("Finished AES-128 CBC");
   Serial.println("#######################");
   Serial.println("#######################");
   Serial.println("Starting AES-192 CBC");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif
   test_AES(key,24,iv,in,16);
   Serial.println("Finished AES-192 CBC");
   Serial.println("#######################");
   Serial.println("#######################");
   Serial.println("Starting AES-256 CBC");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif
   test_AES(key,32,iv,in,16);
   Serial.println("Finished AES-256 CBC");
   Serial.println("#######################");
 
   Serial.println("#######################");
   Serial.println("Starting ARC4 40-bit key");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif
   test_ARC4(key,5,in,16);
   Serial.println("Finished ARC4 40-bit key");
   Serial.println("#######################");
   Serial.println("#######################");
   Serial.println("Starting ARC4 256-bit key");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif
   test_ARC4(key,32,in,16);
   Serial.println("Finished ARC4 256-bit key");
   Serial.println("#######################");
   Serial.println("#######################");
   Serial.println("Starting ARC4 2048-bit key");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif
   test_ARC4(key,256,in,16);
   Serial.println("Finished ARC4 2048-bit key");
   Serial.println("#######################");
 
   Serial.println("#######################");
   Serial.println("Starting Camellia-128 CBC");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif
   test_CAMELLIA(key,16,iv,in,16);
   Serial.println("Finished Camellia-128 CBC");
   Serial.println("#######################");
   Serial.println("#######################");
   Serial.println("Starting Camellia-192 CBC");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif  
   test_CAMELLIA(key,24,iv,in,16);
   Serial.println("Finished Camellia-192 CBC");
   Serial.println("#######################");
   Serial.println("#######################");
   Serial.println("Starting Camellia-256 CBC");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif
   test_CAMELLIA(key,32,iv,in,16);
   Serial.println("Finished Camellia-256 CBC");
   Serial.println("#######################");
 
   Serial.println("#######################");
   Serial.println("Starting CHACHA 128-bit key");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif
   test_CHACHA(key,16,iv,in,16);
   Serial.println("Finished CHACHA 128-bit key");
   Serial.println("#######################");
   Serial.println("#######################");
   Serial.println("Starting CHACHA 256-bit key");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif
   test_CHACHA(key,32,iv,in,16);
   Serial.println("Finished CHACHA 256-bit key");
   Serial.println("#######################"); 
@@ -531,11 +572,17 @@ void loop(){
   Serial.println("#######################");  
   */
   Serial.println("Starting RABBIT");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif
   test_RABBIT(key,iv,in,16);
   Serial.println("Finished RABBIT");
   Serial.println("#######################"); 
   Serial.println("#######################");
   Serial.println("Starting IDEA CBC");
+#ifdef REPEAT
+  for(int i = 0;i < REP_TIMES;i++)
+#endif
   test_IDEA(key,16,iv,in,16);
   Serial.println("Finished IDEA CBC");
   Serial.println("#######################"); 

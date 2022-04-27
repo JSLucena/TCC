@@ -3,7 +3,9 @@
 #include <wolfssl/wolfcrypt/blake2.h>
 #include <user_settings.h>
 
-#define DEBUG
+//#define DEBUG
+#define REPEAT
+#define REP_TIMES 15
 
 
 void hash_data(enum wc_HashType type,char* data){
@@ -123,41 +125,49 @@ for(i = 0;i < sizeof(result);i++)
 }
 void loop(){
   Serial.println("Starting MD5");
-  hash_data(WC_HASH_TYPE_MD5,data);
-  Serial.println("Finished MD5");
-  Serial.println("################################");
-  wolfCrypt_Cleanup();
-  wolfCrypt_Init();
-
-  Serial.println("Starting MD5");
-  hash_data(WC_HASH_TYPE_MD5,data);
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
+    hash_data(WC_HASH_TYPE_MD5,data);
   Serial.println("Finished MD5");
   Serial.println("################################");
   wolfCrypt_Cleanup();
   wolfCrypt_Init();
   
   Serial.println("Starting SHA1");
-  hash_data(WC_HASH_TYPE_SHA,data);
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
+    hash_data(WC_HASH_TYPE_SHA,data);
   Serial.println("Finished SHA1");
   Serial.println("################################");
   wolfCrypt_Cleanup();
   wolfCrypt_Init();
 
   Serial.println("Starting SHA2-224");
-  hash_data(WC_HASH_TYPE_SHA224,data);
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif  
+    hash_data(WC_HASH_TYPE_SHA224,data);
   Serial.println("Finished SHA2-224");
   Serial.println("################################");
   wolfCrypt_Cleanup();
   wolfCrypt_Init();
 
   Serial.println("Starting SHA2-256");
-  hash_data(WC_HASH_TYPE_SHA256,data);
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif  
+    hash_data(WC_HASH_TYPE_SHA256,data);
   Serial.println("Finished SHA2-256");
   Serial.println("################################");
   wolfCrypt_Cleanup();
   wolfCrypt_Init();
 
   Serial.println("Starting SHA2-384");
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif  
   hash_data(WC_HASH_TYPE_SHA384,data);
   Serial.println("Finished SHA2-384");
   Serial.println("################################");
@@ -165,12 +175,18 @@ void loop(){
   wolfCrypt_Init();
 
   Serial.println("Starting SHA2-512");
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
   hash_data(WC_HASH_TYPE_SHA512,data);
   Serial.println("Finished SHA2-512");
   Serial.println("################################");
   wolfCrypt_Cleanup();
 
   Serial.println("Starting SHA3-224");
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
   hash_data(WC_HASH_TYPE_SHA3_224,data);
   Serial.println("Finished SHA3-224");
   Serial.println("################################");
@@ -178,6 +194,9 @@ void loop(){
   wolfCrypt_Init();
 
   Serial.println("Starting SHA3-256");
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
   hash_data(WC_HASH_TYPE_SHA3_256,data);
   Serial.println("Finished SHA3-256");
   Serial.println("################################");
@@ -185,6 +204,9 @@ void loop(){
   wolfCrypt_Init();
 
   Serial.println("Starting SHA3-384");
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
   hash_data(WC_HASH_TYPE_SHA3_384,data);
   Serial.println("Finished SHA3-384");
   Serial.println("################################");
@@ -192,6 +214,9 @@ void loop(){
   wolfCrypt_Init();
 
   Serial.println("Starting SHA3-512");
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
   hash_data(WC_HASH_TYPE_SHA3_512,data);
   Serial.println("Finished SHA3-512");
   Serial.println("################################");
@@ -199,6 +224,9 @@ void loop(){
   wolfCrypt_Init();
 
   Serial.println("Starting BLAKE2B-224");
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
   hash_blake2b(data,28);
   Serial.println("Finished BLAKE2B-224");
   Serial.println("################################");
@@ -206,6 +234,9 @@ void loop(){
   wolfCrypt_Init();
 
   Serial.println("Starting BLAKE2B-256");
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
   hash_blake2b(data,32);
   Serial.println("Finished BLAKE2B-256");
   Serial.println("################################");
@@ -213,6 +244,9 @@ void loop(){
   wolfCrypt_Init();
 
   Serial.println("Starting BLAKE2B-384");
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
   hash_blake2b(data,48);
   Serial.println("Finished BLAKE2B-384");
   Serial.println("################################");
@@ -220,6 +254,9 @@ void loop(){
   wolfCrypt_Init();
 
   Serial.println("Starting BLAKE2B-512");
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
   hash_blake2b(data,64);
   Serial.println("Finished BLAKE2B-512");
   Serial.println("################################");
@@ -227,6 +264,9 @@ void loop(){
   wolfCrypt_Init();
 
   Serial.println("Starting BLAKE2S-128");
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
   hash_blake2s(data,16);
   Serial.println("Finished BLAKE2S-128");
   Serial.println("################################");
@@ -234,6 +274,9 @@ void loop(){
   wolfCrypt_Init();
 
   Serial.println("Starting BLAKE2S-192");
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
   hash_blake2s(data,24);
   Serial.println("Finished BLAKE2S-192");
   Serial.println("################################");
@@ -241,6 +284,9 @@ void loop(){
   wolfCrypt_Init();
 
   Serial.println("Starting BLAKE2S-224");
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
   hash_blake2s(data,28);
   Serial.println("Finished BLAKE2S-224");
   Serial.println("################################");
@@ -248,6 +294,9 @@ void loop(){
   wolfCrypt_Init();
 
   Serial.println("Starting BLAKE2S-256");
+#ifdef REPEAT  
+  for(int i = 0;i<REP_TIMES;i++)  
+#endif
   hash_blake2s(data,32);
   Serial.println("Finished BLAKE2S-256");
   Serial.println("################################");
