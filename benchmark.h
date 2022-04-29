@@ -1,8 +1,8 @@
 #define DEBUG
 #define REPEAT 
 //#define EXEC_BURN
-//#define EXEC_HASH 
-#define EXEC_CIPHER
+#define EXEC_HASH 
+//#define EXEC_CIPHER
 //#define EXEC_PK
 #define BURNTIME 2
 

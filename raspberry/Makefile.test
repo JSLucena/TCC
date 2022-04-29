@@ -1,0 +1,9 @@
+# Project name
+BIN = test
+#SRC_C = ./Source/test_main.c
+#SRC_C = ./Source/hash_test.c
+SRC_C = ./Source/crypt_test.c
+
+all: build_hex
+
+include Makefile.common
