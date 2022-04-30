@@ -1,0 +1,4838 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o)
+                              Build/sp_int.o (__aeabi_uldivmod)
+/usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_dvmd_lnx.o)
+                              /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
+/usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
+                              /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
+/usr/lib/arm-linux-gnueabihf/libc_nonshared.a(elf-init.oS)
+                              /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o (__libc_csu_init)
+
+As-needed library included to satisfy reference by file (symbol)
+
+libc.so.6                     Build/test.o (strncmp@@GLIBC_2.4)
+
+Discarded input sections
+
+ .text          0x00000000       0x3c /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .rodata.cst4   0x00000000        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .ARM.extab     0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .ARM.exidx     0x00000000        0x8 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .data          0x00000000        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .bss           0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .ARM.attributes
+                0x00000000       0x2f /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .data          0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o
+ .bss           0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o
+ .data          0x00000000        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+ .rodata        0x00000000       0x90 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+ .text          0x00000000        0x0 Build/public_key_test.o
+ .data          0x00000000        0x0 Build/public_key_test.o
+ .bss           0x00000000        0x0 Build/public_key_test.o
+ .text.test_RSA
+                0x00000000      0x3b8 Build/public_key_test.o
+ .rodata.test_DSA.str1.1
+                0x00000000       0x23 Build/public_key_test.o
+ .text.test_DSA
+                0x00000000      0x13c Build/public_key_test.o
+ .text.test_DH  0x00000000      0x19c Build/public_key_test.o
+ .bss.result    0x00000000       0x20 Build/public_key_test.o
+ .bss.ret       0x00000000        0x4 Build/public_key_test.o
+ .data.data     0x00000000       0x2c Build/public_key_test.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/public_key_test.o
+ .text          0x00000000        0x0 Build/wolf_main.o
+ .data          0x00000000        0x0 Build/wolf_main.o
+ .bss           0x00000000        0x0 Build/wolf_main.o
+ .text.my_time  0x00000000       0x10 Build/wolf_main.o
+ .text.LowResTimer
+                0x00000000       0x10 Build/wolf_main.o
+ .text.current_time
+                0x00000000       0x3c Build/wolf_main.o
+ .text.my_rng_gen_block
+                0x00000000       0x2e Build/wolf_main.o
+ .bss.gTimeMs   0x00000000        0x4 Build/wolf_main.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/wolf_main.o
+ .text          0x00000000        0x0 Build/armtarget.o
+ .data          0x00000000        0x0 Build/armtarget.o
+ .bss           0x00000000        0x0 Build/armtarget.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/armtarget.o
+ .text          0x00000000        0x0 Build/test.o
+ .data          0x00000000        0x0 Build/test.o
+ .bss           0x00000000        0x0 Build/test.o
+ .rodata.str1.1
+                0x00000000      0x489 Build/test.o
+ .text.time_cb  0x00000000        0xa Build/test.o
+ .rodata.sha3_224_test.str1.1
+                0x00000000       0xb2 Build/test.o
+ .text.sha3_224_test
+                0x00000000      0x16c Build/test.o
+ .rodata.sha3_256_test.str1.1
+                0x00000000       0x84 Build/test.o
+ .text.sha3_256_test
+                0x00000000      0x16c Build/test.o
+ .rodata.sha3_384_test.str1.1
+                0x00000000       0xc4 Build/test.o
+ .text.sha3_384_test
+                0x00000000      0x16c Build/test.o
+ .rodata.sha3_512_test.str1.1
+                0x00000000       0xc3 Build/test.o
+ .text.sha3_512_test
+                0x00000000      0x16c Build/test.o
+ .text._rng_test
+                0x00000000       0xb0 Build/test.o
+ .text.rsa_export_key_test
+                0x00000000      0x324 Build/test.o
+ .text.rsa_flatten_test
+                0x00000000       0xf4 Build/test.o
+ .text.dh_ffdhe_test
+                0x00000000      0x2bc Build/test.o
+ .rodata.dh_fips_generate_test.str1.1
+                0x00000000      0x11e Build/test.o
+ .text.dh_fips_generate_test
+                0x00000000      0x320 Build/test.o
+ .rodata.ecc_exp_imp_test.str1.1
+                0x00000000       0xc3 Build/test.o
+ .text.ecc_exp_imp_test
+                0x00000000      0x1e8 Build/test.o
+ .text.aesgcm_default_test_helper.constprop.0
+                0x00000000      0x1c8 Build/test.o
+ .rodata.rsa_sig_test.constprop.0.str1.1
+                0x00000000       0x3b Build/test.o
+ .text.rsa_sig_test.constprop.0
+                0x00000000      0x458 Build/test.o
+ .text.error_test
+                0x00000000      0x134 Build/test.o
+ .rodata.base64_test.str1.1
+                0x00000000       0x7f Build/test.o
+ .text.base64_test
+                0x00000000      0x360 Build/test.o
+ .rodata.asn_test.str1.1
+                0x00000000       0x23 Build/test.o
+ .text.asn_test
+                0x00000000       0xbc Build/test.o
+ .rodata.md5_test.str1.1
+                0x00000000      0x10f Build/test.o
+ .text.md5_test
+                0x00000000      0x208 Build/test.o
+ .rodata.sha_test.str1.1
+                0x00000000      0x12b Build/test.o
+ .text.sha_test
+                0x00000000      0x1f0 Build/test.o
+ .text.blake2b_test
+                0x00000000       0x78 Build/test.o
+ .text.blake2s_test
+                0x00000000       0x78 Build/test.o
+ .rodata.sha224_test.str1.1
+                0x00000000       0x57 Build/test.o
+ .text.sha224_test
+                0x00000000      0x128 Build/test.o
+ .rodata.sha256_test.str1.1
+                0x00000000       0x63 Build/test.o
+ .text.sha256_test
+                0x00000000      0x180 Build/test.o
+ .rodata.sha512_test.str1.1
+                0x00000000      0x134 Build/test.o
+ .text.sha512_test
+                0x00000000      0x1d4 Build/test.o
+ .rodata.sha384_test.str1.1
+                0x00000000       0x93 Build/test.o
+ .text.sha384_test
+                0x00000000      0x1b0 Build/test.o
+ .text.sha3_test
+                0x00000000       0x1e Build/test.o
+ .rodata.hash_test.str1.1
+                0x00000000       0x28 Build/test.o
+ .text.hash_test
+                0x00000000      0x480 Build/test.o
+ .rodata.hmac_md5_test.str1.1
+                0x00000000       0x33 Build/test.o
+ .text.hmac_md5_test
+                0x00000000      0x114 Build/test.o
+ .rodata.hmac_sha_test.str1.1
+                0x00000000       0x2a Build/test.o
+ .text.hmac_sha_test
+                0x00000000      0x114 Build/test.o
+ .rodata.hmac_sha224_test.str1.1
+                0x00000000       0x57 Build/test.o
+ .text.hmac_sha224_test
+                0x00000000      0x134 Build/test.o
+ .rodata.hmac_sha256_test.str1.1
+                0x00000000       0x42 Build/test.o
+ .text.hmac_sha256_test
+                0x00000000      0x140 Build/test.o
+ .rodata.hmac_sha384_test.str1.1
+                0x00000000       0xc4 Build/test.o
+ .text.hmac_sha384_test
+                0x00000000      0x134 Build/test.o
+ .rodata.hmac_sha512_test.str1.1
+                0x00000000      0x104 Build/test.o
+ .text.hmac_sha512_test
+                0x00000000      0x134 Build/test.o
+ .text.hmac_sha3_test
+                0x00000000      0x130 Build/test.o
+ .rodata.chacha_test.str1.1
+                0x00000000       0x24 Build/test.o
+ .text.chacha_test
+                0x00000000      0x2a8 Build/test.o
+ .rodata.poly1305_test.str1.1
+                0x00000000      0x214 Build/test.o
+ .text.poly1305_test
+                0x00000000      0x380 Build/test.o
+ .rodata.chacha20_poly1305_aead_test.str1.1
+                0x00000000      0x1d0 Build/test.o
+ .text.chacha20_poly1305_aead_test
+                0x00000000      0x8c4 Build/test.o
+ .rodata.des_test.str1.1
+                0x00000000       0x44 Build/test.o
+ .text.des_test
+                0x00000000      0x100 Build/test.o
+ .rodata.des3_test.str1.1
+                0x00000000       0x64 Build/test.o
+ .text.des3_test
+                0x00000000      0x148 Build/test.o
+ .rodata.aes_test.str1.1
+                0x00000000       0xe8 Build/test.o
+ .text.aes_test
+                0x00000000      0x68c Build/test.o
+ .rodata.aes192_test.str1.1
+                0x00000000       0x3b Build/test.o
+ .text.aes192_test
+                0x00000000      0x1a8 Build/test.o
+ .rodata.aes256_test.str1.1
+                0x00000000       0x32 Build/test.o
+ .text.aes256_test
+                0x00000000      0x1a8 Build/test.o
+ .rodata.aesgcm_default_test.str1.1
+                0x00000000       0xfe Build/test.o
+ .text.aesgcm_default_test
+                0x00000000      0x1e8 Build/test.o
+ .rodata.aesgcm_test.str1.1
+                0x00000000      0x1c7 Build/test.o
+ .text.aesgcm_test
+                0x00000000      0x824 Build/test.o
+ .rodata.gmac_test.str1.1
+                0x00000000       0x7f Build/test.o
+ .text.gmac_test
+                0x00000000      0x2b8 Build/test.o
+ .rodata.camellia_test.str1.1
+                0x00000000       0x77 Build/test.o
+ .text.camellia_test
+                0x00000000      0x41c Build/test.o
+ .rodata.random_test.str1.1
+                0x00000000       0xd3 Build/test.o
+ .text.random_test
+                0x00000000      0x1ac Build/test.o
+ .text.memory_test
+                0x00000000       0x44 Build/test.o
+ .rodata.rsa_test.str1.1
+                0x00000000       0x3e Build/test.o
+ .text.rsa_test
+                0x00000000      0xf70 Build/test.o
+ .rodata.dh_test.str1.1
+                0x00000000        0x4 Build/test.o
+ .text.dh_test  0x00000000      0x6d4 Build/test.o
+ .text.dsa_test
+                0x00000000      0x284 Build/test.o
+ .rodata.ecc_test.str1.1
+                0x00000000      0x2cc Build/test.o
+ .text.ecc_test
+                0x00000000     0x1288 Build/test.o
+ .rodata.ecc_test_buffers.str1.1
+                0x00000000       0x20 Build/test.o
+ .text.ecc_test_buffers
+                0x00000000      0x1d4 Build/test.o
+ .text.logging_test
+                0x00000000       0x2c Build/test.o
+ .text.mutex_test
+                0x00000000       0x20 Build/test.o
+ .text.time_test
+                0x00000000       0x60 Build/test.o
+ .rodata.wolfcrypt_test.str1.1
+                0x00000000      0x896 Build/test.o
+ .text.wolfcrypt_test
+                0x00000000      0x4c4 Build/test.o
+ .rodata        0x00000000      0x86d Build/test.o
+ .rodata.blake2b_vec
+                0x00000000       0xc0 Build/test.o
+ .rodata.blake2s_vec
+                0x00000000       0x60 Build/test.o
+ .rodata.client_key_der_2048
+                0x00000000      0x4a8 Build/test.o
+ .rodata.dh_g   0x00000000        0x1 Build/test.o
+ .rodata.dh_key_der_2048
+                0x00000000      0x10c Build/test.o
+ .rodata.dh_p   0x00000000       0x80 Build/test.o
+ .rodata.dsa_key_der_2048
+                0x00000000      0x343 Build/test.o
+ .rodata.ecc_clikey_der_256
+                0x00000000       0x79 Build/test.o
+ .rodata.ecc_key_der_256
+                0x00000000       0x79 Build/test.o
+ .comment       0x00000000       0x2f Build/test.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/test.o
+ .ARM.attributes
+                0x00000000       0x37 Build/test.o
+ .text          0x00000000        0x0 Build/benchmark.o
+ .data          0x00000000        0x0 Build/benchmark.o
+ .bss           0x00000000        0x0 Build/benchmark.o
+ .text.bench_stats_start
+                0x00000000       0x14 Build/benchmark.o
+ .text.bench_stats_sym_check
+                0x00000000       0x38 Build/benchmark.o
+ .rodata.bench_stats_asym_finish.isra.0.str1.1
+                0x00000000       0x63 Build/benchmark.o
+ .text.bench_stats_asym_finish.isra.0
+                0x00000000      0x110 Build/benchmark.o
+ .rodata.bench_rsaKeyGen_helper.isra.0.str1.1
+                0x00000000        0x4 Build/benchmark.o
+ .text.bench_rsaKeyGen_helper.isra.0
+                0x00000000       0x94 Build/benchmark.o
+ .rodata.bench_rsa_helper.isra.0.str1.1
+                0x00000000       0x1a Build/benchmark.o
+ .text.bench_rsa_helper.isra.0
+                0x00000000      0x144 Build/benchmark.o
+ .rodata.bench_stats_sym_finish.isra.0.str1.1
+                0x00000000       0x54 Build/benchmark.o
+ .text.bench_stats_sym_finish.isra.0
+                0x00000000      0x1bc Build/benchmark.o
+ .rodata.bench_hmac.constprop.0.str1.1
+                0x00000000       0x4c Build/benchmark.o
+ .text.bench_hmac.constprop.0
+                0x00000000       0xd0 Build/benchmark.o
+ .rodata.bench_aesgcm_internal.constprop.0.str1.1
+                0x00000000       0x77 Build/benchmark.o
+ .text.bench_aesgcm_internal.constprop.0
+                0x00000000      0x1ec Build/benchmark.o
+ .rodata.bench_aescbc_internal.str1.1
+                0x00000000       0x1c Build/benchmark.o
+ .text.bench_aescbc_internal
+                0x00000000      0x130 Build/benchmark.o
+ .rodata.bench_stats_print.str1.1
+                0x00000000       0x2e Build/benchmark.o
+ .text.bench_stats_print
+                0x00000000       0x7c Build/benchmark.o
+ .rodata.benchmark_init.str1.1
+                0x00000000       0x53 Build/benchmark.o
+ .text.benchmark_init
+                0x00000000       0x7c Build/benchmark.o
+ .rodata.benchmark_free.str1.1
+                0x00000000       0x21 Build/benchmark.o
+ .text.benchmark_free
+                0x00000000       0x1c Build/benchmark.o
+ .rodata.bench_rng.str1.1
+                0x00000000       0x17 Build/benchmark.o
+ .text.bench_rng
+                0x00000000       0xb4 Build/benchmark.o
+ .rodata.bench_aescbc.str1.1
+                0x00000000       0x60 Build/benchmark.o
+ .text.bench_aescbc
+                0x00000000       0x68 Build/benchmark.o
+ .rodata.bench_aesgcm.str1.1
+                0x00000000       0x60 Build/benchmark.o
+ .text.bench_aesgcm
+                0x00000000       0x68 Build/benchmark.o
+ .rodata.bench_gmac.str1.1
+                0x00000000        0xb Build/benchmark.o
+ .text.bench_gmac
+                0x00000000       0xb4 Build/benchmark.o
+ .rodata.bench_poly1305.str1.1
+                0x00000000       0x45 Build/benchmark.o
+ .text.bench_poly1305
+                0x00000000      0x114 Build/benchmark.o
+ .rodata.bench_camellia.str1.1
+                0x00000000       0x49 Build/benchmark.o
+ .text.bench_camellia
+                0x00000000       0xa4 Build/benchmark.o
+ .rodata.bench_des.str1.1
+                0x00000000       0x3e Build/benchmark.o
+ .text.bench_des
+                0x00000000       0xcc Build/benchmark.o
+ .rodata.bench_chacha.str1.1
+                0x00000000        0x7 Build/benchmark.o
+ .text.bench_chacha
+                0x00000000       0x88 Build/benchmark.o
+ .rodata.bench_chacha20_poly1305_aead.str1.1
+                0x00000000       0x30 Build/benchmark.o
+ .text.bench_chacha20_poly1305_aead
+                0x00000000       0xac Build/benchmark.o
+ .rodata.bench_md5.str1.1
+                0x00000000       0x21 Build/benchmark.o
+ .text.bench_md5
+                0x00000000      0x12c Build/benchmark.o
+ .rodata.bench_sha.str1.1
+                0x00000000       0x1e Build/benchmark.o
+ .text.bench_sha
+                0x00000000      0x130 Build/benchmark.o
+ .rodata.bench_sha224.str1.1
+                0x00000000       0x28 Build/benchmark.o
+ .text.bench_sha224
+                0x00000000      0x130 Build/benchmark.o
+ .rodata.bench_sha256.str1.1
+                0x00000000       0x28 Build/benchmark.o
+ .text.bench_sha256
+                0x00000000      0x130 Build/benchmark.o
+ .rodata.bench_sha384.str1.1
+                0x00000000       0x28 Build/benchmark.o
+ .text.bench_sha384
+                0x00000000      0x130 Build/benchmark.o
+ .rodata.bench_sha512.str1.1
+                0x00000000       0x28 Build/benchmark.o
+ .text.bench_sha512
+                0x00000000      0x130 Build/benchmark.o
+ .rodata.bench_sha3_224.str1.1
+                0x00000000       0x28 Build/benchmark.o
+ .text.bench_sha3_224
+                0x00000000      0x134 Build/benchmark.o
+ .rodata.bench_sha3_256.str1.1
+                0x00000000       0x28 Build/benchmark.o
+ .text.bench_sha3_256
+                0x00000000      0x134 Build/benchmark.o
+ .rodata.bench_sha3_384.str1.1
+                0x00000000       0x28 Build/benchmark.o
+ .text.bench_sha3_384
+                0x00000000      0x134 Build/benchmark.o
+ .rodata.bench_sha3_512.str1.1
+                0x00000000       0x28 Build/benchmark.o
+ .text.bench_sha3_512
+                0x00000000      0x134 Build/benchmark.o
+ .rodata.bench_blake2b.str1.1
+                0x00000000       0x65 Build/benchmark.o
+ .text.bench_blake2b
+                0x00000000      0x104 Build/benchmark.o
+ .rodata.bench_blake2s.str1.1
+                0x00000000       0x65 Build/benchmark.o
+ .text.bench_blake2s
+                0x00000000      0x110 Build/benchmark.o
+ .rodata.bench_hmac_md5.str1.1
+                0x00000000       0x1a Build/benchmark.o
+ .text.bench_hmac_md5
+                0x00000000       0x3c Build/benchmark.o
+ .rodata.bench_hmac_sha.str1.1
+                0x00000000       0x1e Build/benchmark.o
+ .text.bench_hmac_sha
+                0x00000000       0x40 Build/benchmark.o
+ .rodata.bench_hmac_sha224.str1.1
+                0x00000000       0x29 Build/benchmark.o
+ .text.bench_hmac_sha224
+                0x00000000       0x40 Build/benchmark.o
+ .rodata.bench_hmac_sha256.str1.1
+                0x00000000       0x2d Build/benchmark.o
+ .text.bench_hmac_sha256
+                0x00000000       0x3c Build/benchmark.o
+ .rodata.bench_hmac_sha384.str1.1
+                0x00000000       0x3d Build/benchmark.o
+ .text.bench_hmac_sha384
+                0x00000000       0x3c Build/benchmark.o
+ .rodata.bench_hmac_sha512.str1.1
+                0x00000000       0x4d Build/benchmark.o
+ .text.bench_hmac_sha512
+                0x00000000       0x3c Build/benchmark.o
+ .text.bench_rsaKeyGen
+                0x00000000        0x8 Build/benchmark.o
+ .text.bench_rsaKeyGen_size
+                0x00000000        0x6 Build/benchmark.o
+ .rodata.bench_rsa.str1.1
+                0x00000000       0x23 Build/benchmark.o
+ .text.bench_rsa
+                0x00000000       0x70 Build/benchmark.o
+ .rodata.bench_rsa_key.str1.1
+                0x00000000       0x1a Build/benchmark.o
+ .text.bench_rsa_key
+                0x00000000       0x88 Build/benchmark.o
+ .rodata.bench_dh.str1.1
+                0x00000000       0x2b Build/benchmark.o
+ .text.bench_dh
+                0x00000000      0x1cc Build/benchmark.o
+ .rodata.bench_eccMakeKey.str1.1
+                0x00000000        0xd Build/benchmark.o
+ .text.bench_eccMakeKey
+                0x00000000       0xb0 Build/benchmark.o
+ .rodata.bench_ecc.str1.1
+                0x00000000       0x1a Build/benchmark.o
+ .text.bench_ecc
+                0x00000000      0x268 Build/benchmark.o
+ .text.bench_ecc_curve
+                0x00000000       0x44 Build/benchmark.o
+ .rodata.benchmark_test.str1.1
+                0x00000000       0x5e Build/benchmark.o
+ .text.benchmark_test
+                0x00000000      0x31c Build/benchmark.o
+ .text.benchmark_configure
+                0x00000000       0x24 Build/benchmark.o
+ .rodata.str1.1
+                0x00000000      0x146 Build/benchmark.o
+ .bss.bench_asym_algs
+                0x00000000        0x4 Build/benchmark.o
+ .bss.bench_cipher
+                0x00000000        0x4 Build/benchmark.o
+ .bss.bench_iv  0x00000000        0x4 Build/benchmark.o
+ .bss.bench_key
+                0x00000000        0x4 Build/benchmark.o
+ .bss.bench_plain
+                0x00000000        0x4 Build/benchmark.o
+ .bss.gBenchStaticInit
+                0x00000000        0x4 Build/benchmark.o
+ .bss.gRng      0x00000000       0x10 Build/benchmark.o
+ .bss.gStats    0x00000000     0x1000 Build/benchmark.o
+ .bss.gStatsCount
+                0x00000000        0x4 Build/benchmark.o
+ .data.aesAuthAddSz
+                0x00000000        0x4 Build/benchmark.o
+ .data.base2    0x00000000        0x4 Build/benchmark.o
+ .data.bench_all
+                0x00000000        0x4 Build/benchmark.o
+ .data.bench_desc_words
+                0x00000000       0x70 Build/benchmark.o
+ .data.bench_result_words1
+                0x00000000       0x20 Build/benchmark.o
+ .data.bench_result_words2
+                0x00000000       0x28 Build/benchmark.o
+ .data.bench_size
+                0x00000000        0x4 Build/benchmark.o
+ .data.digest_stream
+                0x00000000        0x4 Build/benchmark.o
+ .data.numBlocks
+                0x00000000        0x4 Build/benchmark.o
+ .rodata.bench_iv_buf
+                0x00000000       0x18 Build/benchmark.o
+ .rodata.bench_key_buf
+                0x00000000       0x40 Build/benchmark.o
+ .rodata.dh_key_der_2048
+                0x00000000      0x10c Build/benchmark.o
+ .rodata.rsa_key_der_2048
+                0x00000000      0x4a7 Build/benchmark.o
+ .comment       0x00000000       0x2f Build/benchmark.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/benchmark.o
+ .ARM.attributes
+                0x00000000       0x37 Build/benchmark.o
+ .text          0x00000000        0x0 Build/bio.o
+ .data          0x00000000        0x0 Build/bio.o
+ .bss           0x00000000        0x0 Build/bio.o
+ .comment       0x00000000       0x2f Build/bio.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/bio.o
+ .ARM.attributes
+                0x00000000       0x3e Build/bio.o
+ .text          0x00000000        0x0 Build/crl.o
+ .data          0x00000000        0x0 Build/crl.o
+ .bss           0x00000000        0x0 Build/crl.o
+ .comment       0x00000000       0x2f Build/crl.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/crl.o
+ .ARM.attributes
+                0x00000000       0x3e Build/crl.o
+ .text          0x00000000        0x0 Build/internal.o
+ .data          0x00000000        0x0 Build/internal.o
+ .bss           0x00000000        0x0 Build/internal.o
+ .text.ForceZero
+                0x00000000       0x10 Build/internal.o
+ .text.c24to32  0x00000000       0x12 Build/internal.o
+ .text.ato16    0x00000000        0x8 Build/internal.o
+ .text.SetDigest
+                0x00000000       0x46 Build/internal.o
+ .text.TypeHash
+                0x00000000       0x14 Build/internal.o
+ .text.CipherRequires
+                0x00000000      0x1fc Build/internal.o
+ .text.SanityCheckMsgReceived
+                0x00000000      0x2f0 Build/internal.o
+ .text.cipherExtraData
+                0x00000000       0x2c Build/internal.o
+ .text.Poly1305TagOld
+                0x00000000       0x9a Build/internal.o
+ .text.ProcessPeerCertParse.constprop.0
+                0x00000000       0xa2 Build/internal.o
+ .text.AddRecordHeader.constprop.0
+                0x00000000       0x22 Build/internal.o
+ .text.AddHeaders
+                0x00000000       0x1c Build/internal.o
+ .text.IsEncryptionOn.isra.0
+                0x00000000       0x14 Build/internal.o
+ .text.IsTLS    0x00000000       0x18 Build/internal.o
+ .text.IsAtLeastTLSv1_2
+                0x00000000       0x1a Build/internal.o
+ .text.IsAtLeastTLSv1_3
+                0x00000000       0x20 Build/internal.o
+ .text.InitSSL_Method
+                0x00000000       0x18 Build/internal.o
+ .text.InitSSL_Ctx
+                0x00000000       0x94 Build/internal.o
+ .text.SSL_CtxResourceFree
+                0x00000000       0x74 Build/internal.o
+ .text.InitCiphers
+                0x00000000       0x24 Build/internal.o
+ .text.FreeCiphers
+                0x00000000       0x8c Build/internal.o
+ .text.InitCipherSpecs
+                0x00000000       0x18 Build/internal.o
+ .text.InitSuitesHashSigAlgo
+                0x00000000       0x7e Build/internal.o
+ .text.InitSuites
+                0x00000000      0x4b8 Build/internal.o
+ .text.InitX509Name
+                0x00000000       0x22 Build/internal.o
+ .text.FreeX509Name
+                0x00000000       0x18 Build/internal.o
+ .text.InitX509
+                0x00000000       0x36 Build/internal.o
+ .text.FreeX509
+                0x00000000       0x46 Build/internal.o
+ .text.RsaSign  0x00000000       0x26 Build/internal.o
+ .text.RsaVerify
+                0x00000000        0xc Build/internal.o
+ .text.VerifyRsaSign
+                0x00000000       0x54 Build/internal.o
+ .text.RsaDec   0x00000000       0x32 Build/internal.o
+ .text.RsaEnc   0x00000000       0x26 Build/internal.o
+ .text.EccSign  0x00000000       0x18 Build/internal.o
+ .text.EccVerify
+                0x00000000       0x34 Build/internal.o
+ .text.EccSharedSecret
+                0x00000000       0x2e Build/internal.o
+ .text.EccMakeKey
+                0x00000000       0x42 Build/internal.o
+ .text.DhGenKeyPair
+                0x00000000       0x10 Build/internal.o
+ .text.DhAgree  0x00000000       0x5c Build/internal.o
+ .text.InitSSL_Suites
+                0x00000000       0xa4 Build/internal.o
+ .text.SSL_CTX_RefCount
+                0x00000000       0x36 Build/internal.o
+ .text.FreeSSL_Ctx
+                0x00000000       0x3e Build/internal.o
+ .text.SetSSL_CTX
+                0x00000000      0x21c Build/internal.o
+ .text.FreeHandshakeHashes
+                0x00000000       0x32 Build/internal.o
+ .text.InitHandshakeHashes
+                0x00000000       0x60 Build/internal.o
+ .text.InitSSL  0x00000000      0x178 Build/internal.o
+ .text.FreeArrays
+                0x00000000       0x66 Build/internal.o
+ .text.FreeKey  0x00000000       0x36 Build/internal.o
+ .text.AllocKey
+                0x00000000       0x86 Build/internal.o
+ .text.FreeKeyExchange
+                0x00000000       0x40 Build/internal.o
+ .text.FreeSuites
+                0x00000000       0x1a Build/internal.o
+ .text.WriteSEQ
+                0x00000000       0x5a Build/internal.o
+ .text.HashRaw  0x00000000       0x44 Build/internal.o
+ .text.HashOutput
+                0x00000000       0x1e Build/internal.o
+ .text.HashInput
+                0x00000000       0x12 Build/internal.o
+ .text.ShrinkOutputBuffer
+                0x00000000       0x2a Build/internal.o
+ .text.ShrinkInputBuffer
+                0x00000000       0x4c Build/internal.o
+ .text.SSL_ResourceFree
+                0x00000000      0x10c Build/internal.o
+ .text.FreeSSL  0x00000000       0x1c Build/internal.o
+ .text.FreeHandshakeResources
+                0x00000000      0x10a Build/internal.o
+ .text.SendBuffered
+                0x00000000       0x84 Build/internal.o
+ .text.GrowInputBuffer
+                0x00000000       0x90 Build/internal.o
+ .text.GetInputData
+                0x00000000      0x118 Build/internal.o
+ .text.CheckAvailableSize
+                0x00000000       0x8a Build/internal.o
+ .text.MatchDomainName
+                0x00000000       0x7a Build/internal.o
+ .text.CheckForAltNames
+                0x00000000       0x58 Build/internal.o
+ .text.CheckHostName
+                0x00000000       0x34 Build/internal.o
+ .text.CheckIPAddr
+                0x00000000       0x1c Build/internal.o
+ .text.DoVerifyCallback
+                0x00000000      0x13a Build/internal.o
+ .text.DoFinished
+                0x00000000       0x9c Build/internal.o
+ .text.ChachaAEADEncrypt
+                0x00000000      0x1d2 Build/internal.o
+ .text.TimingPadVerify
+                0x00000000      0x1fe Build/internal.o
+ .text.AlertTypeToString
+                0x00000000       0x14 Build/internal.o
+ .text.BuildCertHashes
+                0x00000000       0x60 Build/internal.o
+ .text.FreeBuildMsgArgs
+                0x00000000       0x28 Build/internal.o
+ .text.BuildMessage
+                0x00000000      0x38c Build/internal.o
+ .text.SendChangeCipher
+                0x00000000       0xba Build/internal.o
+ .text.SendHandshakeMsg.constprop.0
+                0x00000000      0x132 Build/internal.o
+ .text.SendFinished
+                0x00000000       0xc0 Build/internal.o
+ .text.SendCertificate
+                0x00000000      0x3f0 Build/internal.o
+ .text.SendCertificateRequest
+                0x00000000      0x18e Build/internal.o
+ .text.SendCertificateStatus
+                0x00000000        0x4 Build/internal.o
+ .text.IsSCR    0x00000000        0x4 Build/internal.o
+ .text.SendData
+                0x00000000      0x158 Build/internal.o
+ .text.SendAlert
+                0x00000000       0xd8 Build/internal.o
+ .text.DoCertFatalAlert
+                0x00000000       0x40 Build/internal.o
+ .text.ProcessPeerCerts
+                0x00000000      0x704 Build/internal.o
+ .text.DoApplicationData
+                0x00000000       0x88 Build/internal.o
+ .rodata.wolfSSL_ERR_reason_error_string.str1.1
+                0x00000000       0x15 Build/internal.o
+ .text.wolfSSL_ERR_reason_error_string
+                0x00000000       0x28 Build/internal.o
+ .rodata.wolfSSL_ERR_func_error_string.str1.1
+                0x00000000        0x1 Build/internal.o
+ .text.wolfSSL_ERR_func_error_string
+                0x00000000        0x8 Build/internal.o
+ .text.wolfSSL_ERR_lib_error_string
+                0x00000000        0x8 Build/internal.o
+ .text.SetErrorString
+                0x00000000       0x1a Build/internal.o
+ .text.GetCipherNames
+                0x00000000        0x8 Build/internal.o
+ .text.GetCipherNamesSize
+                0x00000000        0x4 Build/internal.o
+ .rodata.GetCipherNameInternal.str1.1
+                0x00000000        0x5 Build/internal.o
+ .text.GetCipherNameInternal
+                0x00000000       0x38 Build/internal.o
+ .rodata.GetCipherNameIana.str1.1
+                0x00000000        0x5 Build/internal.o
+ .text.GetCipherNameIana
+                0x00000000       0x38 Build/internal.o
+ .text.wolfSSL_get_cipher_name_internal
+                0x00000000       0x10 Build/internal.o
+ .text.wolfSSL_get_cipher_name_iana
+                0x00000000       0x10 Build/internal.o
+ .rodata.GetCipherSuiteFromName.str1.1
+                0x00000000        0x2 Build/internal.o
+ .text.GetCipherSuiteFromName
+                0x00000000       0x74 Build/internal.o
+ .rodata.SetCipherList.str1.1
+                0x00000000       0x17 Build/internal.o
+ .text.SetCipherList
+                0x00000000      0x150 Build/internal.o
+ .text.PickHashSigAlgo
+                0x00000000       0x94 Build/internal.o
+ .text.CompareSuites
+                0x00000000      0x10a Build/internal.o
+ .text.DecodePrivateKey
+                0x00000000       0xd8 Build/internal.o
+ .text.SendClientHello
+                0x00000000      0x21e Build/internal.o
+ .text.CheckVersion
+                0x00000000       0x50 Build/internal.o
+ .text.CompleteServerHello
+                0x00000000       0xb4 Build/internal.o
+ .text.DoServerHello
+                0x00000000      0x1ac Build/internal.o
+ .text.VerifyClientSuite
+                0x00000000       0x18 Build/internal.o
+ .text.SendClientKeyExchange
+                0x00000000      0x49c Build/internal.o
+ .text.SendCertificateVerify
+                0x00000000      0x300 Build/internal.o
+ .text.GetCurveByOID
+                0x00000000        0xe Build/internal.o
+ .text.SendServerHello
+                0x00000000      0x1fc Build/internal.o
+ .text.SendServerKeyExchange
+                0x00000000      0x810 Build/internal.o
+ .text.MatchSuite
+                0x00000000       0xa0 Build/internal.o
+ .text.HandleTlsResumption
+                0x00000000       0xec Build/internal.o
+ .text.DoClientHello
+                0x00000000      0x2b0 Build/internal.o
+ .text.DoHandShakeMsgType
+                0x00000000     0x1300 Build/internal.o
+ .text.ProcessReplyEx
+                0x00000000      0xa90 Build/internal.o
+ .text.ProcessReply
+                0x00000000        0x6 Build/internal.o
+ .text.ReceiveData
+                0x00000000       0xc0 Build/internal.o
+ .text.SendServerHelloDone
+                0x00000000       0xf4 Build/internal.o
+ .text.wolfSSL_GetMaxFragSize
+                0x00000000        0xe Build/internal.o
+ .rodata.str1.1
+                0x00000000     0x189c Build/internal.o
+ .rodata.CSWTCH.375
+                0x00000000        0xa Build/internal.o
+ .rodata.CSWTCH.479
+                0x00000000      0x1e4 Build/internal.o
+ .rodata.CSWTCH.502
+                0x00000000      0x800 Build/internal.o
+ .rodata.access_denied_str.10
+                0x00000000        0xe Build/internal.o
+ .rodata.bad_certificate_status_response_str.1
+                0x00000000       0x20 Build/internal.o
+ .rodata.bad_certificate_str.17
+                0x00000000       0x10 Build/internal.o
+ .rodata.bad_record_mac_str.22
+                0x00000000        0xf Build/internal.o
+ .rodata.certificate_expired_str.14
+                0x00000000       0x14 Build/internal.o
+ .rodata.certificate_revoked_str.15
+                0x00000000       0x14 Build/internal.o
+ .rodata.certificate_unknown_str.13
+                0x00000000       0x14 Build/internal.o
+ .rodata.cipher_names
+                0x00000000      0x174 Build/internal.o
+ .rodata.client
+                0x00000000        0x5 Build/internal.o
+ .rodata.close_notify_str.24
+                0x00000000        0xd Build/internal.o
+ .rodata.decode_error_str.9
+                0x00000000        0xd Build/internal.o
+ .rodata.decompression_failure_str.20
+                0x00000000       0x16 Build/internal.o
+ .rodata.decrypt_error_str.8
+                0x00000000        0xe Build/internal.o
+ .rodata.handshake_failure_str.19
+                0x00000000       0x12 Build/internal.o
+ .rodata.illegal_parameter_str.12
+                0x00000000       0x12 Build/internal.o
+ .rodata.insufficient_security_str.6
+                0x00000000       0x16 Build/internal.o
+ .rodata.internal_error_str.5
+                0x00000000        0xf Build/internal.o
+ .rodata.no_application_protocol_str.0
+                0x00000000       0x18 Build/internal.o
+ .rodata.no_certificate_str.18
+                0x00000000        0xf Build/internal.o
+ .rodata.no_renegotiation_str.3
+                0x00000000       0x11 Build/internal.o
+ .rodata.protocol_version_str.7
+                0x00000000       0x11 Build/internal.o
+ .rodata.record_overflow_str.21
+                0x00000000       0x10 Build/internal.o
+ .rodata.server
+                0x00000000        0x5 Build/internal.o
+ .rodata.tls13Downgrade
+                0x00000000        0x7 Build/internal.o
+ .rodata.unexpected_message_str.23
+                0x00000000       0x13 Build/internal.o
+ .rodata.unknown_ca_str.11
+                0x00000000        0xb Build/internal.o
+ .rodata.unrecognized_name_str.2
+                0x00000000       0x12 Build/internal.o
+ .rodata.unsupported_certificate_str.16
+                0x00000000       0x18 Build/internal.o
+ .rodata.user_canceled_str.4
+                0x00000000        0xe Build/internal.o
+ .comment       0x00000000       0x2f Build/internal.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/internal.o
+ .ARM.attributes
+                0x00000000       0x37 Build/internal.o
+ .text          0x00000000        0x0 Build/keys.o
+ .data          0x00000000        0x0 Build/keys.o
+ .bss           0x00000000        0x0 Build/keys.o
+ .text.SetCipherSpecs
+                0x00000000      0x3c4 Build/keys.o
+ .text.SetKeysSide
+                0x00000000      0x608 Build/keys.o
+ .text.StoreKeys
+                0x00000000       0xb0 Build/keys.o
+ .text.MakeMasterSecret
+                0x00000000        0x4 Build/keys.o
+ .comment       0x00000000       0x2f Build/keys.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/keys.o
+ .ARM.attributes
+                0x00000000       0x37 Build/keys.o
+ .text          0x00000000        0x0 Build/ocsp.o
+ .data          0x00000000        0x0 Build/ocsp.o
+ .bss           0x00000000        0x0 Build/ocsp.o
+ .comment       0x00000000       0x2f Build/ocsp.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/ocsp.o
+ .ARM.attributes
+                0x00000000       0x3e Build/ocsp.o
+ .text          0x00000000        0x0 Build/sniffer.o
+ .data          0x00000000        0x0 Build/sniffer.o
+ .bss           0x00000000        0x0 Build/sniffer.o
+ .comment       0x00000000       0x2f Build/sniffer.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sniffer.o
+ .ARM.attributes
+                0x00000000       0x3e Build/sniffer.o
+ .text          0x00000000        0x0 Build/ssl.o
+ .data          0x00000000        0x0 Build/ssl.o
+ .bss           0x00000000        0x0 Build/ssl.o
+ .text.HashSigner
+                0x00000000       0x10 Build/ssl.o
+ .text.ModeToVerifyOptions
+                0x00000000       0x54 Build/ssl.o
+ .text.wolfSSL_CTX_up_ref
+                0x00000000       0x12 Build/ssl.o
+ .text.wolfSSL_CTX_free
+                0x00000000        0x8 Build/ssl.o
+ .text.wolfSSL_CTX_new_rng
+                0x00000000       0x38 Build/ssl.o
+ .text.wolfSSL_new
+                0x00000000       0x30 Build/ssl.o
+ .text.wolfSSL_free
+                0x00000000        0xc Build/ssl.o
+ .text.wolfSSL_is_server
+                0x00000000       0x18 Build/ssl.o
+ .text.wolfSSL_use_old_poly
+                0x00000000       0x10 Build/ssl.o
+ .text.wolfSSL_set_fd
+                0x00000000       0x1c Build/ssl.o
+ .text.wolfSSL_set_read_fd
+                0x00000000       0x16 Build/ssl.o
+ .text.wolfSSL_set_write_fd
+                0x00000000       0x16 Build/ssl.o
+ .text.wolfSSL_get_cipher_list
+                0x00000000       0x22 Build/ssl.o
+ .text.wolfSSL_get_cipher_list_ex
+                0x00000000       0x1c Build/ssl.o
+ .text.wolfSSL_get_ciphers
+                0x00000000       0x84 Build/ssl.o
+ .text.wolfSSL_get_ciphers_iana
+                0x00000000       0x82 Build/ssl.o
+ .text.wolfSSL_get_shared_ciphers
+                0x00000000       0x2c Build/ssl.o
+ .text.wolfSSL_get_fd
+                0x00000000        0xe Build/ssl.o
+ .text.wolfSSL_dtls
+                0x00000000        0xc Build/ssl.o
+ .text.wolfSSL_CTX_mutual_auth
+                0x00000000       0x28 Build/ssl.o
+ .text.wolfSSL_mutual_auth
+                0x00000000       0x2c Build/ssl.o
+ .text.wolfSSL_dtls_set_peer
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_dtls_get_peer
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_GetRNG
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_GetObjectSize
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_CTX_GetObjectSize
+                0x00000000        0x4 Build/ssl.o
+ .text.wolfSSL_METHOD_GetObjectSize
+                0x00000000        0x4 Build/ssl.o
+ .text.wolfSSL_GetMaxOutputSize
+                0x00000000       0x18 Build/ssl.o
+ .text.wolfSSL_GetOutputSize
+                0x00000000       0x44 Build/ssl.o
+ .text.wolfSSL_CTX_SetMinEccKey_Sz
+                0x00000000       0x20 Build/ssl.o
+ .text.wolfSSL_SetMinEccKey_Sz
+                0x00000000       0x1a Build/ssl.o
+ .text.wolfSSL_CTX_SetMinRsaKey_Sz
+                0x00000000       0x20 Build/ssl.o
+ .text.wolfSSL_SetMinRsaKey_Sz
+                0x00000000       0x1a Build/ssl.o
+ .text.wolfSSL_SetTmpDH
+                0x00000000      0x14c Build/ssl.o
+ .text.wolfSSL_SetEnableDhKeyTest
+                0x00000000       0x20 Build/ssl.o
+ .text.wolfSSL_CTX_SetTmpDH
+                0x00000000      0x10c Build/ssl.o
+ .text.wolfSSL_SetTmpDH_buffer_wrapper
+                0x00000000      0x10c Build/ssl.o
+ .text.wolfSSL_CTX_SetMinDhKey_Sz
+                0x00000000       0x1c Build/ssl.o
+ .text.wolfSSL_SetMinDhKey_Sz
+                0x00000000       0x1c Build/ssl.o
+ .text.wolfSSL_CTX_SetMaxDhKey_Sz
+                0x00000000       0x1c Build/ssl.o
+ .text.wolfSSL_SetMaxDhKey_Sz
+                0x00000000       0x1c Build/ssl.o
+ .text.wolfSSL_GetDhKey_Sz
+                0x00000000       0x10 Build/ssl.o
+ .text.wolfSSL_write
+                0x00000000       0x1a Build/ssl.o
+ .text.wolfSSL_peek
+                0x00000000       0x1c Build/ssl.o
+ .text.wolfSSL_read
+                0x00000000       0x1c Build/ssl.o
+ .text.wolfSSL_SetDevId
+                0x00000000       0x10 Build/ssl.o
+ .text.wolfSSL_CTX_SetDevId
+                0x00000000        0xe Build/ssl.o
+ .text.wolfSSL_CTX_GetDevId
+                0x00000000       0x1c Build/ssl.o
+ .text.wolfSSL_CTX_GetHeap
+                0x00000000       0x10 Build/ssl.o
+ .text.wolfSSL_UseSupportedCurve
+                0x00000000       0x2e Build/ssl.o
+ .text.wolfSSL_CTX_UseSupportedCurve
+                0x00000000       0x26 Build/ssl.o
+ .text.wolfSSL_send
+                0x00000000       0x24 Build/ssl.o
+ .text.wolfSSL_recv
+                0x00000000       0x24 Build/ssl.o
+ .text.wolfSSL_shutdown
+                0x00000000       0x76 Build/ssl.o
+ .text.wolfSSL_state
+                0x00000000        0xe Build/ssl.o
+ .text.wolfSSL_get_error
+                0x00000000       0x38 Build/ssl.o
+ .text.wolfSSL_get_alert_history
+                0x00000000       0x16 Build/ssl.o
+ .text.wolfSSL_want_read
+                0x00000000       0x10 Build/ssl.o
+ .text.wolfSSL_want_write
+                0x00000000       0x10 Build/ssl.o
+ .text.wolfSSL_ERR_error_string
+                0x00000000       0x1c Build/ssl.o
+ .text.wolfSSL_ERR_error_string_n
+                0x00000000       0x32 Build/ssl.o
+ .text.wolfSSL_KeepArrays
+                0x00000000       0x10 Build/ssl.o
+ .text.wolfSSL_FreeArrays
+                0x00000000       0x1e Build/ssl.o
+ .text.wolfSSL_KeepHandshakeResources
+                0x00000000       0x18 Build/ssl.o
+ .text.wolfSSL_FreeHandshakeResources
+                0x00000000       0x12 Build/ssl.o
+ .text.wolfSSL_CTX_UseClientSuites
+                0x00000000       0x18 Build/ssl.o
+ .text.wolfSSL_UseClientSuites
+                0x00000000       0x18 Build/ssl.o
+ .text.wolfSSL_GetMacSecret
+                0x00000000       0x22 Build/ssl.o
+ .text.wolfSSL_CTX_GetCertManager
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_CertManagerFree
+                0x00000000       0x2a Build/ssl.o
+ .text.wolfSSL_CertManagerNew_ex
+                0x00000000       0x40 Build/ssl.o
+ .text.wolfSSL_CertManagerNew
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_CertManager_up_ref
+                0x00000000        0xc Build/ssl.o
+ .text.wolfSSL_CertManagerUnloadCAs
+                0x00000000       0x32 Build/ssl.o
+ .text.wolfSSL_pending
+                0x00000000        0x8 Build/ssl.o
+ .text.wolfSSL_has_pending
+                0x00000000        0xe Build/ssl.o
+ .text.wolfSSL_CTX_set_group_messages
+                0x00000000       0x18 Build/ssl.o
+ .text.wolfSSL_set_group_messages
+                0x00000000       0x18 Build/ssl.o
+ .text.wolfSSL_CTX_SetMinVersion
+                0x00000000       0x14 Build/ssl.o
+ .text.wolfSSL_SetMinVersion
+                0x00000000       0x14 Build/ssl.o
+ .text.wolfSSL_GetVersion
+                0x00000000       0x28 Build/ssl.o
+ .text.wolfSSL_SetVersion
+                0x00000000       0x6a Build/ssl.o
+ .text.AlreadySigner
+                0x00000000       0x52 Build/ssl.o
+ .text.GetCA    0x00000000       0x4a Build/ssl.o
+ .text.GetCAByName
+                0x00000000       0x58 Build/ssl.o
+ .text.AddCA    0x00000000      0x1e0 Build/ssl.o
+ .text.wolfSSL_CertManagerEnableCRL
+                0x00000000        0xe Build/ssl.o
+ .text.wolfSSL_CertManagerDisableCRL
+                0x00000000       0x18 Build/ssl.o
+ .text.wolfSSL_CertManagerSetVerify
+                0x00000000        0x6 Build/ssl.o
+ .text.CM_VerifyBuffer_ex
+                0x00000000       0xe6 Build/ssl.o
+ .text.ProcessBuffer
+                0x00000000      0x864 Build/ssl.o
+ .text.wolfSSL_CertManagerVerifyBuffer
+                0x00000000        0xe Build/ssl.o
+ .text.wolfSSL_CertManagerEnableOCSP
+                0x00000000        0xe Build/ssl.o
+ .text.wolfSSL_CertManagerDisableOCSP
+                0x00000000       0x18 Build/ssl.o
+ .text.wolfSSL_CertManagerEnableOCSPStapling
+                0x00000000        0xe Build/ssl.o
+ .text.wolfSSL_CertManagerDisableOCSPStapling
+                0x00000000        0xe Build/ssl.o
+ .text.wolfSSL_CertManagerEnableOCSPMustStaple
+                0x00000000        0xe Build/ssl.o
+ .text.wolfSSL_CertManagerDisableOCSPMustStaple
+                0x00000000        0xe Build/ssl.o
+ .text.wolfSSL_CTX_set_verify_depth
+                0x00000000        0xc Build/ssl.o
+ .text.wolfSSL_get_verify_depth
+                0x00000000        0xc Build/ssl.o
+ .text.wolfSSL_CTX_get_verify_depth
+                0x00000000        0xc Build/ssl.o
+ .text.wolfSSL_CTX_check_private_key
+                0x00000000       0x6c Build/ssl.o
+ .text.wolfSSL_use_certificate_ASN1
+                0x00000000       0x34 Build/ssl.o
+ .text.wolfSSL_CTX_SetTmpEC_DHE_Sz
+                0x00000000       0x2c Build/ssl.o
+ .text.wolfSSL_SetTmpEC_DHE_Sz
+                0x00000000       0x18 Build/ssl.o
+ .text.wolfSSL_CTX_set_verify
+                0x00000000       0x3c Build/ssl.o
+ .text.wolfSSL_set_verify
+                0x00000000       0x26 Build/ssl.o
+ .text.wolfSSL_set_verify_result
+                0x00000000        0x2 Build/ssl.o
+ .text.wolfSSL_SetCertCbCtx
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_CTX_SetCertCbCtx
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_CTX_SetCACb
+                0x00000000        0xa Build/ssl.o
+ .text.wolfSSL_load_error_strings
+                0x00000000        0x2 Build/ssl.o
+ .text.wolfSSL_CTX_set_cipher_list
+                0x00000000       0x3a Build/ssl.o
+ .text.wolfSSL_set_cipher_list
+                0x00000000       0x4c Build/ssl.o
+ .text.wolfSSL_dtls_get_using_nonblock
+                0x00000000        0x4 Build/ssl.o
+ .text.wolfSSL_dtls_set_using_nonblock
+                0x00000000        0x2 Build/ssl.o
+ .text.wolfSSLv23_client_method_ex
+                0x00000000       0x22 Build/ssl.o
+ .text.wolfSSLv23_client_method
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_connect
+                0x00000000      0x190 Build/ssl.o
+ .text.wolfSSL_connect_cert
+                0x00000000       0x24 Build/ssl.o
+ .text.wolfSSLv23_server_method_ex
+                0x00000000       0x26 Build/ssl.o
+ .text.wolfSSLv23_server_method
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_accept
+                0x00000000      0x268 Build/ssl.o
+ .text.wolfSSL_negotiate
+                0x00000000       0x30 Build/ssl.o
+ .text.wolfSSL_SetHsDoneCb
+                0x00000000       0x10 Build/ssl.o
+ .text.wolfSSL_Cleanup
+                0x00000000       0x88 Build/ssl.o
+ .text.wolfSSL_Init
+                0x00000000       0x68 Build/ssl.o
+ .text.wolfSSL_CTX_new_ex
+                0x00000000       0x4c Build/ssl.o
+ .text.wolfSSL_CTX_new
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_library_init
+                0x00000000       0x10 Build/ssl.o
+ .text.ClientSessionToSession
+                0x00000000        0x2 Build/ssl.o
+ .text.wolfSSL_GetSession
+                0x00000000        0x4 Build/ssl.o
+ .text.wolfSSL_check_domain_name
+                0x00000000       0x50 Build/ssl.o
+ .text.wolfSSL_set_compression
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_CTX_load_verify_buffer_ex
+                0x00000000       0x92 Build/ssl.o
+ .text.wolfSSL_CTX_load_verify_buffer
+                0x00000000       0x10 Build/ssl.o
+ .text.wolfSSL_CertManagerLoadCABuffer
+                0x00000000       0x48 Build/ssl.o
+ .text.wolfSSL_CTX_load_verify_chain_buffer_format
+                0x00000000       0x14 Build/ssl.o
+ .text.wolfSSL_CTX_use_certificate_buffer
+                0x00000000       0x2a Build/ssl.o
+ .text.wolfSSL_CTX_use_PrivateKey_buffer
+                0x00000000       0x2c Build/ssl.o
+ .text.wolfSSL_CTX_use_certificate_chain_buffer_format
+                0x00000000       0x2c Build/ssl.o
+ .text.wolfSSL_CTX_use_certificate_chain_buffer
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_SetTmpDH_buffer
+                0x00000000       0x1e Build/ssl.o
+ .text.wolfSSL_CTX_SetTmpDH_buffer
+                0x00000000       0x14 Build/ssl.o
+ .text.wolfSSL_use_certificate_buffer
+                0x00000000       0x2a Build/ssl.o
+ .text.wolfSSL_use_PrivateKey_buffer
+                0x00000000       0x2c Build/ssl.o
+ .text.wolfSSL_use_certificate_chain_buffer_format
+                0x00000000       0x2c Build/ssl.o
+ .text.wolfSSL_use_certificate_chain_buffer
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_UnloadCertsKeys
+                0x00000000       0x50 Build/ssl.o
+ .text.wolfSSL_CTX_UnloadCAs
+                0x00000000        0xe Build/ssl.o
+ .text.wolfSSL_is_init_finished
+                0x00000000       0x10 Build/ssl.o
+ .text.wolfSSL_CTX_set_options
+                0x00000000       0x12 Build/ssl.o
+ .text.wolfSSL_get_shutdown
+                0x00000000       0x16 Build/ssl.o
+ .text.wolfSSL_session_reused
+                0x00000000        0xc Build/ssl.o
+ .text.wolfSSL_NewSession
+                0x00000000       0x30 Build/ssl.o
+ .text.wolfSSL_SESSION_new_ex
+                0x00000000        0x4 Build/ssl.o
+ .text.wolfSSL_SESSION_new
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_SESSION_up_ref
+                0x00000000       0x16 Build/ssl.o
+ .text.wolfSSL_DupSession
+                0x00000000       0x34 Build/ssl.o
+ .text.wolfSSL_SESSION_dup
+                0x00000000        0x4 Build/ssl.o
+ .text.wolfSSL_FreeSession
+                0x00000000       0x1a Build/ssl.o
+ .text.wolfSSL_SESSION_free
+                0x00000000        0x4 Build/ssl.o
+ .rodata.wolfSSL_get_version.str1.1
+                0x00000000        0x8 Build/ssl.o
+ .text.wolfSSL_get_version
+                0x00000000       0x28 Build/ssl.o
+ .rodata.wolfSSL_lib_version.str1.1
+                0x00000000        0x6 Build/ssl.o
+ .text.wolfSSL_lib_version
+                0x00000000        0x8 Build/ssl.o
+ .text.wolfSSL_lib_version_hex
+                0x00000000        0x8 Build/ssl.o
+ .text.wolfSSL_get_current_cipher_suite
+                0x00000000        0xc Build/ssl.o
+ .text.wolfSSL_get_current_cipher
+                0x00000000        0xc Build/ssl.o
+ .text.wolfSSL_CIPHER_get_name
+                0x00000000        0xc Build/ssl.o
+ .text.wolfSSL_CIPHER_get_version
+                0x00000000        0xe Build/ssl.o
+ .text.wolfSSL_SESSION_CIPHER_get_name
+                0x00000000       0x10 Build/ssl.o
+ .text.wolfSSL_get_cipher
+                0x00000000        0xe Build/ssl.o
+ .text.wolfSSL_get_cipher_name
+                0x00000000        0x4 Build/ssl.o
+ .text.wolfSSL_get_cipher_name_from_suite
+                0x00000000        0x4 Build/ssl.o
+ .text.wolfSSL_get_cipher_name_iana_from_suite
+                0x00000000        0x4 Build/ssl.o
+ .text.wolfSSL_get_cipher_suite_from_name
+                0x00000000       0x18 Build/ssl.o
+ .text.wolfSSL_CIPHER_get_id
+                0x00000000       0x10 Build/ssl.o
+ .text.wolfSSL_get_cipher_by_value
+                0x00000000        0x4 Build/ssl.o
+ .text.wolfSSL_get_curve_name
+                0x00000000       0x3c Build/ssl.o
+ .text.wolfSSL_version
+                0x00000000       0x38 Build/ssl.o
+ .text.wolfSSL_get_SSL_CTX
+                0x00000000        0x4 Build/ssl.o
+ .text.wolfSSL_X509_check_host
+                0x00000000       0x5a Build/ssl.o
+ .text.wolfSSL_X509_check_ip_asc
+                0x00000000       0x52 Build/ssl.o
+ .rodata.str1.1
+                0x00000000       0x5b Build/ssl.o
+ .bss.count_mutex
+                0x00000000        0x4 Build/ssl.o
+ .bss.count_mutex_valid
+                0x00000000        0x4 Build/ssl.o
+ .bss.initRefCount
+                0x00000000        0x4 Build/ssl.o
+ .bss.tmp.0     0x00000000       0x50 Build/ssl.o
+ .rodata.CSWTCH.139
+                0x00000000       0x14 Build/ssl.o
+ .rodata.CSWTCH.141
+                0x00000000       0x14 Build/ssl.o
+ .comment       0x00000000       0x2f Build/ssl.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/ssl.o
+ .ARM.attributes
+                0x00000000       0x37 Build/ssl.o
+ .text          0x00000000        0x0 Build/tls.o
+ .data          0x00000000        0x0 Build/tls.o
+ .bss           0x00000000        0x0 Build/tls.o
+ .text.ctMaskEq
+                0x00000000       0x12 Build/tls.o
+ .text.TLSX_GetSize
+                0x00000000       0xa6 Build/tls.o
+ .text.Hmac_HashUpdate
+                0x00000000       0x2a Build/tls.o
+ .text.TLSX_SignatureAlgorithms_MapPss
+                0x00000000       0x40 Build/tls.o
+ .text.TLSX_Write
+                0x00000000      0x142 Build/tls.o
+ .text.TLSX_PointFormat_ValidateRequest.constprop.0.isra.0
+                0x00000000       0x20 Build/tls.o
+ .text.BuildTlsHandshakeHash
+                0x00000000       0x78 Build/tls.o
+ .text.BuildTlsFinished
+                0x00000000       0x80 Build/tls.o
+ .text.MakeTLSv1_2
+                0x00000000        0xa Build/tls.o
+ .text.wolfSSL_DeriveTlsKeys
+                0x00000000       0x58 Build/tls.o
+ .text.DeriveTlsKeys
+                0x00000000       0xac Build/tls.o
+ .text.wolfSSL_MakeTlsMasterSecret
+                0x00000000       0x58 Build/tls.o
+ .text.MakeTlsMasterSecret
+                0x00000000       0x78 Build/tls.o
+ .text.wolfSSL_make_eap_keys
+                0x00000000       0x80 Build/tls.o
+ .text.wolfSSL_GetHmacType
+                0x00000000       0x24 Build/tls.o
+ .text.wolfSSL_SetTlsHmacInner
+                0x00000000       0x42 Build/tls.o
+ .text.TLS_hmac
+                0x00000000      0x518 Build/tls.o
+ .text.TLSX_HandleUnsupportedExtension
+                0x00000000       0x10 Build/tls.o
+ .text.TLSX_Find
+                0x00000000        0xe Build/tls.o
+ .text.TLSX_CheckUnsupportedExtension
+                0x00000000       0x20 Build/tls.o
+ .text.TLSX_SetResponse
+                0x00000000       0x12 Build/tls.o
+ .text.TLSX_ValidateSupportedCurves
+                0x00000000      0x1a4 Build/tls.o
+ .text.TLSX_FreeAll
+                0x00000000       0x3e Build/tls.o
+ .text.TLSX_Push
+                0x00000000       0x46 Build/tls.o
+ .text.TLSX_UseSupportedCurve
+                0x00000000       0x76 Build/tls.o
+ .text.TLSX_PopulateSupportedGroups
+                0x00000000       0x64 Build/tls.o
+ .text.TLSX_UsePointFormat
+                0x00000000       0x76 Build/tls.o
+ .text.TLSX_SupportedFFDHE_Set
+                0x00000000      0x120 Build/tls.o
+ .text.TLSX_Remove
+                0x00000000       0x2c Build/tls.o
+ .text.TLSX_SupportExtensions
+                0x00000000       0x1e Build/tls.o
+ .text.TLSX_PopulateExtensions
+                0x00000000       0x88 Build/tls.o
+ .text.TLSX_GetRequestSize
+                0x00000000       0x86 Build/tls.o
+ .text.TLSX_WriteRequest
+                0x00000000       0xba Build/tls.o
+ .text.TLSX_GetResponseSize
+                0x00000000       0x6a Build/tls.o
+ .text.TLSX_WriteResponse
+                0x00000000       0x8c Build/tls.o
+ .text.TLSX_Parse
+                0x00000000      0x190 Build/tls.o
+ .text.wolfTLS_client_method_ex
+                0x00000000       0x28 Build/tls.o
+ .text.wolfTLS_client_method
+                0x00000000        0x6 Build/tls.o
+ .text.wolfTLSv1_2_client_method_ex
+                0x00000000       0x22 Build/tls.o
+ .text.wolfTLSv1_2_client_method
+                0x00000000        0x6 Build/tls.o
+ .text.wolfTLS_server_method_ex
+                0x00000000       0x2a Build/tls.o
+ .text.wolfTLS_server_method
+                0x00000000        0x6 Build/tls.o
+ .text.wolfTLSv1_2_server_method_ex
+                0x00000000       0x26 Build/tls.o
+ .text.wolfTLSv1_2_server_method
+                0x00000000        0x6 Build/tls.o
+ .rodata.CSWTCH.125
+                0x00000000        0x8 Build/tls.o
+ .rodata.client
+                0x00000000        0x5 Build/tls.o
+ .rodata.key_label
+                0x00000000        0xe Build/tls.o
+ .rodata.master_label
+                0x00000000        0xe Build/tls.o
+ .rodata.tls_client
+                0x00000000       0x10 Build/tls.o
+ .rodata.tls_server
+                0x00000000       0x10 Build/tls.o
+ .comment       0x00000000       0x2f Build/tls.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/tls.o
+ .ARM.attributes
+                0x00000000       0x37 Build/tls.o
+ .text          0x00000000        0x0 Build/tls13.o
+ .data          0x00000000        0x0 Build/tls13.o
+ .bss           0x00000000        0x0 Build/tls13.o
+ .comment       0x00000000       0x2f Build/tls13.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/tls13.o
+ .ARM.attributes
+                0x00000000       0x3e Build/tls13.o
+ .text          0x00000000        0x0 Build/wolfio.o
+ .data          0x00000000        0x0 Build/wolfio.o
+ .bss           0x00000000        0x0 Build/wolfio.o
+ .text.wolfSSL_CTX_SetIORecv
+                0x00000000        0x6 Build/wolfio.o
+ .text.wolfSSL_CTX_SetIOSend
+                0x00000000        0x6 Build/wolfio.o
+ .text.wolfSSL_SSLSetIORecv
+                0x00000000        0x6 Build/wolfio.o
+ .text.wolfSSL_SSLSetIOSend
+                0x00000000        0x6 Build/wolfio.o
+ .text.wolfSSL_SetIOReadCtx
+                0x00000000        0x6 Build/wolfio.o
+ .text.wolfSSL_SetIOWriteCtx
+                0x00000000        0x6 Build/wolfio.o
+ .text.wolfSSL_GetIOReadCtx
+                0x00000000        0x6 Build/wolfio.o
+ .text.wolfSSL_GetIOWriteCtx
+                0x00000000        0x6 Build/wolfio.o
+ .text.wolfSSL_SetIOReadFlags
+                0x00000000        0x8 Build/wolfio.o
+ .text.wolfSSL_SetIOWriteFlags
+                0x00000000        0x8 Build/wolfio.o
+ .comment       0x00000000       0x2f Build/wolfio.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/wolfio.o
+ .ARM.attributes
+                0x00000000       0x37 Build/wolfio.o
+ .text          0x00000000        0x0 Build/aes.o
+ .data          0x00000000        0x0 Build/aes.o
+ .bss           0x00000000        0x0 Build/aes.o
+ .text.ByteReverseWord32
+                0x00000000        0x4 Build/aes.o
+ .text.IncrementGcmCounter
+                0x00000000       0x18 Build/aes.o
+ .text.wc_AesEncrypt
+                0x00000000      0xe78 Build/aes.o
+ .text.xorbufout
+                0x00000000       0x3e Build/aes.o
+ .text.xorbuf   0x00000000       0x40 Build/aes.o
+ .text.GMULT    0x00000000       0x98 Build/aes.o
+ .text.wc_AesSetIV
+                0x00000000       0x1e Build/aes.o
+ .text.wc_AesSetKey
+                0x00000000      0x458 Build/aes.o
+ .text.wc_AesCbcEncrypt
+                0x00000000       0x54 Build/aes.o
+ .text.wc_AesCbcDecrypt
+                0x00000000      0xe88 Build/aes.o
+ .text.wc_AesGcmSetKey
+                0x00000000       0x4a Build/aes.o
+ .text.GHASH    0x00000000      0x162 Build/aes.o
+ .text.wc_AesGcmEncrypt
+                0x00000000      0x10a Build/aes.o
+ .text.wc_AesGcmDecrypt
+                0x00000000      0x14c Build/aes.o
+ .text.wc_AesGcmSetExtIV
+                0x00000000       0x3e Build/aes.o
+ .text.wc_AesGcmSetIV
+                0x00000000       0x5e Build/aes.o
+ .text.wc_AesGcmEncrypt_ex
+                0x00000000       0xbc Build/aes.o
+ .text.wc_Gmac  0x00000000       0xba Build/aes.o
+ .text.wc_GmacVerify
+                0x00000000       0x98 Build/aes.o
+ .text.wc_GmacSetKey
+                0x00000000        0xe Build/aes.o
+ .text.wc_GmacUpdate
+                0x00000000       0x2c Build/aes.o
+ .text.wc_AesInit
+                0x00000000       0x10 Build/aes.o
+ .text.wc_AesFree
+                0x00000000        0x2 Build/aes.o
+ .text.wc_AesGetKeySize
+                0x00000000       0x32 Build/aes.o
+ .rodata.Td     0x00000000     0x1000 Build/aes.o
+ .rodata.Td4    0x00000000      0x100 Build/aes.o
+ .rodata.Te     0x00000000     0x1000 Build/aes.o
+ .rodata.rcon   0x00000000       0x28 Build/aes.o
+ .comment       0x00000000       0x2f Build/aes.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/aes.o
+ .ARM.attributes
+                0x00000000       0x37 Build/aes.o
+ .text          0x00000000        0x0 Build/cmac.o
+ .data          0x00000000        0x0 Build/cmac.o
+ .bss           0x00000000        0x0 Build/cmac.o
+ .comment       0x00000000       0x2f Build/cmac.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/cmac.o
+ .ARM.attributes
+                0x00000000       0x3e Build/cmac.o
+ .text          0x00000000        0x0 Build/des3.o
+ .data          0x00000000        0x0 Build/des3.o
+ .bss           0x00000000        0x0 Build/des3.o
+ .text.ByteReverseWord32
+                0x00000000        0x4 Build/des3.o
+ .text.IPERM    0x00000000       0x78 Build/des3.o
+ .text.FPERM    0x00000000       0x78 Build/des3.o
+ .text.DesRawProcessBlock
+                0x00000000      0x130 Build/des3.o
+ .text.DesSetKey
+                0x00000000      0x170 Build/des3.o
+ .text.DesProcessBlock
+                0x00000000       0x66 Build/des3.o
+ .text.Des3ProcessBlock
+                0x00000000       0x7c Build/des3.o
+ .text.xorbuf.constprop.0
+                0x00000000       0x36 Build/des3.o
+ .text.wc_Des_CbcEncrypt
+                0x00000000       0x38 Build/des3.o
+ .text.wc_Des_CbcDecrypt
+                0x00000000       0x4a Build/des3.o
+ .text.wc_Des3_CbcEncrypt
+                0x00000000       0x4c Build/des3.o
+ .text.wc_Des3_CbcDecrypt
+                0x00000000       0x5a Build/des3.o
+ .text.wc_Des_SetIV
+                0x00000000       0x10 Build/des3.o
+ .text.wc_Des_SetKey
+                0x00000000       0x1e Build/des3.o
+ .text.wc_Des3_SetIV
+                0x00000000       0x20 Build/des3.o
+ .text.wc_Des3_SetKey
+                0x00000000       0x82 Build/des3.o
+ .text.wc_Des3Init
+                0x00000000       0x10 Build/des3.o
+ .text.wc_Des3Free
+                0x00000000        0x2 Build/des3.o
+ .rodata.Spbox  0x00000000      0x800 Build/des3.o
+ .rodata.bytebit
+                0x00000000       0x20 Build/des3.o
+ .rodata.pc1    0x00000000       0x38 Build/des3.o
+ .rodata.pc2    0x00000000       0x30 Build/des3.o
+ .rodata.totrot
+                0x00000000       0x10 Build/des3.o
+ .comment       0x00000000       0x2f Build/des3.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/des3.o
+ .ARM.attributes
+                0x00000000       0x37 Build/des3.o
+ .text          0x00000000        0x0 Build/dh.o
+ .data          0x00000000        0x0 Build/dh.o
+ .bss           0x00000000        0x0 Build/dh.o
+ .text._ffc_validate_public_key
+                0x00000000      0x1aa Build/dh.o
+ .text._DhSetKey
+                0x00000000      0x130 Build/dh.o
+ .text.wc_Dh_ffdhe2048_Get
+                0x00000000        0x8 Build/dh.o
+ .text.wc_Dh_ffdhe4096_Get
+                0x00000000        0x8 Build/dh.o
+ .text.wc_InitDhKey_ex
+                0x00000000       0x36 Build/dh.o
+ .text.wc_InitDhKey
+                0x00000000        0xa Build/dh.o
+ .text.wc_FreeDhKey
+                0x00000000       0x1e Build/dh.o
+ .text.wc_DhCheckPubKey_ex
+                0x00000000       0x12 Build/dh.o
+ .text.wc_DhCheckPubKey
+                0x00000000       0x16 Build/dh.o
+ .text.wc_DhCheckPubValue
+                0x00000000       0x5e Build/dh.o
+ .text.wc_DhCheckPrivKey_ex
+                0x00000000      0x10a Build/dh.o
+ .text.wc_DhCheckPrivKey
+                0x00000000       0x10 Build/dh.o
+ .text.wc_DhCheckKeyPair
+                0x00000000      0x132 Build/dh.o
+ .text.wc_DhGenerateKeyPair
+                0x00000000      0x2f2 Build/dh.o
+ .text.wc_DhAgree
+                0x00000000       0xe4 Build/dh.o
+ .text.wc_DhSetCheckKey
+                0x00000000        0x4 Build/dh.o
+ .text.wc_DhSetKey_ex
+                0x00000000       0x1e Build/dh.o
+ .text.wc_DhSetKey
+                0x00000000       0x1c Build/dh.o
+ .text.wc_DhSetNamedKey
+                0x00000000       0x54 Build/dh.o
+ .text.wc_DhGetNamedKeyMinSize
+                0x00000000       0x16 Build/dh.o
+ .text.wc_DhCmpNamedKey
+                0x00000000       0x60 Build/dh.o
+ .text.wc_DhGetNamedKeyParamSize
+                0x00000000       0x30 Build/dh.o
+ .text.wc_DhCopyNamedKey
+                0x00000000       0x84 Build/dh.o
+ .text.wc_DhGenerateParams
+                0x00000000      0x256 Build/dh.o
+ .text.wc_DhExportParamsRaw
+                0x00000000       0xd4 Build/dh.o
+ .rodata.dh_ffdhe2048_g
+                0x00000000        0x1 Build/dh.o
+ .rodata.dh_ffdhe2048_p
+                0x00000000      0x100 Build/dh.o
+ .rodata.dh_ffdhe4096_g
+                0x00000000        0x1 Build/dh.o
+ .rodata.dh_ffdhe4096_p
+                0x00000000      0x200 Build/dh.o
+ .rodata.ffdhe2048.1
+                0x00000000       0x10 Build/dh.o
+ .rodata.ffdhe4096.0
+                0x00000000       0x10 Build/dh.o
+ .comment       0x00000000       0x2f Build/dh.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/dh.o
+ .ARM.attributes
+                0x00000000       0x37 Build/dh.o
+ .text          0x00000000        0x0 Build/ecc.o
+ .data          0x00000000        0x0 Build/ecc.o
+ .bss           0x00000000        0x0 Build/ecc.o
+ .text.wc_ecc_del_point_ex.part.0
+                0x00000000       0x20 Build/ecc.o
+ .text.wc_ecc_cmp_param
+                0x00000000       0xb4 Build/ecc.o
+ .text.wc_ecc_new_point_ex.constprop.0.isra.0
+                0x00000000       0x40 Build/ecc.o
+ .text.wc_ecc_import_raw_private
+                0x00000000      0x120 Build/ecc.o
+ .text.wc_ecc_mulmod_ex
+                0x00000000       0x9c Build/ecc.o
+ .text.wc_ecc_mulmod_ex2
+                0x00000000       0x82 Build/ecc.o
+ .text.wc_ecc_mulmod
+                0x00000000       0x16 Build/ecc.o
+ .text.wc_ecc_new_point_h
+                0x00000000       0x14 Build/ecc.o
+ .text.wc_ecc_new_point
+                0x00000000       0x14 Build/ecc.o
+ .text.wc_ecc_del_point_h
+                0x00000000        0x8 Build/ecc.o
+ .text.wc_ecc_del_point
+                0x00000000        0x8 Build/ecc.o
+ .text.wc_ecc_forcezero_point
+                0x00000000       0x1e Build/ecc.o
+ .text.wc_ecc_copy_point
+                0x00000000       0x30 Build/ecc.o
+ .text.wc_ecc_cmp_point
+                0x00000000       0x30 Build/ecc.o
+ .text.wc_ecc_get_curve_idx
+                0x00000000       0x20 Build/ecc.o
+ .text.wc_ecc_get_name
+                0x00000000       0x20 Build/ecc.o
+ .text.wc_ecc_get_curve_id
+                0x00000000       0x20 Build/ecc.o
+ .text.wc_ecc_get_curve_size_from_id
+                0x00000000       0x20 Build/ecc.o
+ .text.wc_ecc_get_curve_idx_from_name
+                0x00000000       0x3c Build/ecc.o
+ .text.wc_ecc_get_curve_size_from_name
+                0x00000000       0x20 Build/ecc.o
+ .text.wc_ecc_get_curve_id_from_name
+                0x00000000       0x24 Build/ecc.o
+ .text.wc_ecc_get_curve_id_from_params
+                0x00000000       0xdc Build/ecc.o
+ .text.wc_ecc_get_curve_id_from_dp_params
+                0x00000000      0x104 Build/ecc.o
+ .text.wc_ecc_get_curve_id_from_oid
+                0x00000000       0x50 Build/ecc.o
+ .text.wc_ecc_get_curve_params
+                0x00000000       0x14 Build/ecc.o
+ .text.wc_ecc_shared_secret_gen
+                0x00000000       0x40 Build/ecc.o
+ .text.wc_ecc_shared_secret_ex
+                0x00000000       0x6a Build/ecc.o
+ .text.wc_ecc_shared_secret
+                0x00000000       0x4c Build/ecc.o
+ .text.wc_ecc_point_is_at_infinity
+                0x00000000       0x1e Build/ecc.o
+ .text.wc_ecc_gen_k
+                0x00000000       0x76 Build/ecc.o
+ .text.wc_ecc_make_pub
+                0x00000000        0x4 Build/ecc.o
+ .text.wc_ecc_make_pub_ex
+                0x00000000        0x4 Build/ecc.o
+ .text.wc_ecc_make_key_ex2
+                0x00000000        0x4 Build/ecc.o
+ .text.wc_ecc_key_new
+                0x00000000       0x2c Build/ecc.o
+ .text.wc_ecc_set_flags
+                0x00000000       0x12 Build/ecc.o
+ .text.wc_ecc_import_point_der_ex
+                0x00000000       0xc8 Build/ecc.o
+ .text.wc_ecc_import_point_der
+                0x00000000        0xe Build/ecc.o
+ .text.wc_ecc_export_point_der
+                0x00000000       0xf8 Build/ecc.o
+ .text.wc_ecc_export_point_der_ex
+                0x00000000       0x18 Build/ecc.o
+ .text.wc_ecc_export_x963
+                0x00000000      0x100 Build/ecc.o
+ .text.wc_ecc_export_x963_ex
+                0x00000000        0xc Build/ecc.o
+ .text.wc_ecc_is_point
+                0x00000000       0x22 Build/ecc.o
+ .text.wc_ecc_check_key
+                0x00000000       0x40 Build/ecc.o
+ .text.wc_ecc_import_x963_ex
+                0x00000000       0xe8 Build/ecc.o
+ .text.wc_ecc_import_x963
+                0x00000000        0x6 Build/ecc.o
+ .text.wc_ecc_export_ex
+                0x00000000       0xa8 Build/ecc.o
+ .text.wc_ecc_export_private_only
+                0x00000000       0x26 Build/ecc.o
+ .text.wc_ecc_export_public_raw
+                0x00000000       0x26 Build/ecc.o
+ .text.wc_ecc_export_private_raw
+                0x00000000       0x1a Build/ecc.o
+ .text.wc_ecc_import_private_key_ex
+                0x00000000       0x64 Build/ecc.o
+ .text.wc_ecc_import_private_key
+                0x00000000       0x12 Build/ecc.o
+ .text.wc_ecc_rs_to_sig
+                0x00000000       0xb4 Build/ecc.o
+ .text.wc_ecc_rs_raw_to_sig
+                0x00000000       0x2a Build/ecc.o
+ .text.wc_ecc_sig_to_rs
+                0x00000000       0x1e Build/ecc.o
+ .text.wc_ecc_import_raw_ex
+                0x00000000       0x12 Build/ecc.o
+ .text.wc_ecc_import_unsigned
+                0x00000000       0x12 Build/ecc.o
+ .text.wc_ecc_import_raw
+                0x00000000       0x78 Build/ecc.o
+ .text.wc_ecc_size
+                0x00000000        0xa Build/ecc.o
+ .text.wc_ecc_sig_size_calc
+                0x00000000       0x10 Build/ecc.o
+ .text.wc_ecc_sig_size
+                0x00000000       0x86 Build/ecc.o
+ .text.wc_ecc_set_rng
+                0x00000000       0x10 Build/ecc.o
+ .text.wc_ecc_ctx_set_algo
+                0x00000000       0x18 Build/ecc.o
+ .text.wc_ecc_ctx_get_own_salt
+                0x00000000       0x42 Build/ecc.o
+ .text.wc_ecc_ctx_set_info
+                0x00000000       0x16 Build/ecc.o
+ .rodata.wc_ecc_ctx_set_peer_salt.str1.1
+                0x00000000       0x18 Build/ecc.o
+ .text.wc_ecc_ctx_set_peer_salt
+                0x00000000       0xac Build/ecc.o
+ .text.wc_ecc_ctx_reset
+                0x00000000       0x58 Build/ecc.o
+ .text.wc_ecc_ctx_free
+                0x00000000       0x1a Build/ecc.o
+ .text.wc_ecc_ctx_new_ex
+                0x00000000       0x30 Build/ecc.o
+ .text.wc_ecc_ctx_new
+                0x00000000        0x6 Build/ecc.o
+ .text.wc_ecc_encrypt_ex
+                0x00000000      0x2ac Build/ecc.o
+ .text.wc_ecc_encrypt
+                0x00000000       0x1a Build/ecc.o
+ .text.wc_ecc_decrypt
+                0x00000000      0x2f4 Build/ecc.o
+ .text.wc_ecc_get_oid
+                0x00000000       0x4c Build/ecc.o
+ .rodata.ecc_sets_count
+                0x00000000        0x4 Build/ecc.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/ecc.o
+ .text          0x00000000        0x0 Build/hmac.o
+ .data          0x00000000        0x0 Build/hmac.o
+ .bss           0x00000000        0x0 Build/hmac.o
+ .text.HmacKeyInnerHash
+                0x00000000       0xa0 Build/hmac.o
+ .text.wc_HmacSizeByType
+                0x00000000       0x20 Build/hmac.o
+ .text._InitHmac
+                0x00000000       0x9e Build/hmac.o
+ .text.wc_HmacUpdate
+                0x00000000       0xc6 Build/hmac.o
+ .text.wc_HmacFinal
+                0x00000000      0x2a8 Build/hmac.o
+ .text.wc_HmacInit
+                0x00000000       0x24 Build/hmac.o
+ .text.wc_HmacFree
+                0x00000000       0x46 Build/hmac.o
+ .text.wc_HmacSetKey
+                0x00000000      0x274 Build/hmac.o
+ .text.wolfSSL_GetHmacMaxSize
+                0x00000000        0x4 Build/hmac.o
+ .rodata.CSWTCH.4
+                0x00000000       0x16 Build/hmac.o
+ .comment       0x00000000       0x2f Build/hmac.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/hmac.o
+ .ARM.attributes
+                0x00000000       0x37 Build/hmac.o
+ .text          0x00000000        0x0 Build/random.o
+ .data          0x00000000        0x0 Build/random.o
+ .bss           0x00000000        0x0 Build/random.o
+ .text.wc_RNG_DRBG_Reseed
+                0x00000000       0x10 Build/random.o
+ .text.wc_FreeRng
+                0x00000000       0x34 Build/random.o
+ .text.wc_rng_free
+                0x00000000       0x1e Build/random.o
+ .text.wc_RNG_GenerateByte
+                0x00000000        0x6 Build/random.o
+ .text.wc_InitRngNonce_ex
+                0x00000000        0x4 Build/random.o
+ .text.wc_InitRngNonce
+                0x00000000        0x6 Build/random.o
+ .text.wc_InitRng_ex
+                0x00000000        0xa Build/random.o
+ .text.wc_rng_new
+                0x00000000       0x2c Build/random.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/random.o
+ .text          0x00000000        0x0 Build/rsa.o
+ .data          0x00000000        0x0 Build/rsa.o
+ .bss           0x00000000        0x0 Build/rsa.o
+ .text.ctMaskNotEq
+                0x00000000       0x16 Build/rsa.o
+ .text.wc_RsaCleanup
+                0x00000000       0x4e Build/rsa.o
+ .text.RsaGetValue
+                0x00000000       0x2a Build/rsa.o
+ .text._CheckProbablePrime
+                0x00000000      0x184 Build/rsa.o
+ .text.RsaMGF1.constprop.0
+                0x00000000       0xde Build/rsa.o
+ .text.RsaMGF.isra.0
+                0x00000000       0x5a Build/rsa.o
+ .text.wc_InitRsaKey_ex
+                0x00000000       0x8e Build/rsa.o
+ .text.wc_InitRsaKey
+                0x00000000        0x8 Build/rsa.o
+ .text.wc_FreeRsaKey
+                0x00000000       0x96 Build/rsa.o
+ .text.wc_RsaPad_ex
+                0x00000000      0x276 Build/rsa.o
+ .text.wc_RsaUnPad_ex
+                0x00000000      0x1ea Build/rsa.o
+ .text.wc_hash2mgf
+                0x00000000       0x14 Build/rsa.o
+ .text.wc_RsaEncryptSize
+                0x00000000        0xc Build/rsa.o
+ .text.wc_RsaFunction_ex
+                0x00000000      0x224 Build/rsa.o
+ .text.wc_RsaFunction
+                0x00000000       0x1a Build/rsa.o
+ .text.RsaPrivateDecryptEx
+                0x00000000      0x1e6 Build/rsa.o
+ .text.wc_RsaPrivateDecryptInline
+                0x00000000       0x36 Build/rsa.o
+ .text.wc_RsaPrivateDecryptInline_ex
+                0x00000000       0x42 Build/rsa.o
+ .text.wc_RsaPrivateDecrypt
+                0x00000000       0x32 Build/rsa.o
+ .text.wc_RsaPrivateDecrypt_ex
+                0x00000000       0x3e Build/rsa.o
+ .text.wc_RsaSSL_VerifyInline
+                0x00000000       0x32 Build/rsa.o
+ .text.wc_RsaSSL_Verify_ex2
+                0x00000000       0x50 Build/rsa.o
+ .text.wc_RsaSSL_Verify_ex
+                0x00000000       0x16 Build/rsa.o
+ .text.wc_RsaSSL_Verify
+                0x00000000       0x12 Build/rsa.o
+ .text.RsaPublicEncryptEx.constprop.0
+                0x00000000      0x116 Build/rsa.o
+ .text.wc_RsaSSL_Sign
+                0x00000000       0x2a Build/rsa.o
+ .rodata._ifc_pairwise_consistency_test.str1.1
+                0x00000000       0x1a Build/rsa.o
+ .text._ifc_pairwise_consistency_test
+                0x00000000       0x9c Build/rsa.o
+ .text.wc_CheckRsaKey
+                0x00000000      0x186 Build/rsa.o
+ .text.wc_RsaPublicEncrypt_ex
+                0x00000000       0x34 Build/rsa.o
+ .text.wc_RsaPublicEncrypt
+                0x00000000       0x26 Build/rsa.o
+ .text.wc_RsaFlattenPublicKey
+                0x00000000       0x66 Build/rsa.o
+ .text.wc_RsaExportKey
+                0x00000000       0x8e Build/rsa.o
+ .text.wc_CheckProbablePrime_ex
+                0x00000000       0xfa Build/rsa.o
+ .text.wc_CheckProbablePrime
+                0x00000000       0x20 Build/rsa.o
+ .text.wc_MakeRsaKey
+                0x00000000      0x4b0 Build/rsa.o
+ .text.wc_RsaSetRNG
+                0x00000000       0x16 Build/rsa.o
+ .rodata.CSWTCH.134
+                0x00000000        0x5 Build/rsa.o
+ .rodata.lower_bound
+                0x00000000      0x100 Build/rsa.o
+ .comment       0x00000000       0x2f Build/rsa.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/rsa.o
+ .ARM.attributes
+                0x00000000       0x37 Build/rsa.o
+ .text          0x00000000        0x0 Build/sha.o
+ .data          0x00000000        0x0 Build/sha.o
+ .bss           0x00000000        0x0 Build/sha.o
+ .text.ByteReverseWords
+                0x00000000       0x18 Build/sha.o
+ .text.Transform
+                0x00000000      0xdb0 Build/sha.o
+ .text.wc_InitSha_ex
+                0x00000000       0x40 Build/sha.o
+ .text.wc_ShaUpdate
+                0x00000000       0xce Build/sha.o
+ .text.wc_ShaFinalRaw
+                0x00000000       0x2c Build/sha.o
+ .text.wc_ShaFinal
+                0x00000000       0xe4 Build/sha.o
+ .text.wc_InitSha
+                0x00000000        0xa Build/sha.o
+ .text.wc_ShaFree
+                0x00000000        0x2 Build/sha.o
+ .text.wc_ShaCopy
+                0x00000000       0x1c Build/sha.o
+ .text.wc_ShaGetHash
+                0x00000000       0x24 Build/sha.o
+ .comment       0x00000000       0x2f Build/sha.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sha.o
+ .ARM.attributes
+                0x00000000       0x37 Build/sha.o
+ .text          0x00000000        0x0 Build/sha256.o
+ .data          0x00000000        0x0 Build/sha256.o
+ .bss           0x00000000        0x0 Build/sha256.o
+ .text.wc_Sha256FinalRaw
+                0x00000000       0x2a Build/sha256.o
+ .text.wc_InitSha224_ex
+                0x00000000       0x64 Build/sha256.o
+ .text.wc_Sha224Update
+                0x00000000       0x10 Build/sha256.o
+ .text.wc_Sha224Final
+                0x00000000       0x80 Build/sha256.o
+ .text.wc_InitSha224
+                0x00000000        0xa Build/sha256.o
+ .text.wc_Sha224Free
+                0x00000000        0x2 Build/sha256.o
+ .text.wc_Sha256Copy
+                0x00000000       0x1c Build/sha256.o
+ .text.wc_Sha256GetHash
+                0x00000000       0x24 Build/sha256.o
+ .text.wc_Sha224GetHash
+                0x00000000       0x2e Build/sha256.o
+ .text.wc_Sha224Copy
+                0x00000000        0x4 Build/sha256.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sha256.o
+ .text          0x00000000        0x0 Build/sha512.o
+ .data          0x00000000        0x0 Build/sha512.o
+ .bss           0x00000000        0x0 Build/sha512.o
+ .text.InitSha512
+                0x00000000       0xb0 Build/sha512.o
+ .text.InitSha512_224
+                0x00000000       0xb0 Build/sha512.o
+ .text.InitSha512_256
+                0x00000000       0xb0 Build/sha512.o
+ .text.ByteReverseWords64
+                0x00000000       0x20 Build/sha512.o
+ .text.Sha512FinalRaw
+                0x00000000       0x2c Build/sha512.o
+ .text._Transform_Sha512
+                0x00000000     0x1fe4 Build/sha512.o
+ .text.Sha512Final
+                0x00000000       0xb8 Build/sha512.o
+ .text.Sha512_Family_Final
+                0x00000000       0x32 Build/sha512.o
+ .text.wc_Sha512Final
+                0x00000000        0xc Build/sha512.o
+ .text.wc_Sha512_224Final
+                0x00000000        0xc Build/sha512.o
+ .text.wc_Sha512_256Final
+                0x00000000        0xc Build/sha512.o
+ .text.wc_InitSha512_ex
+                0x00000000       0x10 Build/sha512.o
+ .text.wc_InitSha512_224_ex
+                0x00000000       0x10 Build/sha512.o
+ .text.wc_InitSha512_256_ex
+                0x00000000       0x10 Build/sha512.o
+ .text.wc_Sha512Update
+                0x00000000       0xd2 Build/sha512.o
+ .text.wc_Sha512FinalRaw
+                0x00000000        0x6 Build/sha512.o
+ .text.wc_InitSha512
+                0x00000000        0xa Build/sha512.o
+ .text.wc_Sha512Free
+                0x00000000        0x2 Build/sha512.o
+ .text.wc_Sha384Update
+                0x00000000        0x4 Build/sha512.o
+ .text.wc_Sha384FinalRaw
+                0x00000000       0x2a Build/sha512.o
+ .text.wc_Sha384Final
+                0x00000000       0xd0 Build/sha512.o
+ .text.wc_InitSha384_ex
+                0x00000000       0xb8 Build/sha512.o
+ .text.wc_InitSha384
+                0x00000000        0xa Build/sha512.o
+ .text.wc_Sha384Free
+                0x00000000        0x2 Build/sha512.o
+ .text.wc_Sha512Copy
+                0x00000000       0x1c Build/sha512.o
+ .text.Sha512_Family_GetHash
+                0x00000000       0x24 Build/sha512.o
+ .text.wc_Sha512GetHash
+                0x00000000        0xc Build/sha512.o
+ .text.wc_InitSha512_224
+                0x00000000        0xa Build/sha512.o
+ .text.wc_Sha512_224Update
+                0x00000000        0x4 Build/sha512.o
+ .text.wc_Sha512_224FinalRaw
+                0x00000000        0x6 Build/sha512.o
+ .text.wc_Sha512_224Free
+                0x00000000        0x2 Build/sha512.o
+ .text.wc_Sha512_224GetHash
+                0x00000000        0xc Build/sha512.o
+ .text.wc_Sha512_224Copy
+                0x00000000        0x4 Build/sha512.o
+ .text.wc_InitSha512_256
+                0x00000000        0xa Build/sha512.o
+ .text.wc_Sha512_256Update
+                0x00000000        0x4 Build/sha512.o
+ .text.wc_Sha512_256FinalRaw
+                0x00000000        0x6 Build/sha512.o
+ .text.wc_Sha512_256Free
+                0x00000000        0x2 Build/sha512.o
+ .text.wc_Sha512_256GetHash
+                0x00000000        0xc Build/sha512.o
+ .text.wc_Sha512_256Copy
+                0x00000000        0x4 Build/sha512.o
+ .text.wc_Sha384GetHash
+                0x00000000       0x24 Build/sha512.o
+ .text.wc_Sha384Copy
+                0x00000000        0x4 Build/sha512.o
+ .rodata.K512   0x00000000      0x280 Build/sha512.o
+ .comment       0x00000000       0x2f Build/sha512.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sha512.o
+ .ARM.attributes
+                0x00000000       0x37 Build/sha512.o
+ .text          0x00000000        0x0 Build/sha3.o
+ .data          0x00000000        0x0 Build/sha3.o
+ .bss           0x00000000        0x0 Build/sha3.o
+ .text.BlockSha3
+                0x00000000      0xf88 Build/sha3.o
+ .text.wc_Sha3Update
+                0x00000000       0xe2 Build/sha3.o
+ .text.wc_Sha3Copy
+                0x00000000       0x1e Build/sha3.o
+ .text.wc_Sha3Final
+                0x00000000       0xaa Build/sha3.o
+ .text.wc_Sha3GetHash
+                0x00000000       0x2c Build/sha3.o
+ .text.wc_InitSha3_224
+                0x00000000       0x2c Build/sha3.o
+ .text.wc_Sha3_224_Update
+                0x00000000        0x6 Build/sha3.o
+ .text.wc_Sha3_224_Final
+                0x00000000        0x8 Build/sha3.o
+ .text.wc_Sha3_224_Free
+                0x00000000        0x2 Build/sha3.o
+ .text.wc_Sha3_224_GetHash
+                0x00000000        0x8 Build/sha3.o
+ .text.wc_Sha3_224_Copy
+                0x00000000        0x4 Build/sha3.o
+ .text.wc_InitSha3_256
+                0x00000000       0x2c Build/sha3.o
+ .text.wc_Sha3_256_Update
+                0x00000000        0x6 Build/sha3.o
+ .text.wc_Sha3_256_Final
+                0x00000000        0x8 Build/sha3.o
+ .text.wc_Sha3_256_Free
+                0x00000000        0x2 Build/sha3.o
+ .text.wc_Sha3_256_GetHash
+                0x00000000        0x8 Build/sha3.o
+ .text.wc_Sha3_256_Copy
+                0x00000000        0x4 Build/sha3.o
+ .text.wc_InitSha3_384
+                0x00000000       0x2c Build/sha3.o
+ .text.wc_Sha3_384_Update
+                0x00000000        0x6 Build/sha3.o
+ .text.wc_Sha3_384_Final
+                0x00000000        0x8 Build/sha3.o
+ .text.wc_Sha3_384_Free
+                0x00000000        0x2 Build/sha3.o
+ .text.wc_Sha3_384_GetHash
+                0x00000000        0x8 Build/sha3.o
+ .text.wc_Sha3_384_Copy
+                0x00000000        0x4 Build/sha3.o
+ .text.wc_InitSha3_512
+                0x00000000       0x2c Build/sha3.o
+ .text.wc_Sha3_512_Update
+                0x00000000        0x6 Build/sha3.o
+ .text.wc_Sha3_512_Final
+                0x00000000        0x8 Build/sha3.o
+ .text.wc_Sha3_512_Free
+                0x00000000        0x2 Build/sha3.o
+ .text.wc_Sha3_512_GetHash
+                0x00000000        0x8 Build/sha3.o
+ .text.wc_Sha3_512_Copy
+                0x00000000        0x4 Build/sha3.o
+ .rodata.hash_keccak_r
+                0x00000000       0xc0 Build/sha3.o
+ .comment       0x00000000       0x2f Build/sha3.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sha3.o
+ .ARM.attributes
+                0x00000000       0x37 Build/sha3.o
+ .text          0x00000000        0x0 Build/asm.o
+ .data          0x00000000        0x0 Build/asm.o
+ .bss           0x00000000        0x0 Build/asm.o
+ .comment       0x00000000       0x2f Build/asm.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/asm.o
+ .ARM.attributes
+                0x00000000       0x3e Build/asm.o
+ .text          0x00000000        0x0 Build/asn.o
+ .data          0x00000000        0x0 Build/asn.o
+ .bss           0x00000000        0x0 Build/asn.o
+ .text.GetASNNull
+                0x00000000       0x2c Build/asn.o
+ .text.GetBoolean
+                0x00000000       0x32 Build/asn.o
+ .text.GetTime  0x00000000       0x3a Build/asn.o
+ .text.trim_leading_zeros
+                0x00000000       0x26 Build/asn.o
+ .text.CheckCurve
+                0x00000000       0x24 Build/asn.o
+ .text.MatchBaseName
+                0x00000000       0xba Build/asn.o
+ .text.KeyPemToDerPassCb
+                0x00000000       0x22 Build/asn.o
+ .text.FreeTmpDsas.constprop.0
+                0x00000000       0x18 Build/asn.o
+ .text.SetASNLength
+                0x00000000       0x42 Build/asn.o
+ .text.GetLength
+                0x00000000        0xe Build/asn.o
+ .text.GetDateInfo
+                0x00000000       0x84 Build/asn.o
+ .text.SkipInt  0x00000000       0x20 Build/asn.o
+ .text.GetSequence_ex
+                0x00000000       0x16 Build/asn.o
+ .text.GetSet   0x00000000       0x16 Build/asn.o
+ .text.GetSet_ex
+                0x00000000       0x16 Build/asn.o
+ .text.GetOctetString
+                0x00000000       0x16 Build/asn.o
+ .text.GetSigName
+                0x00000000      0x188 Build/asn.o
+ .text.GetMyVersion
+                0x00000000       0x4c Build/asn.o
+ .text.GetInt   0x00000000       0x4c Build/asn.o
+ .text.CheckBitString
+                0x00000000       0xa4 Build/asn.o
+ .text.OidFromId
+                0x00000000      0x7c0 Build/asn.o
+ .text.GetASNObjectId
+                0x00000000       0x1a Build/asn.o
+ .text.SkipObjectId
+                0x00000000       0x20 Build/asn.o
+ .text.GetObjectId
+                0x00000000       0x76 Build/asn.o
+ .text.GetAlgoId
+                0x00000000       0x7c Build/asn.o
+ .text.ToTraditionalInline_ex
+                0x00000000       0x9c Build/asn.o
+ .text.wc_RsaPrivateKeyDecode
+                0x00000000       0xf6 Build/asn.o
+ .text.ToTraditionalInline
+                0x00000000        0xe Build/asn.o
+ .text.ToTraditional_ex
+                0x00000000       0x3e Build/asn.o
+ .text.ToTraditional
+                0x00000000        0xe Build/asn.o
+ .text.wc_GetPkcs8TraditionalOffset
+                0x00000000       0x1c Build/asn.o
+ .text.wc_RsaPublicKeyDecode_ex
+                0x00000000      0x13c Build/asn.o
+ .text.wc_RsaPublicKeyDecodeRaw
+                0x00000000       0x76 Build/asn.o
+ .text.wc_RsaPublicKeyDecode
+                0x00000000       0x40 Build/asn.o
+ .text.wc_DhKeyDecode
+                0x00000000       0x56 Build/asn.o
+ .text.wc_DhParamsLoad
+                0x00000000       0x8e Build/asn.o
+ .text.wc_DsaPublicKeyDecode
+                0x00000000      0x12a Build/asn.o
+ .text.wc_DsaParamsDecode
+                0x00000000       0x6a Build/asn.o
+ .text.wc_DsaPrivateKeyDecode
+                0x00000000      0x160 Build/asn.o
+ .text.FreeAltNames
+                0x00000000       0x1c Build/asn.o
+ .text.AltNameNew
+                0x00000000       0x18 Build/asn.o
+ .text.FreeNameSubtrees
+                0x00000000       0x1c Build/asn.o
+ .text.CalcHashId
+                0x00000000        0x4 Build/asn.o
+ .rodata.GetName.str1.1
+                0x00000000       0x5a Build/asn.o
+ .text.GetName  0x00000000      0x390 Build/asn.o
+ .text.ExtractDate
+                0x00000000       0xa4 Build/asn.o
+ .text.DateGreaterThan
+                0x00000000       0x66 Build/asn.o
+ .text.wc_SetTimeCb
+                0x00000000        0xc Build/asn.o
+ .text.wc_Time  0x00000000       0x10 Build/asn.o
+ .text.wc_ValidateDate
+                0x00000000       0x9c Build/asn.o
+ .text.GetDate  0x00000000       0x82 Build/asn.o
+ .text.wc_GetTime
+                0x00000000       0x22 Build/asn.o
+ .text.wc_GetDateInfo
+                0x00000000       0x16 Build/asn.o
+ .text.wc_GetDateAsCalendarTime
+                0x00000000       0x20 Build/asn.o
+ .text.SetBitString
+                0x00000000       0x24 Build/asn.o
+ .text.SetObjectId
+                0x00000000       0x12 Build/asn.o
+ .text.SetCurve
+                0x00000000       0x34 Build/asn.o
+ .text.DsaKeyIntsToDer
+                0x00000000      0x158 Build/asn.o
+ .text.wc_DsaKeyToDer
+                0x00000000       0x24 Build/asn.o
+ .text.wc_DsaKeyToParamsDer
+                0x00000000       0x20 Build/asn.o
+ .text.wc_DsaKeyToParamsDer_ex
+                0x00000000       0x1c Build/asn.o
+ .text.SetOctetString
+                0x00000000        0xa Build/asn.o
+ .text.wc_BuildEccKeyDer
+                0x00000000      0x1d0 Build/asn.o
+ .text.SetSet   0x00000000        0xa Build/asn.o
+ .text.SetImplicit
+                0x00000000       0x24 Build/asn.o
+ .text.SetExplicit
+                0x00000000        0x8 Build/asn.o
+ .text.SetAlgoID
+                0x00000000       0xec Build/asn.o
+ .text.wc_SetDsaPublicKey
+                0x00000000      0x2ba Build/asn.o
+ .text.wc_DsaKeyToPublicDer
+                0x00000000       0x12 Build/asn.o
+ .text.SetRsaPublicKey
+                0x00000000      0x11c Build/asn.o
+ .text.SetEccPublicKey
+                0x00000000       0xec Build/asn.o
+ .text.wc_EncodeSignature
+                0x00000000       0x66 Build/asn.o
+ .text.wc_GetCTC_HashOID
+                0x00000000       0x10 Build/asn.o
+ .text.InitSignatureCtx
+                0x00000000       0x18 Build/asn.o
+ .text.InitDecodedCert
+                0x00000000       0x44 Build/asn.o
+ .text.wc_InitDecodedCert
+                0x00000000        0x4 Build/asn.o
+ .text.FreeSignatureCtx
+                0x00000000       0x5e Build/asn.o
+ .text.FreeDecodedCert
+                0x00000000       0x78 Build/asn.o
+ .text.wc_FreeDecodedCert
+                0x00000000        0x4 Build/asn.o
+ .text.MakeSigner
+                0x00000000       0x18 Build/asn.o
+ .text.FreeSigner
+                0x00000000       0x34 Build/asn.o
+ .text.FreeSignerTable
+                0x00000000       0x2e Build/asn.o
+ .text.SetMyVersion
+                0x00000000       0x26 Build/asn.o
+ .text.wc_CreatePKCS8Key
+                0x00000000      0x134 Build/asn.o
+ .text.eccToPKCS8
+                0x00000000       0xde Build/asn.o
+ .text.SetSerialNumber
+                0x00000000       0x70 Build/asn.o
+ .text.GetSerialNumber
+                0x00000000       0x58 Build/asn.o
+ .text.wc_GetPubX509
+                0x00000000      0x15c Build/asn.o
+ .text.DecodeToKey
+                0x00000000      0x1f8 Build/asn.o
+ .text.AllocDer
+                0x00000000       0x60 Build/asn.o
+ .text.FreeDer  0x00000000       0x34 Build/asn.o
+ .text.wc_AllocDer
+                0x00000000        0x4 Build/asn.o
+ .text.wc_FreeDer
+                0x00000000        0x4 Build/asn.o
+ .rodata.wc_PemGetHeaderFooter.str1.1
+                0x00000000      0x28e Build/asn.o
+ .text.wc_PemGetHeaderFooter
+                0x00000000      0x120 Build/asn.o
+ .rodata.wc_DerToPemEx.str1.1
+                0x00000000        0x2 Build/asn.o
+ .text.wc_DerToPemEx
+                0x00000000      0x14c Build/asn.o
+ .text.wc_DerToPem
+                0x00000000       0x12 Build/asn.o
+ .rodata.PemToDer.str1.1
+                0x00000000       0x3c Build/asn.o
+ .text.PemToDer
+                0x00000000      0x1e8 Build/asn.o
+ .text.wc_PemToDer
+                0x00000000       0x34 Build/asn.o
+ .text.wc_KeyPemToDer
+                0x00000000       0x94 Build/asn.o
+ .text.wc_CertPemToDer
+                0x00000000       0x60 Build/asn.o
+ .text.wc_GetPubKeyDerFromCert
+                0x00000000       0x3c Build/asn.o
+ .text.wc_RsaKeyToDer
+                0x00000000      0x120 Build/asn.o
+ .text.wc_RsaKeyToPublicDer
+                0x00000000       0x12 Build/asn.o
+ .text.wc_RsaKeyToPublicDer_ex
+                0x00000000       0x10 Build/asn.o
+ .text.wc_EccPublicKeyToDer
+                0x00000000       0x10 Build/asn.o
+ .text.wc_EccPublicKeyDerSize
+                0x00000000        0xc Build/asn.o
+ .text.StoreECC_DSA_Sig_Bin
+                0x00000000       0xd8 Build/asn.o
+ .text.DecodeECC_DSA_Sig_Bin
+                0x00000000       0xa6 Build/asn.o
+ .text.wc_EccPrivateKeyDecode
+                0x00000000      0x1ae Build/asn.o
+ .text.wc_CheckPrivateKey
+                0x00000000      0x172 Build/asn.o
+ .text.wc_CheckPrivateKeyCert
+                0x00000000       0x1e Build/asn.o
+ .text.wc_EccPublicKeyDecode
+                0x00000000      0x186 Build/asn.o
+ .rodata.ParseCertRelative.str1.1
+                0x00000000        0x4 Build/asn.o
+ .text.ParseCertRelative
+                0x00000000     0x1324 Build/asn.o
+ .text.ParseCert
+                0x00000000       0x70 Build/asn.o
+ .text.wc_ParseCert
+                0x00000000        0x4 Build/asn.o
+ .text.wc_EccKeyToDer
+                0x00000000       0x14 Build/asn.o
+ .text.wc_EccKeyDerSize
+                0x00000000       0x20 Build/asn.o
+ .text.wc_EccPrivateKeyToDer
+                0x00000000       0x16 Build/asn.o
+ .text.wc_EccPrivateKeyToPKCS8
+                0x00000000        0x6 Build/asn.o
+ .text.wc_EccKeyToPKCS8
+                0x00000000        0x6 Build/asn.o
+ .text.GetNameHash
+                0x00000000       0x74 Build/asn.o
+ .bss.timeFunc  0x00000000        0x4 Build/asn.o
+ .data.rsaIntOffset
+                0x00000000       0x20 Build/asn.o
+ .rodata.BEGIN_CERT
+                0x00000000        0x4 Build/asn.o
+ .rodata.BEGIN_DH_PARAM
+                0x00000000        0x4 Build/asn.o
+ .rodata.BEGIN_DSA_PARAM
+                0x00000000        0x4 Build/asn.o
+ .rodata.BEGIN_DSA_PRIV
+                0x00000000        0x4 Build/asn.o
+ .rodata.BEGIN_EC_PRIV
+                0x00000000        0x4 Build/asn.o
+ .rodata.BEGIN_ENC_PRIV_KEY
+                0x00000000        0x4 Build/asn.o
+ .rodata.BEGIN_PRIV_KEY
+                0x00000000        0x4 Build/asn.o
+ .rodata.BEGIN_PUB_KEY
+                0x00000000        0x4 Build/asn.o
+ .rodata.BEGIN_RSA_PRIV
+                0x00000000        0x4 Build/asn.o
+ .rodata.BEGIN_RSA_PUB
+                0x00000000        0x4 Build/asn.o
+ .rodata.BEGIN_X509_CRL
+                0x00000000        0x4 Build/asn.o
+ .rodata.BEGIN_X942_PARAM
+                0x00000000        0x4 Build/asn.o
+ .rodata.CSWTCH.960
+                0x00000000        0xc Build/asn.o
+ .rodata.END_CERT
+                0x00000000        0x4 Build/asn.o
+ .rodata.END_DH_PARAM
+                0x00000000        0x4 Build/asn.o
+ .rodata.END_DSA_PARAM
+                0x00000000        0x4 Build/asn.o
+ .rodata.END_DSA_PRIV
+                0x00000000        0x4 Build/asn.o
+ .rodata.END_EC_PRIV
+                0x00000000        0x4 Build/asn.o
+ .rodata.END_ENC_PRIV_KEY
+                0x00000000        0x4 Build/asn.o
+ .rodata.END_PRIV_KEY
+                0x00000000        0x4 Build/asn.o
+ .rodata.END_PUB_KEY
+                0x00000000        0x4 Build/asn.o
+ .rodata.END_RSA_PRIV
+                0x00000000        0x4 Build/asn.o
+ .rodata.END_RSA_PUB
+                0x00000000        0x4 Build/asn.o
+ .rodata.END_X509_CRL
+                0x00000000        0x4 Build/asn.o
+ .rodata.END_X942_PARAM
+                0x00000000        0x4 Build/asn.o
+ .rodata.blkAes128CbcOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.blkAes128GcmOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.blkAes192CbcOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.blkAes192GcmOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.blkAes256CbcOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.blkAes256GcmOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.blkDes3CbcOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.blkDesCbcOid
+                0x00000000        0x5 Build/asn.o
+ .rodata.dhSinglePass_stdDH_sha1kdf_Oid
+                0x00000000        0x9 Build/asn.o
+ .rodata.dhSinglePass_stdDH_sha224kdf_Oid
+                0x00000000        0x6 Build/asn.o
+ .rodata.dhSinglePass_stdDH_sha256kdf_Oid
+                0x00000000        0x6 Build/asn.o
+ .rodata.dhSinglePass_stdDH_sha384kdf_Oid
+                0x00000000        0x6 Build/asn.o
+ .rodata.dhSinglePass_stdDH_sha512kdf_Oid
+                0x00000000        0x6 Build/asn.o
+ .rodata.extAltNamesHwNameOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.extAltNamesOid
+                0x00000000        0x3 Build/asn.o
+ .rodata.extAuthInfoCaIssuerOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.extAuthInfoOcspOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.extAuthInfoOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.extAuthKeyOid
+                0x00000000        0x3 Build/asn.o
+ .rodata.extBasicCaOid
+                0x00000000        0x3 Build/asn.o
+ .rodata.extCertPolicyAnyOid
+                0x00000000        0x4 Build/asn.o
+ .rodata.extCertPolicyOid
+                0x00000000        0x3 Build/asn.o
+ .rodata.extCrlDistOid
+                0x00000000        0x3 Build/asn.o
+ .rodata.extExtKeyUsageAnyOid
+                0x00000000        0x4 Build/asn.o
+ .rodata.extExtKeyUsageClientAuthOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.extExtKeyUsageCodeSigningOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.extExtKeyUsageEmailProtectOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.extExtKeyUsageOcspSignOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.extExtKeyUsageOid
+                0x00000000        0x3 Build/asn.o
+ .rodata.extExtKeyUsageServerAuthOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.extExtKeyUsageTimestampOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.extInhibitAnyOid
+                0x00000000        0x3 Build/asn.o
+ .rodata.extKeyUsageOid
+                0x00000000        0x3 Build/asn.o
+ .rodata.extNameConsOid
+                0x00000000        0x3 Build/asn.o
+ .rodata.extSubjKeyOid
+                0x00000000        0x3 Build/asn.o
+ .rodata.hashMd5hOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.hashSha1hOid
+                0x00000000        0x5 Build/asn.o
+ .rodata.hashSha224hOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.hashSha256hOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.hashSha384hOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.hashSha3_224hOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.hashSha3_256hOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.hashSha3_384hOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.hashSha3_512hOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.hashSha512_224hOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.hashSha512_256hOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.hashSha512hOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.hmacSha224Oid
+                0x00000000        0x8 Build/asn.o
+ .rodata.hmacSha256Oid
+                0x00000000        0x8 Build/asn.o
+ .rodata.hmacSha384Oid
+                0x00000000        0x8 Build/asn.o
+ .rodata.hmacSha512Oid
+                0x00000000        0x8 Build/asn.o
+ .rodata.keyDhOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.keyDsaOid
+                0x00000000        0x7 Build/asn.o
+ .rodata.keyEcdsaOid
+                0x00000000        0x7 Build/asn.o
+ .rodata.keyRsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.pbeMd5Des
+                0x00000000        0x9 Build/asn.o
+ .rodata.pbeSha1Des
+                0x00000000        0x9 Build/asn.o
+ .rodata.pbeSha1Des3
+                0x00000000        0xa Build/asn.o
+ .rodata.pbes2  0x00000000        0x9 Build/asn.o
+ .rodata.pbkdf2Oid
+                0x00000000        0x9 Build/asn.o
+ .rodata.pem_struct_min_sz
+                0x00000000        0x4 Build/asn.o
+ .rodata.sigMd5wRsaName
+                0x00000000       0x15 Build/asn.o
+ .rodata.sigMd5wRsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigSha1wDsaName
+                0x00000000        0x8 Build/asn.o
+ .rodata.sigSha1wDsaOid
+                0x00000000        0x7 Build/asn.o
+ .rodata.sigSha1wEcdsaName
+                0x00000000        0xa Build/asn.o
+ .rodata.sigSha1wEcdsaOid
+                0x00000000        0x7 Build/asn.o
+ .rodata.sigSha1wRsaName
+                0x00000000       0x16 Build/asn.o
+ .rodata.sigSha1wRsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigSha224wEcdsaName
+                0x00000000        0xd Build/asn.o
+ .rodata.sigSha224wEcdsaOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.sigSha224wRsaName
+                0x00000000       0x18 Build/asn.o
+ .rodata.sigSha224wRsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigSha256wDsaName
+                0x00000000        0xb Build/asn.o
+ .rodata.sigSha256wDsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigSha256wEcdsaName
+                0x00000000        0xd Build/asn.o
+ .rodata.sigSha256wEcdsaOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.sigSha256wRsaName
+                0x00000000       0x18 Build/asn.o
+ .rodata.sigSha256wRsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigSha384wEcdsaName
+                0x00000000        0xd Build/asn.o
+ .rodata.sigSha384wEcdsaOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.sigSha384wRsaName
+                0x00000000       0x18 Build/asn.o
+ .rodata.sigSha384wRsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigSha3_224wEcdsaName
+                0x00000000        0xf Build/asn.o
+ .rodata.sigSha3_224wEcdsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigSha3_224wRsaName
+                0x00000000       0x1a Build/asn.o
+ .rodata.sigSha3_224wRsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigSha3_256wEcdsaName
+                0x00000000        0xf Build/asn.o
+ .rodata.sigSha3_256wEcdsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigSha3_256wRsaName
+                0x00000000       0x1a Build/asn.o
+ .rodata.sigSha3_256wRsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigSha3_384wEcdsaName
+                0x00000000        0xf Build/asn.o
+ .rodata.sigSha3_384wEcdsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigSha3_384wRsaName
+                0x00000000       0x1a Build/asn.o
+ .rodata.sigSha3_384wRsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigSha3_512wEcdsaName
+                0x00000000        0xf Build/asn.o
+ .rodata.sigSha3_512wEcdsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigSha3_512wRsaName
+                0x00000000       0x1a Build/asn.o
+ .rodata.sigSha3_512wRsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigSha512wEcdsaName
+                0x00000000        0xd Build/asn.o
+ .rodata.sigSha512wEcdsaOid
+                0x00000000        0x8 Build/asn.o
+ .rodata.sigSha512wRsaName
+                0x00000000       0x18 Build/asn.o
+ .rodata.sigSha512wRsaOid
+                0x00000000        0x9 Build/asn.o
+ .rodata.sigUnknownName
+                0x00000000        0x8 Build/asn.o
+ .rodata.wrapAes128Oid
+                0x00000000        0x9 Build/asn.o
+ .rodata.wrapAes192Oid
+                0x00000000        0x9 Build/asn.o
+ .rodata.wrapAes256Oid
+                0x00000000        0x9 Build/asn.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/asn.o
+ .text          0x00000000        0x0 Build/blake2s.o
+ .data          0x00000000        0x0 Build/blake2s.o
+ .bss           0x00000000        0x0 Build/blake2s.o
+ .text.blake2s_compress
+                0x00000000     0x1838 Build/blake2s.o
+ .text.blake2s_init_param
+                0x00000000       0xc2 Build/blake2s.o
+ .text.blake2s_init
+                0x00000000       0x38 Build/blake2s.o
+ .text.blake2s_update
+                0x00000000       0xbe Build/blake2s.o
+ .text.blake2s_init_key
+                0x00000000       0x98 Build/blake2s.o
+ .text.blake2s_final
+                0x00000000      0x10c Build/blake2s.o
+ .text.blake2s  0x00000000       0x50 Build/blake2s.o
+ .text.wc_InitBlake2s
+                0x00000000       0x12 Build/blake2s.o
+ .text.wc_InitBlake2s_WithKey
+                0x00000000       0x26 Build/blake2s.o
+ .text.wc_Blake2sUpdate
+                0x00000000        0x4 Build/blake2s.o
+ .text.wc_Blake2sFinal
+                0x00000000        0xc Build/blake2s.o
+ .comment       0x00000000       0x2f Build/blake2s.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/blake2s.o
+ .ARM.attributes
+                0x00000000       0x37 Build/blake2s.o
+ .text          0x00000000        0x0 Build/chacha.o
+ .data          0x00000000        0x0 Build/chacha.o
+ .bss           0x00000000        0x0 Build/chacha.o
+ .text.wc_Chacha_wordtobyte
+                0x00000000      0x1f4 Build/chacha.o
+ .text.wc_Chacha_SetIV
+                0x00000000       0x30 Build/chacha.o
+ .text.wc_Chacha_SetKey
+                0x00000000       0x7c Build/chacha.o
+ .text.wc_Chacha_Process
+                0x00000000       0xe4 Build/chacha.o
+ .text.wc_Chacha_purge_current_block
+                0x00000000       0x28 Build/chacha.o
+ .rodata.sigma  0x00000000       0x10 Build/chacha.o
+ .rodata.tau    0x00000000       0x10 Build/chacha.o
+ .comment       0x00000000       0x2f Build/chacha.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/chacha.o
+ .ARM.attributes
+                0x00000000       0x37 Build/chacha.o
+ .text          0x00000000        0x0 Build/chacha20_poly1305.o
+ .data          0x00000000        0x0 Build/chacha20_poly1305.o
+ .bss           0x00000000        0x0 Build/chacha20_poly1305.o
+ .text.wc_ChaCha20Poly1305_CheckTag
+                0x00000000       0x34 Build/chacha20_poly1305.o
+ .text.wc_ChaCha20Poly1305_Init
+                0x00000000       0x80 Build/chacha20_poly1305.o
+ .text.wc_ChaCha20Poly1305_UpdateAad
+                0x00000000       0x60 Build/chacha20_poly1305.o
+ .text.wc_ChaCha20Poly1305_UpdateData
+                0x00000000       0xac Build/chacha20_poly1305.o
+ .text.wc_ChaCha20Poly1305_Final
+                0x00000000       0x6a Build/chacha20_poly1305.o
+ .text.wc_ChaCha20Poly1305_Encrypt
+                0x00000000       0x5e Build/chacha20_poly1305.o
+ .text.wc_ChaCha20Poly1305_Decrypt
+                0x00000000       0x76 Build/chacha20_poly1305.o
+ .comment       0x00000000       0x2f Build/chacha20_poly1305.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/chacha20_poly1305.o
+ .ARM.attributes
+                0x00000000       0x37 Build/chacha20_poly1305.o
+ .text          0x00000000        0x0 Build/coding.o
+ .data          0x00000000        0x0 Build/coding.o
+ .bss           0x00000000        0x0 Build/coding.o
+ .text.Base64_Char2Val
+                0x00000000       0x34 Build/coding.o
+ .text.CEscape  0x00000000       0xc0 Build/coding.o
+ .text.DoBase64_Encode
+                0x00000000      0x224 Build/coding.o
+ .text.Base64_SkipNewline
+                0x00000000       0x64 Build/coding.o
+ .text.Base64_Decode
+                0x00000000      0x1ae Build/coding.o
+ .text.Base64_Encode
+                0x00000000        0xe Build/coding.o
+ .text.Base64_EncodeEsc
+                0x00000000        0xe Build/coding.o
+ .text.Base64_Encode_NoNl
+                0x00000000        0xe Build/coding.o
+ .rodata.base64Decode
+                0x00000000       0x50 Build/coding.o
+ .rodata.base64Encode
+                0x00000000       0x40 Build/coding.o
+ .comment       0x00000000       0x2f Build/coding.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/coding.o
+ .ARM.attributes
+                0x00000000       0x37 Build/coding.o
+ .text          0x00000000        0x0 Build/compress.o
+ .data          0x00000000        0x0 Build/compress.o
+ .bss           0x00000000        0x0 Build/compress.o
+ .comment       0x00000000       0x2f Build/compress.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/compress.o
+ .ARM.attributes
+                0x00000000       0x3e Build/compress.o
+ .text          0x00000000        0x0 Build/cpuid.o
+ .data          0x00000000        0x0 Build/cpuid.o
+ .bss           0x00000000        0x0 Build/cpuid.o
+ .comment       0x00000000       0x2f Build/cpuid.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/cpuid.o
+ .ARM.attributes
+                0x00000000       0x3e Build/cpuid.o
+ .text          0x00000000        0x0 Build/cryptocb.o
+ .data          0x00000000        0x0 Build/cryptocb.o
+ .bss           0x00000000        0x0 Build/cryptocb.o
+ .comment       0x00000000       0x2f Build/cryptocb.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/cryptocb.o
+ .ARM.attributes
+                0x00000000       0x3e Build/cryptocb.o
+ .text          0x00000000        0x0 Build/curve25519.o
+ .data          0x00000000        0x0 Build/curve25519.o
+ .bss           0x00000000        0x0 Build/curve25519.o
+ .comment       0x00000000       0x2f Build/curve25519.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/curve25519.o
+ .ARM.attributes
+                0x00000000       0x3e Build/curve25519.o
+ .text          0x00000000        0x0 Build/curve448.o
+ .data          0x00000000        0x0 Build/curve448.o
+ .bss           0x00000000        0x0 Build/curve448.o
+ .comment       0x00000000       0x2f Build/curve448.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/curve448.o
+ .ARM.attributes
+                0x00000000       0x3e Build/curve448.o
+ .text          0x00000000        0x0 Build/ecc_fp.o
+ .data          0x00000000        0x0 Build/ecc_fp.o
+ .bss           0x00000000        0x0 Build/ecc_fp.o
+ .comment       0x00000000       0x2f Build/ecc_fp.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/ecc_fp.o
+ .ARM.attributes
+                0x00000000       0x3e Build/ecc_fp.o
+ .text          0x00000000        0x0 Build/eccsi.o
+ .data          0x00000000        0x0 Build/eccsi.o
+ .bss           0x00000000        0x0 Build/eccsi.o
+ .comment       0x00000000       0x2f Build/eccsi.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/eccsi.o
+ .ARM.attributes
+                0x00000000       0x3e Build/eccsi.o
+ .text          0x00000000        0x0 Build/ed25519.o
+ .data          0x00000000        0x0 Build/ed25519.o
+ .bss           0x00000000        0x0 Build/ed25519.o
+ .comment       0x00000000       0x2f Build/ed25519.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/ed25519.o
+ .ARM.attributes
+                0x00000000       0x3e Build/ed25519.o
+ .text          0x00000000        0x0 Build/ed448.o
+ .data          0x00000000        0x0 Build/ed448.o
+ .bss           0x00000000        0x0 Build/ed448.o
+ .comment       0x00000000       0x2f Build/ed448.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/ed448.o
+ .ARM.attributes
+                0x00000000       0x3e Build/ed448.o
+ .text          0x00000000        0x0 Build/error.o
+ .data          0x00000000        0x0 Build/error.o
+ .bss           0x00000000        0x0 Build/error.o
+ .rodata.wc_GetErrorString.str1.1
+                0x00000000       0x15 Build/error.o
+ .text.wc_GetErrorString
+                0x00000000       0x1c Build/error.o
+ .text.wc_ErrorString
+                0x00000000       0x1a Build/error.o
+ .rodata.str1.1
+                0x00000000     0x172d Build/error.o
+ .rodata.CSWTCH.1
+                0x00000000      0x2f8 Build/error.o
+ .comment       0x00000000       0x2f Build/error.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/error.o
+ .ARM.attributes
+                0x00000000       0x37 Build/error.o
+ .text          0x00000000        0x0 Build/fe_448.o
+ .data          0x00000000        0x0 Build/fe_448.o
+ .bss           0x00000000        0x0 Build/fe_448.o
+ .comment       0x00000000       0x2f Build/fe_448.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/fe_448.o
+ .ARM.attributes
+                0x00000000       0x3e Build/fe_448.o
+ .text          0x00000000        0x0 Build/fe_low_mem.o
+ .data          0x00000000        0x0 Build/fe_low_mem.o
+ .bss           0x00000000        0x0 Build/fe_low_mem.o
+ .comment       0x00000000       0x2f Build/fe_low_mem.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/fe_low_mem.o
+ .ARM.attributes
+                0x00000000       0x3e Build/fe_low_mem.o
+ .text          0x00000000        0x0 Build/fe_operations.o
+ .data          0x00000000        0x0 Build/fe_operations.o
+ .bss           0x00000000        0x0 Build/fe_operations.o
+ .comment       0x00000000       0x2f Build/fe_operations.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/fe_operations.o
+ .ARM.attributes
+                0x00000000       0x3e Build/fe_operations.o
+ .text          0x00000000        0x0 Build/ge_448.o
+ .data          0x00000000        0x0 Build/ge_448.o
+ .bss           0x00000000        0x0 Build/ge_448.o
+ .comment       0x00000000       0x2f Build/ge_448.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/ge_448.o
+ .ARM.attributes
+                0x00000000       0x3e Build/ge_448.o
+ .text          0x00000000        0x0 Build/ge_low_mem.o
+ .data          0x00000000        0x0 Build/ge_low_mem.o
+ .bss           0x00000000        0x0 Build/ge_low_mem.o
+ .comment       0x00000000       0x2f Build/ge_low_mem.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/ge_low_mem.o
+ .ARM.attributes
+                0x00000000       0x3e Build/ge_low_mem.o
+ .text          0x00000000        0x0 Build/ge_operations.o
+ .data          0x00000000        0x0 Build/ge_operations.o
+ .bss           0x00000000        0x0 Build/ge_operations.o
+ .comment       0x00000000       0x2f Build/ge_operations.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/ge_operations.o
+ .ARM.attributes
+                0x00000000       0x3e Build/ge_operations.o
+ .text          0x00000000        0x0 Build/hash.o
+ .data          0x00000000        0x0 Build/hash.o
+ .bss           0x00000000        0x0 Build/hash.o
+ .text.wc_HashTypeConvert
+                0x00000000        0xc Build/hash.o
+ .text.wc_HashGetOID
+                0x00000000       0x18 Build/hash.o
+ .text.wc_OidGetHash
+                0x00000000       0x5e Build/hash.o
+ .text.wc_HashGetDigestSize
+                0x00000000       0x18 Build/hash.o
+ .text.wc_HashGetBlockSize
+                0x00000000       0x18 Build/hash.o
+ .text.wc_HashInit_ex
+                0x00000000       0x90 Build/hash.o
+ .text.wc_HashInit
+                0x00000000        0xa Build/hash.o
+ .text.wc_HashUpdate
+                0x00000000       0x96 Build/hash.o
+ .text.wc_HashFinal
+                0x00000000       0x58 Build/hash.o
+ .text.wc_HashFree
+                0x00000000       0x6e Build/hash.o
+ .text.wc_Md5Hash
+                0x00000000       0x4c Build/hash.o
+ .text.wc_ShaHash
+                0x00000000       0x52 Build/hash.o
+ .text.wc_Sha224Hash
+                0x00000000       0x4c Build/hash.o
+ .text.wc_Sha256Hash
+                0x00000000       0x52 Build/hash.o
+ .text.wc_Sha512Hash
+                0x00000000       0x4c Build/hash.o
+ .text.wc_Sha512_224Hash
+                0x00000000       0x4c Build/hash.o
+ .text.wc_Sha512_256Hash
+                0x00000000       0x4c Build/hash.o
+ .text.wc_Sha384Hash
+                0x00000000       0x4c Build/hash.o
+ .text.wc_Sha3_224Hash
+                0x00000000       0x54 Build/hash.o
+ .text.wc_Sha3_256Hash
+                0x00000000       0x54 Build/hash.o
+ .text.wc_Sha3_384Hash
+                0x00000000       0x54 Build/hash.o
+ .text.wc_Sha3_512Hash
+                0x00000000       0x54 Build/hash.o
+ .text.wc_Hash  0x00000000       0xde Build/hash.o
+ .rodata.CSWTCH.3
+                0x00000000       0x26 Build/hash.o
+ .rodata.CSWTCH.6
+                0x00000000       0x22 Build/hash.o
+ .rodata.CSWTCH.8
+                0x00000000       0x22 Build/hash.o
+ .comment       0x00000000       0x2f Build/hash.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/hash.o
+ .ARM.attributes
+                0x00000000       0x37 Build/hash.o
+ .text          0x00000000        0x0 Build/kdf.o
+ .data          0x00000000        0x0 Build/kdf.o
+ .bss           0x00000000        0x0 Build/kdf.o
+ .text.wc_PRF   0x00000000      0x1ba Build/kdf.o
+ .text.wc_PRF_TLSv1
+                0x00000000      0x194 Build/kdf.o
+ .text.wc_PRF_TLS
+                0x00000000       0x78 Build/kdf.o
+ .text.wc_Tls13_HKDF_Extract
+                0x00000000       0x4e Build/kdf.o
+ .text.wc_Tls13_HKDF_Expand_Label
+                0x00000000       0x80 Build/kdf.o
+ .comment       0x00000000       0x2f Build/kdf.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/kdf.o
+ .ARM.attributes
+                0x00000000       0x37 Build/kdf.o
+ .text          0x00000000        0x0 Build/integer.o
+ .data          0x00000000        0x0 Build/integer.o
+ .bss           0x00000000        0x0 Build/integer.o
+ .comment       0x00000000       0x2f Build/integer.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/integer.o
+ .ARM.attributes
+                0x00000000       0x3e Build/integer.o
+ .text          0x00000000        0x0 Build/logging.o
+ .data          0x00000000        0x0 Build/logging.o
+ .bss           0x00000000        0x0 Build/logging.o
+ .text.wolfSSL_SetLoggingCb
+                0x00000000        0x6 Build/logging.o
+ .text.wolfSSL_GetLoggingCb
+                0x00000000        0x4 Build/logging.o
+ .text.wolfSSL_Debugging_ON
+                0x00000000        0x6 Build/logging.o
+ .text.wolfSSL_Debugging_OFF
+                0x00000000        0x2 Build/logging.o
+ .comment       0x00000000       0x2f Build/logging.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/logging.o
+ .ARM.attributes
+                0x00000000       0x37 Build/logging.o
+ .text          0x00000000        0x0 Build/md5.o
+ .data          0x00000000        0x0 Build/md5.o
+ .bss           0x00000000        0x0 Build/md5.o
+ .text.Transform
+                0x00000000      0x6d8 Build/md5.o
+ .text.wc_InitMd5_ex
+                0x00000000       0x38 Build/md5.o
+ .text.wc_Md5Update
+                0x00000000       0xc0 Build/md5.o
+ .text.wc_Md5Final
+                0x00000000       0xc0 Build/md5.o
+ .text.wc_InitMd5
+                0x00000000       0x12 Build/md5.o
+ .text.wc_Md5Free
+                0x00000000        0x2 Build/md5.o
+ .text.wc_Md5Copy
+                0x00000000       0x1c Build/md5.o
+ .text.wc_Md5GetHash
+                0x00000000       0x24 Build/md5.o
+ .comment       0x00000000       0x2f Build/md5.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/md5.o
+ .ARM.attributes
+                0x00000000       0x37 Build/md5.o
+ .text          0x00000000        0x0 Build/memory.o
+ .data          0x00000000        0x0 Build/memory.o
+ .bss           0x00000000        0x0 Build/memory.o
+ .comment       0x00000000       0x2f Build/memory.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/memory.o
+ .ARM.attributes
+                0x00000000       0x3e Build/memory.o
+ .text          0x00000000        0x0 Build/misc.o
+ .data          0x00000000        0x0 Build/misc.o
+ .bss           0x00000000        0x0 Build/misc.o
+ .comment       0x00000000       0x2f Build/misc.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/misc.o
+ .ARM.attributes
+                0x00000000       0x3e Build/misc.o
+ .text          0x00000000        0x0 Build/pkcs12.o
+ .data          0x00000000        0x0 Build/pkcs12.o
+ .bss           0x00000000        0x0 Build/pkcs12.o
+ .comment       0x00000000       0x2f Build/pkcs12.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/pkcs12.o
+ .ARM.attributes
+                0x00000000       0x3e Build/pkcs12.o
+ .text          0x00000000        0x0 Build/pkcs7.o
+ .data          0x00000000        0x0 Build/pkcs7.o
+ .bss           0x00000000        0x0 Build/pkcs7.o
+ .comment       0x00000000       0x2f Build/pkcs7.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/pkcs7.o
+ .ARM.attributes
+                0x00000000       0x3e Build/pkcs7.o
+ .text          0x00000000        0x0 Build/poly1305.o
+ .data          0x00000000        0x0 Build/poly1305.o
+ .bss           0x00000000        0x0 Build/poly1305.o
+ .text.U8TO32   0x00000000        0x4 Build/poly1305.o
+ .text.poly1305_blocks
+                0x00000000      0x1d8 Build/poly1305.o
+ .text.wc_Poly1305SetKey
+                0x00000000       0xa8 Build/poly1305.o
+ .text.wc_Poly1305Final
+                0x00000000      0x190 Build/poly1305.o
+ .text.wc_Poly1305Update
+                0x00000000       0x98 Build/poly1305.o
+ .text.wc_Poly1305_Pad
+                0x00000000       0x3c Build/poly1305.o
+ .text.wc_Poly1305_EncodeSizes
+                0x00000000       0x76 Build/poly1305.o
+ .text.wc_Poly1305_EncodeSizes64
+                0x00000000       0x24 Build/poly1305.o
+ .text.wc_Poly1305_MAC
+                0x00000000       0x6c Build/poly1305.o
+ .comment       0x00000000       0x2f Build/poly1305.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/poly1305.o
+ .ARM.attributes
+                0x00000000       0x37 Build/poly1305.o
+ .text          0x00000000        0x0 Build/pwdbased.o
+ .data          0x00000000        0x0 Build/pwdbased.o
+ .bss           0x00000000        0x0 Build/pwdbased.o
+ .comment       0x00000000       0x2f Build/pwdbased.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/pwdbased.o
+ .ARM.attributes
+                0x00000000       0x3e Build/pwdbased.o
+ .text          0x00000000        0x0 Build/rc2.o
+ .data          0x00000000        0x0 Build/rc2.o
+ .bss           0x00000000        0x0 Build/rc2.o
+ .comment       0x00000000       0x2f Build/rc2.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/rc2.o
+ .ARM.attributes
+                0x00000000       0x3e Build/rc2.o
+ .text          0x00000000        0x0 Build/sakke.o
+ .data          0x00000000        0x0 Build/sakke.o
+ .bss           0x00000000        0x0 Build/sakke.o
+ .comment       0x00000000       0x2f Build/sakke.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sakke.o
+ .ARM.attributes
+                0x00000000       0x3e Build/sakke.o
+ .text          0x00000000        0x0 Build/signature.o
+ .data          0x00000000        0x0 Build/signature.o
+ .bss           0x00000000        0x0 Build/signature.o
+ .text.wc_SignatureGetSize
+                0x00000000       0x2a Build/signature.o
+ .text.wc_SignatureVerifyHash
+                0x00000000      0x102 Build/signature.o
+ .text.wc_SignatureVerify
+                0x00000000       0xd2 Build/signature.o
+ .text.wc_SignatureGenerateHash_ex
+                0x00000000       0xd4 Build/signature.o
+ .text.wc_SignatureGenerateHash
+                0x00000000       0x24 Build/signature.o
+ .text.wc_SignatureGenerate_ex
+                0x00000000      0x108 Build/signature.o
+ .text.wc_SignatureGenerate
+                0x00000000       0x24 Build/signature.o
+ .comment       0x00000000       0x2f Build/signature.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/signature.o
+ .ARM.attributes
+                0x00000000       0x37 Build/signature.o
+ .text          0x00000000        0x0 Build/srp.o
+ .data          0x00000000        0x0 Build/srp.o
+ .bss           0x00000000        0x0 Build/srp.o
+ .comment       0x00000000       0x2f Build/srp.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/srp.o
+ .ARM.attributes
+                0x00000000       0x3e Build/srp.o
+ .text          0x00000000        0x0 Build/sp_arm32.o
+ .data          0x00000000        0x0 Build/sp_arm32.o
+ .bss           0x00000000        0x0 Build/sp_arm32.o
+ .comment       0x00000000       0x2f Build/sp_arm32.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sp_arm32.o
+ .ARM.attributes
+                0x00000000       0x3e Build/sp_arm32.o
+ .text          0x00000000        0x0 Build/sp_arm64.o
+ .data          0x00000000        0x0 Build/sp_arm64.o
+ .bss           0x00000000        0x0 Build/sp_arm64.o
+ .comment       0x00000000       0x2f Build/sp_arm64.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sp_arm64.o
+ .ARM.attributes
+                0x00000000       0x3e Build/sp_arm64.o
+ .text          0x00000000        0x0 Build/sp_armthumb.o
+ .data          0x00000000        0x0 Build/sp_armthumb.o
+ .bss           0x00000000        0x0 Build/sp_armthumb.o
+ .comment       0x00000000       0x2f Build/sp_armthumb.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sp_armthumb.o
+ .ARM.attributes
+                0x00000000       0x3e Build/sp_armthumb.o
+ .text          0x00000000        0x0 Build/sp_c32.o
+ .data          0x00000000        0x0 Build/sp_c32.o
+ .bss           0x00000000        0x0 Build/sp_c32.o
+ .comment       0x00000000       0x2f Build/sp_c32.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sp_c32.o
+ .ARM.attributes
+                0x00000000       0x3e Build/sp_c32.o
+ .text          0x00000000        0x0 Build/sp_c64.o
+ .data          0x00000000        0x0 Build/sp_c64.o
+ .bss           0x00000000        0x0 Build/sp_c64.o
+ .comment       0x00000000       0x2f Build/sp_c64.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sp_c64.o
+ .ARM.attributes
+                0x00000000       0x3e Build/sp_c64.o
+ .text          0x00000000        0x0 Build/sp_cortexm.o
+ .data          0x00000000        0x0 Build/sp_cortexm.o
+ .bss           0x00000000        0x0 Build/sp_cortexm.o
+ .text.sp_2048_to_bin_64
+                0x00000000       0x2c Build/sp_cortexm.o
+ .text.sp_2048_add_64
+                0x00000000       0x3e Build/sp_cortexm.o
+ .text.sp_2048_sub_in_place_64
+                0x00000000       0x38 Build/sp_cortexm.o
+ .text.sp_2048_sqr_64
+                0x00000000       0xf0 Build/sp_cortexm.o
+ .text.sp_2048_add_32
+                0x00000000       0x3e Build/sp_cortexm.o
+ .text.sp_2048_sub_in_place_32
+                0x00000000       0x38 Build/sp_cortexm.o
+ .text.sp_2048_sqr_32
+                0x00000000       0xdc Build/sp_cortexm.o
+ .text.sp_2048_mul_d_64
+                0x00000000       0x40 Build/sp_cortexm.o
+ .text.sp_2048_mul_d_32
+                0x00000000       0x40 Build/sp_cortexm.o
+ .text.sp_2048_cmp_32
+                0x00000000       0x54 Build/sp_cortexm.o
+ .text.sp_2048_cmp_64
+                0x00000000       0x54 Build/sp_cortexm.o
+ .text.sp_2048_cond_add_32
+                0x00000000       0x3a Build/sp_cortexm.o
+ .text.sp_2048_lshift_64
+                0x00000000      0x52c Build/sp_cortexm.o
+ .text.sp_3072_to_bin_96
+                0x00000000       0x2c Build/sp_cortexm.o
+ .text.sp_3072_add_96
+                0x00000000       0x3e Build/sp_cortexm.o
+ .text.sp_3072_sub_in_place_96
+                0x00000000       0x38 Build/sp_cortexm.o
+ .text.sp_3072_sqr_96
+                0x00000000       0xfc Build/sp_cortexm.o
+ .text.sp_3072_add_48
+                0x00000000       0x3e Build/sp_cortexm.o
+ .text.sp_3072_sub_in_place_48
+                0x00000000       0x38 Build/sp_cortexm.o
+ .text.sp_3072_sqr_48
+                0x00000000       0xf4 Build/sp_cortexm.o
+ .text.sp_3072_mul_d_96
+                0x00000000       0x40 Build/sp_cortexm.o
+ .text.sp_3072_mul_d_48
+                0x00000000       0x40 Build/sp_cortexm.o
+ .text.sp_3072_cmp_48
+                0x00000000       0x54 Build/sp_cortexm.o
+ .text.sp_3072_cmp_96
+                0x00000000       0x5c Build/sp_cortexm.o
+ .text.sp_3072_cond_add_48
+                0x00000000       0x3a Build/sp_cortexm.o
+ .text.sp_256_point_from_ecc_point_8
+                0x00000000       0x50 Build/sp_cortexm.o
+ .text.sp_2048_mul_64
+                0x00000000       0xb0 Build/sp_cortexm.o
+ .text.sp_2048_mul_32
+                0x00000000       0xa0 Build/sp_cortexm.o
+ .text.sp_3072_mul_96
+                0x00000000       0xbc Build/sp_cortexm.o
+ .text.sp_3072_mul_48
+                0x00000000       0xa8 Build/sp_cortexm.o
+ .text.sp_2048_to_mp
+                0x00000000       0x38 Build/sp_cortexm.o
+ .text.sp_3072_to_mp
+                0x00000000       0x38 Build/sp_cortexm.o
+ .text.sp_3072_sub_96.isra.0
+                0x00000000       0x38 Build/sp_cortexm.o
+ .text.sp_3072_div_96_cond.constprop.0
+                0x00000000       0xca Build/sp_cortexm.o
+ .text.sp_3072_cond_sub_96.isra.0
+                0x00000000       0x3e Build/sp_cortexm.o
+ .text.sp_3072_mont_reduce_96
+                0x00000000       0xd8 Build/sp_cortexm.o
+ .text.sp_3072_mont_sqr_96
+                0x00000000       0x18 Build/sp_cortexm.o
+ .text.sp_3072_mont_mul_96
+                0x00000000       0x1a Build/sp_cortexm.o
+ .text.sp_3072_cond_sub_48.isra.0
+                0x00000000       0x36 Build/sp_cortexm.o
+ .text.sp_3072_mont_reduce_48
+                0x00000000       0xd6 Build/sp_cortexm.o
+ .text.sp_3072_mont_sqr_48
+                0x00000000       0x18 Build/sp_cortexm.o
+ .text.sp_3072_mont_mul_48
+                0x00000000       0x1a Build/sp_cortexm.o
+ .text.sp_2048_sub_64.isra.0
+                0x00000000       0x34 Build/sp_cortexm.o
+ .text.sp_2048_div_64_cond.constprop.0
+                0x00000000       0xc8 Build/sp_cortexm.o
+ .text.sp_2048_cond_sub_64.isra.0
+                0x00000000       0x3a Build/sp_cortexm.o
+ .text.sp_2048_mont_reduce_64
+                0x00000000       0xd8 Build/sp_cortexm.o
+ .text.sp_2048_mont_sqr_64
+                0x00000000       0x18 Build/sp_cortexm.o
+ .text.sp_2048_mont_mul_64
+                0x00000000       0x1a Build/sp_cortexm.o
+ .text.sp_2048_cond_sub_32.isra.0
+                0x00000000       0x36 Build/sp_cortexm.o
+ .text.sp_2048_mont_reduce_32
+                0x00000000       0xd6 Build/sp_cortexm.o
+ .text.sp_2048_mont_sqr_32
+                0x00000000       0x18 Build/sp_cortexm.o
+ .text.sp_2048_mont_mul_32
+                0x00000000       0x1a Build/sp_cortexm.o
+ .text.sp_2048_mont_setup.isra.0
+                0x00000000       0x28 Build/sp_cortexm.o
+ .text.sp_256_ecc_is_point_8.constprop.0
+                0x00000000       0x88 Build/sp_cortexm.o
+ .text.sp_3072_div_96.constprop.0
+                0x00000000       0xce Build/sp_cortexm.o
+ .text.sp_3072_mod_exp_96.constprop.0
+                0x00000000      0x248 Build/sp_cortexm.o
+ .text.sp_3072_div_48.constprop.0
+                0x00000000       0xcc Build/sp_cortexm.o
+ .text.sp_3072_mod_exp_48
+                0x00000000      0x304 Build/sp_cortexm.o
+ .text.sp_2048_div_64.constprop.0
+                0x00000000       0xcc Build/sp_cortexm.o
+ .text.sp_2048_mod_exp_64.constprop.0
+                0x00000000      0x248 Build/sp_cortexm.o
+ .text.sp_2048_div_32.constprop.0
+                0x00000000       0xc8 Build/sp_cortexm.o
+ .text.sp_2048_mod_exp_32
+                0x00000000      0x304 Build/sp_cortexm.o
+ .text.sp_RsaPublic_2048
+                0x00000000      0x20e Build/sp_cortexm.o
+ .text.sp_RsaPrivate_2048
+                0x00000000      0x162 Build/sp_cortexm.o
+ .text.sp_ModExp_2048
+                0x00000000       0xa0 Build/sp_cortexm.o
+ .text.sp_DhExp_2048
+                0x00000000      0x29e Build/sp_cortexm.o
+ .text.sp_ModExp_1024
+                0x00000000       0xc8 Build/sp_cortexm.o
+ .text.sp_RsaPublic_3072
+                0x00000000      0x210 Build/sp_cortexm.o
+ .text.sp_RsaPrivate_3072
+                0x00000000      0x164 Build/sp_cortexm.o
+ .text.sp_ModExp_3072
+                0x00000000       0xa0 Build/sp_cortexm.o
+ .text.sp_DhExp_3072
+                0x00000000       0xc2 Build/sp_cortexm.o
+ .text.sp_ModExp_1536
+                0x00000000       0xc8 Build/sp_cortexm.o
+ .text.sp_ecc_mulmod_256
+                0x00000000       0x6e Build/sp_cortexm.o
+ .text.sp_ecc_mulmod_add_256
+                0x00000000       0xda Build/sp_cortexm.o
+ .text.sp_ecc_mulmod_base_add_256
+                0x00000000       0xce Build/sp_cortexm.o
+ .text.sp_ecc_secret_gen_256
+                0x00000000       0x9c Build/sp_cortexm.o
+ .text.sp_ecc_is_point_256
+                0x00000000       0x54 Build/sp_cortexm.o
+ .text.sp_ecc_check_key_256
+                0x00000000      0x160 Build/sp_cortexm.o
+ .rodata.p256_b
+                0x00000000       0x20 Build/sp_cortexm.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sp_cortexm.o
+ .text          0x00000000        0x0 Build/sp_dsp32.o
+ .data          0x00000000        0x0 Build/sp_dsp32.o
+ .bss           0x00000000        0x0 Build/sp_dsp32.o
+ .comment       0x00000000       0x2f Build/sp_dsp32.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sp_dsp32.o
+ .ARM.attributes
+                0x00000000       0x3e Build/sp_dsp32.o
+ .text          0x00000000        0x0 Build/sp_int.o
+ .data          0x00000000        0x0 Build/sp_int.o
+ .bss           0x00000000        0x0 Build/sp_int.o
+ .text._sp_sub_d
+                0x00000000       0x6a Build/sp_int.o
+ .text._sp_mul_d
+                0x00000000       0x7c Build/sp_int.o
+ .text._sp_sub_off
+                0x00000000       0xac Build/sp_int.o
+ .text.sp_lshb  0x00000000       0xaa Build/sp_int.o
+ .text.sp_mod_d
+                0x00000000       0x90 Build/sp_int.o
+ .text._sp_add_off.constprop.0
+                0x00000000       0xd0 Build/sp_int.o
+ .text.sp_div_2.isra.0
+                0x00000000       0x4a Build/sp_int.o
+ .text.sp_init_size
+                0x00000000        0xe Build/sp_int.o
+ .text.sp_free  0x00000000        0x2 Build/sp_int.o
+ .text.sp_copy  0x00000000       0x30 Build/sp_int.o
+ .text.sp_exch  0x00000000       0x90 Build/sp_int.o
+ .text.sp_cond_swap_ct
+                0x00000000       0xa4 Build/sp_int.o
+ .text.sp_is_bit_set
+                0x00000000       0x22 Build/sp_int.o
+ .text.sp_set_bit
+                0x00000000       0x4a Build/sp_int.o
+ .text.sp_2expt
+                0x00000000       0x12 Build/sp_int.o
+ .text.sp_set   0x00000000       0x16 Build/sp_int.o
+ .text.sp_set_int
+                0x00000000       0x16 Build/sp_int.o
+ .text.sp_cmp_d
+                0x00000000       0x2e Build/sp_int.o
+ .text.sp_add_d
+                0x00000000       0x80 Build/sp_int.o
+ .text.sp_sub_d
+                0x00000000       0x14 Build/sp_int.o
+ .text.sp_mul_d
+                0x00000000       0x22 Build/sp_int.o
+ .text.sp_div_d
+                0x00000000      0x102 Build/sp_int.o
+ .text.sp_add   0x00000000       0x24 Build/sp_int.o
+ .text.sp_sub   0x00000000       0x1c Build/sp_int.o
+ .text.sp_lshd  0x00000000       0x54 Build/sp_int.o
+ .text.sp_rshd  0x00000000       0x2e Build/sp_int.o
+ .text.sp_rshb  0x00000000       0x7e Build/sp_int.o
+ .text.sp_div   0x00000000      0x376 Build/sp_int.o
+ .text._sp_mont_red
+                0x00000000      0x180 Build/sp_int.o
+ .text.sp_mod   0x00000000       0x14 Build/sp_int.o
+ .text.sp_mul   0x00000000      0x118 Build/sp_int.o
+ .text.sp_mulmod
+                0x00000000       0x76 Build/sp_int.o
+ .text.sp_invmod
+                0x00000000      0x28a Build/sp_int.o
+ .text.sp_sqr   0x00000000        0x8 Build/sp_int.o
+ .text.sp_sqrmod
+                0x00000000       0x32 Build/sp_int.o
+ .text._sp_exptmod_ex
+                0x00000000      0x174 Build/sp_int.o
+ .text.sp_exptmod_ex
+                0x00000000      0x162 Build/sp_int.o
+ .text.sp_exptmod
+                0x00000000       0x1e Build/sp_int.o
+ .text.sp_prime_miller_rabin_ex
+                0x00000000      0x120 Build/sp_int.o
+ .text.sp_mont_red
+                0x00000000       0x24 Build/sp_int.o
+ .text.sp_mont_setup
+                0x00000000       0x3e Build/sp_int.o
+ .text.sp_mont_norm
+                0x00000000       0x6c Build/sp_int.o
+ .text.sp_exptmod_nct
+                0x00000000      0x1d2 Build/sp_int.o
+ .text.sp_tohex
+                0x00000000       0x98 Build/sp_int.o
+ .text.sp_todecimal
+                0x00000000       0x96 Build/sp_int.o
+ .text.sp_toradix
+                0x00000000       0x1a Build/sp_int.o
+ .text.sp_radix_size
+                0x00000000       0x98 Build/sp_int.o
+ .text.sp_prime_is_prime
+                0x00000000      0x178 Build/sp_int.o
+ .text.sp_prime_is_prime_ex
+                0x00000000      0x224 Build/sp_int.o
+ .text.sp_rand_prime
+                0x00000000       0x8c Build/sp_int.o
+ .text.sp_gcd   0x00000000      0x168 Build/sp_int.o
+ .text.CheckRunTimeSettings
+                0x00000000        0x4 Build/sp_int.o
+ .text.CheckRunTimeFastMath
+                0x00000000        0x4 Build/sp_int.o
+ .rodata.kHexChar.0
+                0x00000000       0x10 Build/sp_int.o
+ .rodata.sp_lnz
+                0x00000000       0x40 Build/sp_int.o
+ .rodata.sp_off_on_addr
+                0x00000000        0x8 Build/sp_int.o
+ .rodata.sp_primes
+                0x00000000      0x400 Build/sp_int.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sp_int.o
+ .text          0x00000000        0x0 Build/sp_x86_64.o
+ .data          0x00000000        0x0 Build/sp_x86_64.o
+ .bss           0x00000000        0x0 Build/sp_x86_64.o
+ .comment       0x00000000       0x2f Build/sp_x86_64.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/sp_x86_64.o
+ .ARM.attributes
+                0x00000000       0x3e Build/sp_x86_64.o
+ .text          0x00000000        0x0 Build/tfm.o
+ .data          0x00000000        0x0 Build/tfm.o
+ .bss           0x00000000        0x0 Build/tfm.o
+ .text.fp_sqr_comba8
+                0x00000000      0x45a Build/tfm.o
+ .text.fp_mul_comba8
+                0x00000000      0x4d8 Build/tfm.o
+ .text.s_fp_add
+                0x00000000       0x98 Build/tfm.o
+ .text.s_fp_sub
+                0x00000000       0x96 Build/tfm.o
+ .text.fp_mul_2
+                0x00000000       0x72 Build/tfm.o
+ .text.fp_mul_d
+                0x00000000       0x84 Build/tfm.o
+ .text.fp_div_2
+                0x00000000       0x6a Build/tfm.o
+ .text.fp_div_2_mod_ct
+                0x00000000       0xa6 Build/tfm.o
+ .text.fp_submod_ct
+                0x00000000       0xa2 Build/tfm.o
+ .text.fp_addmod_ct
+                0x00000000       0xce Build/tfm.o
+ .text.fp_cmp_d
+                0x00000000       0x32 Build/tfm.o
+ .text.fp_cmp_mag
+                0x00000000       0x36 Build/tfm.o
+ .text.fp_add   0x00000000       0x42 Build/tfm.o
+ .text.fp_sub   0x00000000       0x40 Build/tfm.o
+ .text.fp_cmp   0x00000000       0x2a Build/tfm.o
+ .text.fp_montgomery_setup
+                0x00000000       0x36 Build/tfm.o
+ .text.fp_montgomery_reduce_ex
+                0x00000000      0x158 Build/tfm.o
+ .text.fp_montgomery_reduce
+                0x00000000        0x6 Build/tfm.o
+ .text.fp_to_unsigned_bin_at_pos
+                0x00000000       0x3e Build/tfm.o
+ .text.fp_to_unsigned_bin_len
+                0x00000000       0x3a Build/tfm.o
+ .text.fp_is_bit_set
+                0x00000000       0x2e Build/tfm.o
+ .text.fp_set_bit
+                0x00000000       0x32 Build/tfm.o
+ .text.fp_count_bits
+                0x00000000       0x1a Build/tfm.o
+ .text.fp_unsigned_bin_size
+                0x00000000       0x1a Build/tfm.o
+ .text.fp_leading_bit
+                0x00000000       0x22 Build/tfm.o
+ .text.fp_lshd  0x00000000       0x6a Build/tfm.o
+ .text.fp_reverse
+                0x00000000       0x22 Build/tfm.o
+ .text.fp_zero  0x00000000       0x10 Build/tfm.o
+ .text.fp_2expt
+                0x00000000       0x28 Build/tfm.o
+ .text.fp_read_unsigned_bin
+                0x00000000       0x56 Build/tfm.o
+ .text.fp_set   0x00000000       0x16 Build/tfm.o
+ .text.fp_montgomery_calc_normalization
+                0x00000000       0x6e Build/tfm.o
+ .text.fp_rshd  0x00000000       0x56 Build/tfm.o
+ .text.fp_rshb  0x00000000       0x66 Build/tfm.o
+ .text.fp_init  0x00000000        0xa Build/tfm.o
+ .text.mp_init  0x00000000        0xc Build/tfm.o
+ .text.fp_clear
+                0x00000000        0x4 Build/tfm.o
+ .text.fp_forcezero
+                0x00000000       0x1e Build/tfm.o
+ .text.mp_forcezero
+                0x00000000        0x4 Build/tfm.o
+ .text.fp_free  0x00000000        0x2 Build/tfm.o
+ .text.mp_clear
+                0x00000000        0x8 Build/tfm.o
+ .text.mp_free  0x00000000        0x2 Build/tfm.o
+ .text.mp_init_multi
+                0x00000000       0x46 Build/tfm.o
+ .text.mp_add   0x00000000        0x4 Build/tfm.o
+ .text.mp_sub   0x00000000        0x4 Build/tfm.o
+ .text.mp_mul_d
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_submod_ct
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_addmod_ct
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_cmp   0x00000000        0x4 Build/tfm.o
+ .text.mp_cmp_d
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_unsigned_bin_size
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_to_unsigned_bin_at_pos
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_to_unsigned_bin_len
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_read_unsigned_bin
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_2expt
+                0x00000000        0xa Build/tfm.o
+ .text.fp_copy  0x00000000       0x3e Build/tfm.o
+ .text.fp_mul_2d
+                0x00000000       0x90 Build/tfm.o
+ .text.fp_set_int
+                0x00000000       0x56 Build/tfm.o
+ .text.mp_mul_2d
+                0x00000000        0x4 Build/tfm.o
+ .text.fp_mul_comba
+                0x00000000      0x114 Build/tfm.o
+ .text.fp_mul   0x00000000       0x52 Build/tfm.o
+ .text.mp_mul   0x00000000        0x4 Build/tfm.o
+ .text.fp_mod_2d
+                0x00000000       0xb8 Build/tfm.o
+ .text.fp_div_2d
+                0x00000000       0x72 Build/tfm.o
+ .text.mp_div_2d
+                0x00000000        0xa Build/tfm.o
+ .text.fp_sqr_comba
+                0x00000000      0x12c Build/tfm.o
+ .text.fp_sqr   0x00000000       0x3e Build/tfm.o
+ .text.fp_sub_d
+                0x00000000       0x5a Build/tfm.o
+ .text.mp_sub_d
+                0x00000000        0x4 Build/tfm.o
+ .text.fp_invmod_mont_ct
+                0x00000000      0x1ce Build/tfm.o
+ .text.mp_invmod_mont_ct
+                0x00000000        0x4 Build/tfm.o
+ .text.fp_div_d
+                0x00000000      0x114 Build/tfm.o
+ .text.fp_init_copy
+                0x00000000       0x1c Build/tfm.o
+ .text.fp_div   0x00000000      0x364 Build/tfm.o
+ .text.fp_mod   0x00000000       0x5a Build/tfm.o
+ .text.fp_mulmod
+                0x00000000       0x66 Build/tfm.o
+ .text.mp_mulmod
+                0x00000000        0x4 Build/tfm.o
+ .text.fp_submod
+                0x00000000       0x66 Build/tfm.o
+ .text.mp_submod
+                0x00000000        0x4 Build/tfm.o
+ .text.fp_addmod
+                0x00000000       0x66 Build/tfm.o
+ .text.mp_addmod
+                0x00000000        0x4 Build/tfm.o
+ .text._fp_exptmod_ct
+                0x00000000      0x160 Build/tfm.o
+ .text._fp_exptmod_nct
+                0x00000000      0x2ee Build/tfm.o
+ .text.mp_mod   0x00000000        0x4 Build/tfm.o
+ .text.fp_invmod
+                0x00000000      0x4e6 Build/tfm.o
+ .text.mp_invmod
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_div   0x00000000        0x4 Build/tfm.o
+ .text.fp_exptmod
+                0x00000000      0x29c Build/tfm.o
+ .text.mp_exptmod
+                0x00000000        0x4 Build/tfm.o
+ .text.fp_exptmod_ex
+                0x00000000       0xb6 Build/tfm.o
+ .text.mp_exptmod_ex
+                0x00000000        0x4 Build/tfm.o
+ .text.fp_exptmod_nct
+                0x00000000       0xac Build/tfm.o
+ .text.mp_exptmod_nct
+                0x00000000        0x4 Build/tfm.o
+ .text.fp_to_unsigned_bin
+                0x00000000       0x3a Build/tfm.o
+ .text.mp_to_unsigned_bin
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_init_copy
+                0x00000000        0xa Build/tfm.o
+ .text.fp_gcd   0x00000000       0xc0 Build/tfm.o
+ .text.mp_copy  0x00000000        0xa Build/tfm.o
+ .text.mp_isodd
+                0x00000000       0x10 Build/tfm.o
+ .text.mp_iszero
+                0x00000000        0xa Build/tfm.o
+ .text.mp_count_bits
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_leading_bit
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_rshb  0x00000000        0x4 Build/tfm.o
+ .text.mp_rshd  0x00000000        0x4 Build/tfm.o
+ .text.mp_set_int
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_is_bit_set
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_set_bit
+                0x00000000        0x4 Build/tfm.o
+ .text.fp_sqrmod
+                0x00000000       0x5e Build/tfm.o
+ .text.mp_sqrmod
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_montgomery_calc_normalization
+                0x00000000        0x4 Build/tfm.o
+ .text.fp_cnt_lsb
+                0x00000000       0x3c Build/tfm.o
+ .text.fp_prime_miller_rabin_ex
+                0x00000000      0x15a Build/tfm.o
+ .text.mp_mod_d
+                0x00000000        0x8 Build/tfm.o
+ .text.mp_prime_is_prime
+                0x00000000      0x13c Build/tfm.o
+ .text.mp_prime_is_prime_ex
+                0x00000000      0x1ec Build/tfm.o
+ .text.mp_cond_swap_ct
+                0x00000000       0xae Build/tfm.o
+ .text.mp_gcd   0x00000000        0x4 Build/tfm.o
+ .text.mp_lcm   0x00000000       0x8e Build/tfm.o
+ .text.mp_rand_prime
+                0x00000000       0xc2 Build/tfm.o
+ .text.mp_exch  0x00000000       0x44 Build/tfm.o
+ .text.fp_add_d
+                0x00000000       0x3c Build/tfm.o
+ .text.mp_add_d
+                0x00000000        0x4 Build/tfm.o
+ .rodata.mp_read_radix.str1.1
+                0x00000000       0x41 Build/tfm.o
+ .text.mp_read_radix
+                0x00000000      0x124 Build/tfm.o
+ .text.mp_sqr   0x00000000        0x4 Build/tfm.o
+ .text.mp_montgomery_reduce
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_montgomery_reduce_ex
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_montgomery_setup
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_div_2
+                0x00000000        0xa Build/tfm.o
+ .text.mp_div_2_mod_ct
+                0x00000000        0x4 Build/tfm.o
+ .text.mp_set   0x00000000        0xa Build/tfm.o
+ .text.mp_radix_size
+                0x00000000       0xb8 Build/tfm.o
+ .text.mp_toradix
+                0x00000000       0xbc Build/tfm.o
+ .text.mp_abs   0x00000000        0xe Build/tfm.o
+ .text.mp_lshd  0x00000000        0x4 Build/tfm.o
+ .rodata.lnz    0x00000000       0x40 Build/tfm.o
+ .rodata.primes
+                0x00000000      0x400 Build/tfm.o
+ .comment       0x00000000       0x2f Build/tfm.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/tfm.o
+ .ARM.attributes
+                0x00000000       0x37 Build/tfm.o
+ .text          0x00000000        0x0 Build/wc_dsp.o
+ .data          0x00000000        0x0 Build/wc_dsp.o
+ .bss           0x00000000        0x0 Build/wc_dsp.o
+ .comment       0x00000000       0x2f Build/wc_dsp.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/wc_dsp.o
+ .ARM.attributes
+                0x00000000       0x3e Build/wc_dsp.o
+ .text          0x00000000        0x0 Build/wc_encrypt.o
+ .data          0x00000000        0x0 Build/wc_encrypt.o
+ .bss           0x00000000        0x0 Build/wc_encrypt.o
+ .text.wc_AesCbcDecryptWithKey
+                0x00000000       0x78 Build/wc_encrypt.o
+ .text.wc_AesCbcEncryptWithKey
+                0x00000000       0x60 Build/wc_encrypt.o
+ .text.wc_Des_CbcEncryptWithKey
+                0x00000000       0x46 Build/wc_encrypt.o
+ .text.wc_Des_CbcDecryptWithKey
+                0x00000000       0x46 Build/wc_encrypt.o
+ .text.wc_Des3_CbcEncryptWithKey
+                0x00000000       0x5c Build/wc_encrypt.o
+ .text.wc_Des3_CbcDecryptWithKey
+                0x00000000       0x5c Build/wc_encrypt.o
+ .comment       0x00000000       0x2f Build/wc_encrypt.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/wc_encrypt.o
+ .ARM.attributes
+                0x00000000       0x37 Build/wc_encrypt.o
+ .text          0x00000000        0x0 Build/wc_pkcs11.o
+ .data          0x00000000        0x0 Build/wc_pkcs11.o
+ .bss           0x00000000        0x0 Build/wc_pkcs11.o
+ .comment       0x00000000       0x2f Build/wc_pkcs11.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/wc_pkcs11.o
+ .ARM.attributes
+                0x00000000       0x3e Build/wc_pkcs11.o
+ .text          0x00000000        0x0 Build/wc_port.o
+ .data          0x00000000        0x0 Build/wc_port.o
+ .bss           0x00000000        0x0 Build/wc_port.o
+ .text.wolfCrypt_Init
+                0x00000000       0x14 Build/wc_port.o
+ .text.wolfCrypt_Cleanup
+                0x00000000       0x1c Build/wc_port.o
+ .text.wc_InitAndAllocMutex
+                0x00000000        0x6 Build/wc_port.o
+ .text.wc_strtok
+                0x00000000       0x58 Build/wc_port.o
+ .text.wc_strsep
+                0x00000000       0x34 Build/wc_port.o
+ .text.wc_strlcpy
+                0x00000000       0x24 Build/wc_port.o
+ .text.wc_strlcat
+                0x00000000       0x2e Build/wc_port.o
+ .text.wc_InitMutex
+                0x00000000        0x4 Build/wc_port.o
+ .text.wc_FreeMutex
+                0x00000000        0x4 Build/wc_port.o
+ .text.wc_LockMutex
+                0x00000000        0x4 Build/wc_port.o
+ .text.wc_UnLockMutex
+                0x00000000        0x4 Build/wc_port.o
+ .text.mystrnstr
+                0x00000000       0x48 Build/wc_port.o
+ .bss.initRefCount
+                0x00000000        0x4 Build/wc_port.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/wc_port.o
+ .text          0x00000000        0x0 Build/wolfevent.o
+ .data          0x00000000        0x0 Build/wolfevent.o
+ .bss           0x00000000        0x0 Build/wolfevent.o
+ .comment       0x00000000       0x2f Build/wolfevent.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/wolfevent.o
+ .ARM.attributes
+                0x00000000       0x3e Build/wolfevent.o
+ .text          0x00000000        0x0 Build/wolfmath.o
+ .data          0x00000000        0x0 Build/wolfmath.o
+ .bss           0x00000000        0x0 Build/wolfmath.o
+ .text.get_digit_count
+                0x00000000        0x6 Build/wolfmath.o
+ .text.get_digit
+                0x00000000       0x18 Build/wolfmath.o
+ .text.mp_cond_copy
+                0x00000000       0xaa Build/wolfmath.o
+ .text.get_rand_digit
+                0x00000000        0x6 Build/wolfmath.o
+ .text.mp_rand  0x00000000       0x52 Build/wolfmath.o
+ .text.wc_export_int
+                0x00000000       0x6e Build/wolfmath.o
+ .rodata.wc_off_on_addr
+                0x00000000        0x8 Build/wolfmath.o
+ .comment       0x00000000       0x2f Build/wolfmath.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/wolfmath.o
+ .ARM.attributes
+                0x00000000       0x37 Build/wolfmath.o
+ .text          0x00000000        0x0 Build/arc4.o
+ .data          0x00000000        0x0 Build/arc4.o
+ .bss           0x00000000        0x0 Build/arc4.o
+ .text.wc_Arc4SetKey
+                0x00000000       0x56 Build/arc4.o
+ .text.wc_Arc4Process
+                0x00000000       0x50 Build/arc4.o
+ .text.wc_Arc4Init
+                0x00000000       0x10 Build/arc4.o
+ .text.wc_Arc4Free
+                0x00000000        0x2 Build/arc4.o
+ .comment       0x00000000       0x2f Build/arc4.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/arc4.o
+ .ARM.attributes
+                0x00000000       0x37 Build/arc4.o
+ .text          0x00000000        0x0 Build/blake2b.o
+ .data          0x00000000        0x0 Build/blake2b.o
+ .bss           0x00000000        0x0 Build/blake2b.o
+ .text.blake2b_compress
+                0x00000000     0x4c78 Build/blake2b.o
+ .text.blake2b_init_param
+                0x00000000       0x5c Build/blake2b.o
+ .text.blake2b_init
+                0x00000000       0x38 Build/blake2b.o
+ .text.blake2b_update
+                0x00000000      0x130 Build/blake2b.o
+ .text.blake2b_init_key
+                0x00000000       0x9a Build/blake2b.o
+ .text.blake2b_final
+                0x00000000      0x194 Build/blake2b.o
+ .text.blake2b  0x00000000       0x52 Build/blake2b.o
+ .text.wc_InitBlake2b
+                0x00000000       0x12 Build/blake2b.o
+ .text.wc_InitBlake2b_WithKey
+                0x00000000       0x26 Build/blake2b.o
+ .text.wc_Blake2bUpdate
+                0x00000000        0x6 Build/blake2b.o
+ .text.wc_Blake2bFinal
+                0x00000000        0xc Build/blake2b.o
+ .rodata.blake2b_IV
+                0x00000000       0x40 Build/blake2b.o
+ .comment       0x00000000       0x2f Build/blake2b.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/blake2b.o
+ .ARM.attributes
+                0x00000000       0x37 Build/blake2b.o
+ .text          0x00000000        0x0 Build/camellia.o
+ .data          0x00000000        0x0 Build/camellia.o
+ .bss           0x00000000        0x0 Build/camellia.o
+ .text.Camellia_EncryptBlock
+                0x00000000     0x1500 Build/camellia.o
+ .text.Camellia_DecryptBlock
+                0x00000000     0x1508 Build/camellia.o
+ .text.camellia_setup256
+                0x00000000      0xdc0 Build/camellia.o
+ .text.xorbuf.constprop.0
+                0x00000000       0x3e Build/camellia.o
+ .text.wc_CamelliaSetIV
+                0x00000000       0x20 Build/camellia.o
+ .text.wc_CamelliaSetKey
+                0x00000000      0x9dc Build/camellia.o
+ .text.wc_CamelliaEncryptDirect
+                0x00000000       0x1e Build/camellia.o
+ .text.wc_CamelliaDecryptDirect
+                0x00000000       0x1e Build/camellia.o
+ .text.wc_CamelliaCbcEncrypt
+                0x00000000       0x52 Build/camellia.o
+ .text.wc_CamelliaCbcDecrypt
+                0x00000000       0x60 Build/camellia.o
+ .rodata.camellia_sp0222
+                0x00000000      0x400 Build/camellia.o
+ .rodata.camellia_sp1110
+                0x00000000      0x400 Build/camellia.o
+ .rodata.camellia_sp3033
+                0x00000000      0x400 Build/camellia.o
+ .rodata.camellia_sp4404
+                0x00000000      0x400 Build/camellia.o
+ .comment       0x00000000       0x2f Build/camellia.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/camellia.o
+ .ARM.attributes
+                0x00000000       0x37 Build/camellia.o
+ .text          0x00000000        0x0 Build/dsa.o
+ .data          0x00000000        0x0 Build/dsa.o
+ .bss           0x00000000        0x0 Build/dsa.o
+ .text.CheckDsaLN
+                0x00000000       0x32 Build/dsa.o
+ .text._DsaImportParamsRaw
+                0x00000000       0xc4 Build/dsa.o
+ .text.wc_InitDsaKey
+                0x00000000       0x36 Build/dsa.o
+ .text.wc_InitDsaKey_h
+                0x00000000       0x12 Build/dsa.o
+ .text.wc_FreeDsaKey
+                0x00000000       0x46 Build/dsa.o
+ .text.wc_MakeDsaKey
+                0x00000000      0x12c Build/dsa.o
+ .text.wc_MakeDsaParameters
+                0x00000000      0x200 Build/dsa.o
+ .text.wc_DsaImportParamsRaw
+                0x00000000       0x14 Build/dsa.o
+ .text.wc_DsaImportParamsRawCheck
+                0x00000000        0x4 Build/dsa.o
+ .text.wc_DsaExportParamsRaw
+                0x00000000       0xd6 Build/dsa.o
+ .text.wc_DsaExportKeyRaw
+                0x00000000       0x8e Build/dsa.o
+ .text.wc_DsaSign
+                0x00000000      0x408 Build/dsa.o
+ .text.wc_DsaVerify
+                0x00000000      0x264 Build/dsa.o
+ .comment       0x00000000       0x2f Build/dsa.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/dsa.o
+ .ARM.attributes
+                0x00000000       0x37 Build/dsa.o
+ .text          0x00000000        0x0 Build/md2.o
+ .data          0x00000000        0x0 Build/md2.o
+ .bss           0x00000000        0x0 Build/md2.o
+ .comment       0x00000000       0x2f Build/md2.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/md2.o
+ .ARM.attributes
+                0x00000000       0x3e Build/md2.o
+ .text          0x00000000        0x0 Build/md4.o
+ .data          0x00000000        0x0 Build/md4.o
+ .bss           0x00000000        0x0 Build/md4.o
+ .comment       0x00000000       0x2f Build/md4.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/md4.o
+ .ARM.attributes
+                0x00000000       0x3e Build/md4.o
+ .text          0x00000000        0x0 Build/ripemd.o
+ .data          0x00000000        0x0 Build/ripemd.o
+ .bss           0x00000000        0x0 Build/ripemd.o
+ .comment       0x00000000       0x2f Build/ripemd.o
+ .note.GNU-stack
+                0x00000000        0x0 Build/ripemd.o
+ .ARM.attributes
+                0x00000000       0x3e Build/ripemd.o
+ .text          0x00000000       0x3c /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x00000000       0x1d /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o)
+ .text          0x00000000       0x10 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_dvmd_lnx.o)
+ .data          0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_dvmd_lnx.o)
+ .bss           0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_dvmd_lnx.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_dvmd_lnx.o)
+ .ARM.attributes
+                0x00000000       0x1d /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_dvmd_lnx.o)
+ .text          0x00000000      0x120 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
+ .data          0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
+ .bss           0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x00000000        0x8 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x00000000       0x2f /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
+ .text          0x00000000       0x64 /usr/lib/arm-linux-gnueabihf/libc_nonshared.a(elf-init.oS)
+ .data          0x00000000        0x0 /usr/lib/arm-linux-gnueabihf/libc_nonshared.a(elf-init.oS)
+ .bss           0x00000000        0x0 /usr/lib/arm-linux-gnueabihf/libc_nonshared.a(elf-init.oS)
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/arm-linux-gnueabihf/libc_nonshared.a(elf-init.oS)
+ .ARM.attributes
+                0x00000000       0x31 /usr/lib/arm-linux-gnueabihf/libc_nonshared.a(elf-init.oS)
+ .text          0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
+ .data          0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
+ .bss           0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
+ .rodata        0x00000000       0x90 /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
+ .text          0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
+ .data          0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
+ .bss           0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+LOAD Build/public_key_test.o
+LOAD Build/wolf_main.o
+LOAD Build/armtarget.o
+LOAD Build/test.o
+LOAD Build/benchmark.o
+LOAD Build/bio.o
+LOAD Build/crl.o
+LOAD Build/internal.o
+LOAD Build/keys.o
+LOAD Build/ocsp.o
+LOAD Build/sniffer.o
+LOAD Build/ssl.o
+LOAD Build/tls.o
+LOAD Build/tls13.o
+LOAD Build/wolfio.o
+LOAD Build/aes.o
+LOAD Build/cmac.o
+LOAD Build/des3.o
+LOAD Build/dh.o
+LOAD Build/ecc.o
+LOAD Build/hmac.o
+LOAD Build/random.o
+LOAD Build/rsa.o
+LOAD Build/sha.o
+LOAD Build/sha256.o
+LOAD Build/sha512.o
+LOAD Build/sha3.o
+LOAD Build/asm.o
+LOAD Build/asn.o
+LOAD Build/blake2s.o
+LOAD Build/chacha.o
+LOAD Build/chacha20_poly1305.o
+LOAD Build/coding.o
+LOAD Build/compress.o
+LOAD Build/cpuid.o
+LOAD Build/cryptocb.o
+LOAD Build/curve25519.o
+LOAD Build/curve448.o
+LOAD Build/ecc_fp.o
+LOAD Build/eccsi.o
+LOAD Build/ed25519.o
+LOAD Build/ed448.o
+LOAD Build/error.o
+LOAD Build/fe_448.o
+LOAD Build/fe_low_mem.o
+LOAD Build/fe_operations.o
+LOAD Build/ge_448.o
+LOAD Build/ge_low_mem.o
+LOAD Build/ge_operations.o
+LOAD Build/hash.o
+LOAD Build/kdf.o
+LOAD Build/integer.o
+LOAD Build/logging.o
+LOAD Build/md5.o
+LOAD Build/memory.o
+LOAD Build/misc.o
+LOAD Build/pkcs12.o
+LOAD Build/pkcs7.o
+LOAD Build/poly1305.o
+LOAD Build/pwdbased.o
+LOAD Build/rc2.o
+LOAD Build/sakke.o
+LOAD Build/signature.o
+LOAD Build/srp.o
+LOAD Build/sp_arm32.o
+LOAD Build/sp_arm64.o
+LOAD Build/sp_armthumb.o
+LOAD Build/sp_c32.o
+LOAD Build/sp_c64.o
+LOAD Build/sp_cortexm.o
+LOAD Build/sp_dsp32.o
+LOAD Build/sp_int.o
+LOAD Build/sp_x86_64.o
+LOAD Build/tfm.o
+LOAD Build/wc_dsp.o
+LOAD Build/wc_encrypt.o
+LOAD Build/wc_pkcs11.o
+LOAD Build/wc_port.o
+LOAD Build/wolfevent.o
+LOAD Build/wolfmath.o
+LOAD Build/arc4.o
+LOAD Build/blake2b.o
+LOAD Build/camellia.o
+LOAD Build/dsa.o
+LOAD Build/md2.o
+LOAD Build/md4.o
+LOAD Build/ripemd.o
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/libm.so
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc_s.so
+START GROUP
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/libgcc_s.so.1
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a
+END GROUP
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/libc.so
+START GROUP
+LOAD /lib/arm-linux-gnueabihf/libc.so.6
+LOAD /usr/lib/arm-linux-gnueabihf/libc_nonshared.a
+LOAD /lib/ld-linux-armhf.so.3
+END GROUP
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc_s.so
+START GROUP
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/libgcc_s.so.1
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a
+END GROUP
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
+LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
+                [!provide]                PROVIDE (__executable_start = SEGMENT_START ("text-segment", 0x10000))
+                0x00010134                . = (SEGMENT_START ("text-segment", 0x10000) + SIZEOF_HEADERS)
+
+.interp         0x00010134       0x19
+ *(.interp)
+ .interp        0x00010134       0x19 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+
+.note.gnu.build-id
+                0x00010150       0x24
+ *(.note.gnu.build-id)
+ .note.gnu.build-id
+                0x00010150       0x24 linker stubs
+
+.note.ABI-tag   0x00010174       0x20
+ .note.ABI-tag  0x00010174       0x20 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+
+.hash
+ *(.hash)
+
+.gnu.hash       0x00010194       0x44
+ *(.gnu.hash)
+ .gnu.hash      0x00010194       0x44 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+
+.dynsym         0x000101d8       0xa0
+ *(.dynsym)
+ .dynsym        0x000101d8       0xa0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+
+.dynstr         0x00010278       0x6c
+ *(.dynstr)
+ .dynstr        0x00010278       0x6c /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+
+.gnu.version    0x000102e4       0x14
+ *(.gnu.version)
+ .gnu.version   0x000102e4       0x14 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+
+.gnu.version_d  0x000102f8        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x000102f8        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+
+.gnu.version_r  0x000102f8       0x30
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x000102f8       0x30 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+
+.rel.dyn        0x00010328        0x8
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro .rel.data.rel.ro.* .rel.gnu.linkonce.d.rel.ro.*)
+ .rel.data.rel.ro
+                0x00010328        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x00010328        0x8 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ .rel.bss       0x00010330        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+                [!provide]                PROVIDE (__rel_iplt_start = .)
+ *(.rel.iplt)
+ .rel.iplt      0x00010330        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+                [!provide]                PROVIDE (__rel_iplt_end = .)
+
+.rela.dyn       0x00010330        0x0
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+                [!provide]                PROVIDE (__rela_iplt_start = .)
+ *(.rela.iplt)
+                [!provide]                PROVIDE (__rela_iplt_end = .)
+
+.rel.plt        0x00010330       0x40
+ *(.rel.plt)
+ .rel.plt       0x00010330       0x40 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+
+.rela.plt
+ *(.rela.plt)
+
+.init           0x00010370        0xc
+ *(SORT_NONE(.init))
+ .init          0x00010370        0x8 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o
+                0x00010370                _init
+ .init          0x00010378        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
+
+.plt            0x0001037c       0x7c
+ *(.plt)
+ .plt           0x0001037c       0x7c /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+                0x00010390                printf@@GLIBC_2.4
+                0x000103a0                free@@GLIBC_2.4
+                0x000103ac                clock_gettime@@GLIBC_2.17
+                0x000103bc                memcpy@@GLIBC_2.4
+                0x000103c8                malloc@@GLIBC_2.4
+                0x000103e0                strlen@@GLIBC_2.4
+                0x000103ec                memset@@GLIBC_2.4
+
+.iplt           0x000103f8        0x0
+ *(.iplt)
+ .iplt          0x000103f8        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+
+.text           0x000103f8     0x55c4
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ .text.startup.main
+                0x000103f8       0x34 Build/public_key_test.o
+                0x000103f8                main
+ *(.text.hot .text.hot.*)
+ *(SORT_BY_NAME(.text.sorted.*))
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0001042c       0x24 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o
+ .text          0x00010450       0x90 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+ .text.test_ECC
+                0x000104e0      0x168 Build/public_key_test.o
+                0x000104e0                test_ECC
+ .text.hw_rand  0x00010648       0x10 Build/wolf_main.o
+                0x00010648                hw_rand
+ .text.my_rng_seed_gen
+                0x00010658        0x4 Build/wolf_main.o
+                0x00010658                my_rng_seed_gen
+ .text.reset_handler
+                0x0001065c        0x8 Build/armtarget.o
+                0x0001065c                reset_handler
+ .text.alt_fp_init
+                0x00010664        0x8 Build/ecc.o
+ .text.wc_ecc_curve_cache_load_item
+                0x0001066c       0x4a Build/ecc.o
+ .text.wc_ecc_curve_free
+                0x000106b6       0x90 Build/ecc.o
+ .text.wc_ecc_curve_load
+                0x00010746       0x9e Build/ecc.o
+ .text.ecc_make_pub_ex.constprop.0
+                0x000107e4       0xf0 Build/ecc.o
+ .text.wc_ecc_set_curve
+                0x000108d4       0x60 Build/ecc.o
+                0x000108d4                wc_ecc_set_curve
+ .text._ecc_make_key_ex
+                0x00010934       0x58 Build/ecc.o
+ .text.wc_ecc_is_valid_idx
+                0x0001098c        0xc Build/ecc.o
+                0x0001098c                wc_ecc_is_valid_idx
+ .text.wc_ecc_make_key_ex
+                0x00010998        0xe Build/ecc.o
+                0x00010998                wc_ecc_make_key_ex
+ .text.wc_ecc_make_key
+                0x000109a6        0x6 Build/ecc.o
+                0x000109a6                wc_ecc_make_key
+ .text.wc_ecc_init_ex
+                0x000109ac       0x52 Build/ecc.o
+                0x000109ac                wc_ecc_init_ex
+ .text.wc_ecc_init
+                0x000109fe        0xa Build/ecc.o
+                0x000109fe                wc_ecc_init
+ .text.wc_ecc_sign_hash_ex
+                0x00010a08       0x68 Build/ecc.o
+                0x00010a08                wc_ecc_sign_hash_ex
+ .text.wc_ecc_sign_hash
+                0x00010a70       0xc6 Build/ecc.o
+                0x00010a70                wc_ecc_sign_hash
+ .text.wc_ecc_free
+                0x00010b36       0x24 Build/ecc.o
+                0x00010b36                wc_ecc_free
+ .text.wc_ecc_key_free
+                0x00010b5a       0x28 Build/ecc.o
+                0x00010b5a                wc_ecc_key_free
+ *fill*         0x00010b82        0x2 
+ .text.wc_ecc_verify_hash_ex
+                0x00010b84      0x11c Build/ecc.o
+                0x00010b84                wc_ecc_verify_hash_ex
+ .text.wc_ecc_verify_hash
+                0x00010ca0       0xee Build/ecc.o
+                0x00010ca0                wc_ecc_verify_hash
+ .text.ForceZero
+                0x00010d8e       0x10 Build/random.o
+ .text.ConstantCompare
+                0x00010d9e       0x1a Build/random.o
+ .text.Hash_DRBG_Uninstantiate
+                0x00010db8       0x24 Build/random.o
+ .text.array_add.part.0.constprop.0
+                0x00010ddc       0x44 Build/random.o
+ .text.Hash_DRBG_Generate
+                0x00010e20      0x1a4 Build/random.o
+ .text.Hash_df.constprop.0
+                0x00010fc4       0xf4 Build/random.o
+ .text.Hash_DRBG_Instantiate.constprop.0
+                0x000110b8       0x56 Build/random.o
+ .text.Hash_DRBG_Reseed
+                0x0001110e       0x68 Build/random.o
+ .text.wc_RNG_TestSeed
+                0x00011176       0x40 Build/random.o
+                0x00011176                wc_RNG_TestSeed
+ .text.wc_RNG_HealthTest_ex
+                0x000111b6       0xaa Build/random.o
+                0x000111b6                wc_RNG_HealthTest_ex
+ .text.wc_RNG_HealthTest
+                0x00011260       0x2c Build/random.o
+                0x00011260                wc_RNG_HealthTest
+ .text.wc_GenerateSeed
+                0x0001128c       0x3c Build/random.o
+                0x0001128c                wc_GenerateSeed
+ .text.wc_RNG_GenerateBlock
+                0x000112c8       0xec Build/random.o
+                0x000112c8                wc_RNG_GenerateBlock
+ .text._InitRng.isra.0
+                0x000113b4      0x138 Build/random.o
+ .text.wc_InitRng
+                0x000114ec        0xa Build/random.o
+                0x000114ec                wc_InitRng
+ .text.ByteReverseWords
+                0x000114f6       0x18 Build/sha256.o
+ *fill*         0x0001150e        0x2 
+ .text.Transform_Sha256
+                0x00011510      0x330 Build/sha256.o
+ .text.Sha256Update
+                0x00011840       0xae Build/sha256.o
+ .text.Sha256Final
+                0x000118ee       0x94 Build/sha256.o
+ *fill*         0x00011982        0x2 
+ .text.wc_InitSha256_ex
+                0x00011984       0x68 Build/sha256.o
+                0x00011984                wc_InitSha256_ex
+ .text.wc_Sha256Update
+                0x000119ec       0x24 Build/sha256.o
+                0x000119ec                wc_Sha256Update
+ .text.wc_Sha256Final
+                0x00011a10       0x84 Build/sha256.o
+                0x00011a10                wc_Sha256Final
+ .text.wc_InitSha256
+                0x00011a94        0xa Build/sha256.o
+                0x00011a94                wc_InitSha256
+ .text.wc_Sha256Free
+                0x00011a9e        0x2 Build/sha256.o
+                0x00011a9e                wc_Sha256Free
+ .text.GetLength_ex
+                0x00011aa0       0x7c Build/asn.o
+                0x00011aa0                GetLength_ex
+ .text.GetASNTag
+                0x00011b1c       0x26 Build/asn.o
+                0x00011b1c                GetASNTag
+ .text.GetASNHeader_ex
+                0x00011b42       0x56 Build/asn.o
+ .text.GetASNInt
+                0x00011b98       0x5c Build/asn.o
+ .text.GetIntPositive
+                0x00011bf4       0x5e Build/asn.o
+ .text.GetSequence
+                0x00011c52       0x16 Build/asn.o
+                0x00011c52                GetSequence
+ .text.SetLength
+                0x00011c68       0x4c Build/asn.o
+                0x00011c68                SetLength
+ .text.SetASNInt
+                0x00011cb4       0x32 Build/asn.o
+                0x00011cb4                SetASNInt
+ .text.SetASNIntMP
+                0x00011ce6       0x64 Build/asn.o
+ .text.SetHeader
+                0x00011d4a       0x16 Build/asn.o
+ .text.SetSequence
+                0x00011d60        0xa Build/asn.o
+                0x00011d60                SetSequence
+ .text.StoreECC_DSA_Sig
+                0x00011d6a       0x78 Build/asn.o
+                0x00011d6a                StoreECC_DSA_Sig
+ .text.DecodeECC_DSA_Sig
+                0x00011de2       0x70 Build/asn.o
+                0x00011de2                DecodeECC_DSA_Sig
+ .text.ForceZero
+                0x00011e52       0x10 Build/sp_cortexm.o
+ .text.sp_2048_from_bin
+                0x00011e62       0x72 Build/sp_cortexm.o
+ .text.div_2048_word_32
+                0x00011ed4       0x72 Build/sp_cortexm.o
+ .text.sp_256_mul_8
+                0x00011f46      0x576 Build/sp_cortexm.o
+ .text.sp_256_sqr_8
+                0x000124bc      0x40a Build/sp_cortexm.o
+ .text.sp_256_add_8
+                0x000128c6       0x3e Build/sp_cortexm.o
+ .text.sp_256_cmp_8
+                0x00012904       0x54 Build/sp_cortexm.o
+ .text.sp_256_cmp_equal_8
+                0x00012958       0x48 Build/sp_cortexm.o
+ .text.sp_256_iszero_8
+                0x000129a0       0x26 Build/sp_cortexm.o
+ .text.sp_256_get_point_16_8
+                0x000129c6      0x1d0 Build/sp_cortexm.o
+ .text.sp_256_add_one_8
+                0x00012b96       0x3a Build/sp_cortexm.o
+ .text.sp_256_sub_in_place_8
+                0x00012bd0       0x38 Build/sp_cortexm.o
+ .text.sp_256_mul_d_8
+                0x00012c08       0x40 Build/sp_cortexm.o
+ .text.sp_2048_from_mp
+                0x00012c48       0x26 Build/sp_cortexm.o
+ *fill*         0x00012c6e        0x2 
+ .text.sp_256_ecc_gen_k_8
+                0x00012c70       0x40 Build/sp_cortexm.o
+ .text.sp_256_to_mp
+                0x00012cb0       0x36 Build/sp_cortexm.o
+ *fill*         0x00012ce6        0x2 
+ .text.sp_256_get_entry_16_8.constprop.0
+                0x00012ce8      0x158 Build/sp_cortexm.o
+ .text.sp_256_div2_8.constprop.0
+                0x00012e40       0xe8 Build/sp_cortexm.o
+ .text.sp_256_mont_sub_8.constprop.0
+                0x00012f28       0xbc Build/sp_cortexm.o
+ .text.sp_256_mont_tpl_8.constprop.0
+                0x00012fe4       0xf6 Build/sp_cortexm.o
+ .text.sp_256_mont_dbl_8.constprop.0
+                0x000130da       0x80 Build/sp_cortexm.o
+ .text.sp_256_mont_add_8.constprop.0
+                0x0001315a       0xc0 Build/sp_cortexm.o
+ .text.sp_256_mont_reduce_8.constprop.0
+                0x0001321a      0x10a Build/sp_cortexm.o
+ .text.sp_256_mont_sqr_8.constprop.0
+                0x00013324      0x5f8 Build/sp_cortexm.o
+ .text.sp_256_mont_mul_8.constprop.0
+                0x0001391c      0x7ac Build/sp_cortexm.o
+ .text.sp_256_proj_point_dbl_8
+                0x000140c8       0xba Build/sp_cortexm.o
+ .text.sp_256_mod_mul_norm_8.constprop.0
+                0x00014182      0x2ea Build/sp_cortexm.o
+ .text.sp_256_sub_8.constprop.0.isra.0
+                0x0001446c       0x34 Build/sp_cortexm.o
+ .text.sp_256_proj_point_add_8
+                0x000144a0      0x284 Build/sp_cortexm.o
+ .text.sp_256_point_to_ecc_point_8
+                0x00014724       0x2a Build/sp_cortexm.o
+ .text.sp_256_cond_sub_8.isra.0
+                0x0001474e       0x36 Build/sp_cortexm.o
+ .text.sp_256_mont_reduce_order_8.constprop.0
+                0x00014784       0xe0 Build/sp_cortexm.o
+ .text.sp_256_mont_mul_order_8
+                0x00014864        0xe Build/sp_cortexm.o
+ *fill*         0x00014872        0x2 
+ .text.sp_256_mont_inv_order_8
+                0x00014874       0x58 Build/sp_cortexm.o
+ .text.sp_256_map_8
+                0x000148cc       0xf4 Build/sp_cortexm.o
+ .text.sp_256_ecc_mulmod_stripe_8.constprop.0
+                0x000149c0      0x370 Build/sp_cortexm.o
+ .text.sp_256_ecc_mulmod_fast_8.constprop.0
+                0x00014d30      0x2bc Build/sp_cortexm.o
+ .text.sp_256_mod_8
+                0x00014fec       0xc4 Build/sp_cortexm.o
+ .text.sp_ecc_mulmod_base_256
+                0x000150b0       0x5e Build/sp_cortexm.o
+                0x000150b0                sp_ecc_mulmod_base_256
+ .text.sp_ecc_make_key_256
+                0x0001510e       0x6e Build/sp_cortexm.o
+                0x0001510e                sp_ecc_make_key_256
+ .text.sp_ecc_sign_256
+                0x0001517c      0x1d4 Build/sp_cortexm.o
+                0x0001517c                sp_ecc_sign_256
+ .text.sp_ecc_verify_256
+                0x00015350      0x218 Build/sp_cortexm.o
+                0x00015350                sp_ecc_verify_256
+ .text._sp_cmp_abs
+                0x00015568       0x36 Build/sp_int.o
+ .text.sp_init  0x0001559e       0x16 Build/sp_int.o
+                0x0001559e                sp_init
+ .text.sp_init_multi
+                0x000155b4       0x52 Build/sp_int.o
+                0x000155b4                sp_init_multi
+ .text.sp_grow  0x00015606       0x2a Build/sp_int.o
+                0x00015606                sp_grow
+ .text.sp_zero  0x00015630        0xa Build/sp_int.o
+                0x00015630                sp_zero
+ .text.sp_clear
+                0x0001563a       0x20 Build/sp_int.o
+                0x0001563a                sp_clear
+ .text.sp_forcezero
+                0x0001565a       0x1e Build/sp_int.o
+                0x0001565a                sp_forcezero
+ .text.sp_cmp   0x00015678       0x1a Build/sp_int.o
+                0x00015678                sp_cmp
+ .text.sp_count_bits
+                0x00015692       0x3c Build/sp_int.o
+                0x00015692                sp_count_bits
+ .text.sp_leading_bit
+                0x000156ce       0x1e Build/sp_int.o
+                0x000156ce                sp_leading_bit
+ .text.sp_unsigned_bin_size
+                0x000156ec       0x14 Build/sp_int.o
+                0x000156ec                sp_unsigned_bin_size
+ .text.sp_read_unsigned_bin
+                0x00015700       0xa2 Build/sp_int.o
+                0x00015700                sp_read_unsigned_bin
+ .text.sp_to_unsigned_bin_len
+                0x000157a2       0x50 Build/sp_int.o
+                0x000157a2                sp_to_unsigned_bin_len
+ .text.sp_to_unsigned_bin
+                0x000157f2       0x14 Build/sp_int.o
+                0x000157f2                sp_to_unsigned_bin
+ .text.sp_read_radix
+                0x00015806       0xa8 Build/sp_int.o
+                0x00015806                sp_read_radix
+ *fill*         0x000158ae        0x2 
+ .text.gmtime   0x000158b0      0x10c Build/wc_port.o
+                0x000158b0                gmtime
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x000159bc        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x000159bc        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x000159bc        0x0 linker stubs
+ *(.v4_bx)
+ .v4_bx         0x000159bc        0x0 linker stubs
+
+.fini           0x000159bc        0x8
+ *(SORT_NONE(.fini))
+ .fini          0x000159bc        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o
+                0x000159bc                _fini
+ .fini          0x000159c0        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
+                [!provide]                PROVIDE (__etext = .)
+                [!provide]                PROVIDE (_etext = .)
+                [!provide]                PROVIDE (etext = .)
+
+.rodata         0x000159c4     0x12f8
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.test_RSA.str1.1
+                0x000159c4      0x17b Build/public_key_test.o
+ .rodata.test_DH.str1.1
+                0x00015b3f       0x24 Build/public_key_test.o
+                                 0x27 (size before relaxing)
+ .rodata.main.str1.1
+                0x00015b63       0x3b Build/public_key_test.o
+ .rodata.str1.1
+                0x00015b9e      0x860 Build/ecc.o
+ .rodata.ecc_oid_secp224r1
+                0x000163fe        0x5 Build/ecc.o
+ .rodata.ecc_oid_secp256r1
+                0x00016403        0x8 Build/ecc.o
+ .rodata.ecc_oid_secp384r1
+                0x0001640b        0x5 Build/ecc.o
+ .rodata.ecc_oid_secp521r1
+                0x00016410        0x5 Build/ecc.o
+ *fill*         0x00016415        0x3 
+ .rodata.ecc_sets
+                0x00016418      0x104 Build/ecc.o
+                0x00016418                ecc_sets
+ .rodata.outputA_data
+                0x0001651c       0x80 Build/random.o
+                0x0001651c                outputA_data
+ .rodata.outputB_data
+                0x0001659c       0x80 Build/random.o
+                0x0001659c                outputB_data
+ .rodata.reseedSeedA_data
+                0x0001661c       0x20 Build/random.o
+                0x0001661c                reseedSeedA_data
+ .rodata.seedA_data
+                0x0001663c       0x30 Build/random.o
+                0x0001663c                seedA_data
+ .rodata.seedB_data
+                0x0001666c       0x30 Build/random.o
+                0x0001666c                seedB_data
+ .rodata.K      0x0001669c      0x100 Build/sha256.o
+ .rodata.p256_mod
+                0x0001679c       0x20 Build/sp_cortexm.o
+ .rodata.p256_mod_minus_2
+                0x000167bc       0x20 Build/sp_cortexm.o
+ .rodata.p256_norm_mod
+                0x000167dc       0x20 Build/sp_cortexm.o
+ .rodata.p256_norm_order
+                0x000167fc       0x20 Build/sp_cortexm.o
+ .rodata.p256_order
+                0x0001681c       0x20 Build/sp_cortexm.o
+ .rodata.p256_order2
+                0x0001683c       0x20 Build/sp_cortexm.o
+ .rodata.p256_table
+                0x0001685c      0x400 Build/sp_cortexm.o
+ .rodata._ytab.0
+                0x00016c5c       0x60 Build/wc_port.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM.exidx      0x00016cbc        0x0
+                [!provide]                PROVIDE (__exidx_start = .)
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                [!provide]                PROVIDE (__exidx_end = .)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+ *(.eh_frame_entry .eh_frame_entry.*)
+
+.eh_frame       0x00016cbc        0x4
+ *(.eh_frame)
+ .eh_frame      0x00016cbc        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
+ *(.eh_frame.*)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges*)
+                0x00026f10                . = DATA_SEGMENT_ALIGN (CONSTANT (MAXPAGESIZE), CONSTANT (COMMONPAGESIZE))
+
+.eh_frame
+ *(.eh_frame)
+ *(.eh_frame.*)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges*)
+
+.tdata          0x00026f10        0x0
+                [!provide]                PROVIDE (__tdata_start = .)
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x00026f10        0x0
+                [!provide]                PROVIDE (__preinit_array_start = .)
+ *(.preinit_array)
+                [!provide]                PROVIDE (__preinit_array_end = .)
+
+.init_array     0x00026f10        0x4
+                0x00026f10                PROVIDE (__init_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+ .init_array    0x00026f10        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+                0x00026f14                PROVIDE (__init_array_end = .)
+
+.fini_array     0x00026f14        0x4
+                [!provide]                PROVIDE (__fini_array_start = .)
+ *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+ .fini_array    0x00026f14        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+                [!provide]                PROVIDE (__fini_array_end = .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT_BY_NAME(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT_BY_NAME(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro    0x00026f18        0x0
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro .data.rel.ro.* .gnu.linkonce.d.rel.ro.*)
+ .data.rel.ro   0x00026f18        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+
+.dynamic        0x00026f18       0xe8
+ *(.dynamic)
+ .dynamic       0x00026f18       0xe8 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+                0x00026f18                _DYNAMIC
+                0x00027000                . = DATA_SEGMENT_RELRO_END (., 0x0)
+
+.got            0x00027000       0x30
+ *(.got.plt)
+ .got.plt       0x00027000       0x2c /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+                0x00027000                _GLOBAL_OFFSET_TABLE_
+ *(.igot.plt)
+ .igot.plt      0x0002702c        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ *(.got)
+ .got           0x0002702c        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ *(.igot)
+
+.data           0x00027030       0x10
+                [!provide]                PROVIDE (__data_start = .)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data.in       0x00027030       0x10 Build/public_key_test.o
+                0x00027030                in
+
+.tm_clone_table
+                0x00027040        0x0
+ .tm_clone_table
+                0x00027040        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+ .tm_clone_table
+                0x00027040        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
+
+.data1
+ *(.data1)
+                0x00027040                _edata = .
+                [!provide]                PROVIDE (edata = .)
+                0x00027040                . = .
+                0x00027040                __bss_start = .
+                0x00027040                __bss_start__ = .
+
+.bss            0x00027040       0x34
+ *(.dynbss)
+ .dynbss        0x00027040        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00027040        0x1 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+ *fill*         0x00027041        0x3 
+ .bss.gCounter  0x00027044        0x4 Build/wolf_main.o
+ .bss.st_time.1
+                0x00027048       0x2c Build/wc_port.o
+ *(COMMON)
+                0x00027074                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x00027074                _bss_end__ = .
+                0x00027074                __bss_end__ = .
+                0x00027074                . = ALIGN (0x4)
+                0x00027074                . = SEGMENT_START ("ldata-segment", .)
+                0x00027074                . = ALIGN (0x4)
+                0x00027074                __end__ = .
+                0x00027074                _end = .
+                [!provide]                PROVIDE (end = .)
+                0x00027074                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x2e
+ *(.comment)
+ .comment       0x00000000       0x2e /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+                                 0x2f (size before relaxing)
+ .comment       0x0000002e       0x2f Build/public_key_test.o
+ .comment       0x0000002e       0x2f Build/wolf_main.o
+ .comment       0x0000002e       0x2f Build/armtarget.o
+ .comment       0x0000002e       0x2f Build/ecc.o
+ .comment       0x0000002e       0x2f Build/random.o
+ .comment       0x0000002e       0x2f Build/sha256.o
+ .comment       0x0000002e       0x2f Build/asn.o
+ .comment       0x0000002e       0x2f Build/sp_cortexm.o
+ .comment       0x0000002e       0x2f Build/sp_int.o
+ .comment       0x0000002e       0x2f Build/wc_port.o
+ .comment       0x0000002e       0x2f /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
+
+.ARM.attributes
+                0x00000000       0x37
+ .ARM.attributes
+                0x00000000       0x23 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o
+ .ARM.attributes
+                0x00000023       0x2f /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+ .ARM.attributes
+                0x00000052       0x37 Build/public_key_test.o
+ .ARM.attributes
+                0x00000089       0x37 Build/wolf_main.o
+ .ARM.attributes
+                0x000000c0       0x37 Build/armtarget.o
+ .ARM.attributes
+                0x000000f7       0x37 Build/ecc.o
+ .ARM.attributes
+                0x0000012e       0x37 Build/random.o
+ .ARM.attributes
+                0x00000165       0x37 Build/sha256.o
+ .ARM.attributes
+                0x0000019c       0x37 Build/asn.o
+ .ARM.attributes
+                0x000001d3       0x37 Build/sp_cortexm.o
+ .ARM.attributes
+                0x0000020a       0x37 Build/sp_int.o
+ .ARM.attributes
+                0x00000241       0x37 Build/wc_port.o
+ .ARM.attributes
+                0x00000278       0x2f /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
+ .ARM.attributes
+                0x000002a7       0x23 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
+
+.gnu.build.attributes
+ *(.gnu.build.attributes .gnu.build.attributes.*)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line .debug_line.* .debug_line_end)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(Build/test.elf elf32-littlearm)
+LOAD linker stubs

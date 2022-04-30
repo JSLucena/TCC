@@ -107,7 +107,7 @@ extern "C" {
     #ifdef USE_FAST_MATH
         /* Maximum math bits (Max RSA key bits * 2) */
         #undef  FP_MAX_BITS
-        #define FP_MAX_BITS     4096
+        #define FP_MAX_BITS     8192
     #endif
 
     /* half as much memory but twice as slow */
@@ -146,11 +146,11 @@ extern "C" {
 
     #ifdef ECC_USER_CURVES
         /* Manual Curve Selection */
-        //#define HAVE_ECC192
-        //#define HAVE_ECC224
+        #define HAVE_ECC192
+        #define HAVE_ECC224
         #undef NO_ECC256
-        //#define HAVE_ECC384
-        //#define HAVE_ECC521
+        #define HAVE_ECC384
+        #define HAVE_ECC521
     #endif
 
     /* Fixed point cache (speeds repeated operations against same private key) */
@@ -215,12 +215,13 @@ extern "C" {
 #undef  NO_DH
 #if 1
     /* Use table for DH instead of -lm (math) lib dependency */
-    #if 0
+    #if 1
+        #define HAVE_PUBLIC_FFDHE
         #define WOLFSSL_DH_CONST
         #define HAVE_FFDHE_2048
         #define HAVE_FFDHE_4096
-        //#define HAVE_FFDHE_6144
-        //#define HAVE_FFDHE_8192
+       // #define HAVE_FFDHE_6144
+       // #define HAVE_FFDHE_8192
     #endif
 
     #ifdef HAVE_FIPS
@@ -648,6 +649,11 @@ extern unsigned int my_rng_seed_gen(void);
 #define HAVE_CHACHA
 #define HAVE_POLY1305
 #undef NO_DES3
+#define WOLFSSL_KEY_GEN
+#define HAVE_PUBLIC_FFDHE
+#define HAVE_ECC_ENCRYPT
+#define HAVE_HKDF
+#undef NO_KDF
 #ifdef __cplusplus
 }
 #endif
