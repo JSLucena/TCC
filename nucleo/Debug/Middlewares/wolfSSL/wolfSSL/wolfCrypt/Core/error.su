@@ -1,0 +1,2 @@
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/error.c:37:13:wc_GetErrorString	16	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/error.c:568:6:wc_ErrorString	16	static

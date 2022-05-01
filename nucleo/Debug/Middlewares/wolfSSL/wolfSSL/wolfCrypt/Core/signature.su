@@ -1,0 +1,8 @@
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/signature.c:59:12:wc_SignatureDerEncode	32	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/signature.c:80:5:wc_SignatureGetSize	32	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/signature.c:127:5:wc_SignatureVerifyHash	56	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/signature.c:263:5:wc_SignatureVerify	64	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/signature.c:341:5:wc_SignatureGenerateHash	48	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/signature.c:351:5:wc_SignatureGenerateHash_ex	56	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/signature.c:452:5:wc_SignatureGenerate	48	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/signature.c:462:5:wc_SignatureGenerate_ex	80	static

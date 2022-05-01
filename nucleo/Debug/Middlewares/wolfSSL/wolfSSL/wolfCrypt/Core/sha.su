@@ -1,0 +1,15 @@
+../../Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/misc.c:111:32:rotlFixed	16	static
+../../Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/misc.c:145:28:ByteReverseWord32	16	static
+../../Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/misc.c:187:26:ByteReverseWords	40	static
+../../Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/misc.c:349:32:min	16	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/sha.c:379:16:InitSha	24	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/sha.c:403:23:AddLength	24	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/sha.c:443:16:Transform	112	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/sha.c:524:5:wc_InitSha_ex	32	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/sha.c:557:5:wc_ShaUpdate	40	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/sha.c:691:5:wc_ShaFinalRaw	40	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/sha.c:711:5:wc_ShaFinal	24	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/sha.c:832:5:wc_InitSha	16	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/sha.c:839:6:wc_ShaFree	16	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/sha.c:876:5:wc_ShaGetHash	120	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/sha.c:906:5:wc_ShaCopy	24	static

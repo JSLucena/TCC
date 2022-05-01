@@ -1,0 +1,5 @@
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/memory.c:102:5:wolfSSL_SetAllocators	24	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/memory.c:112:5:wolfSSL_GetAllocators	24	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/memory.c:126:7:wolfSSL_Malloc	24	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/memory.c:191:6:wolfSSL_Free	16	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/memory.c:222:7:wolfSSL_Realloc	24	static

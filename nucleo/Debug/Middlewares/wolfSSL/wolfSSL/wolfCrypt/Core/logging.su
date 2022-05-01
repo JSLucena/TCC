@@ -1,0 +1,4 @@
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/logging.c:197:5:wolfSSL_SetLoggingCb	16	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/logging.c:209:20:wolfSSL_GetLoggingCb	4	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/logging.c:219:5:wolfSSL_Debugging_ON	4	static
+D:/TCC/A/nucleo/Middlewares/Third_Party/wolfSSL_wolfSSL_wolfSSL/wolfssl/wolfcrypt/src/logging.c:233:6:wolfSSL_Debugging_OFF	4	static
