@@ -3,6 +3,11 @@
 #include <wolfssl/wolfcrypt/types.h>
 #include <wolfssl/wolfcrypt/hash.h>
 #include <wolfssl/wolfcrypt/error-crypt.h>
+#include <wolfssl/wolfcrypt/fe_operations.h>
+#include <wolfssl/wolfcrypt/ge_operations.h>
+#include <wolfssl/wolfcrypt/kdf.h>
+#include <wolfssl/wolfcrypt/hmac.h>
+
 #include <../Header/user_settings.h>
 //#include <user_settings.h>
 #include <stdio.h>
@@ -11,10 +16,10 @@
 
 
 
-//#include <wolfssl/wolfcrypt/curve25519.h>
-//#include <wolfssl/wolfcrypt/curve448.h>
-//#include <wolfssl/wolfcrypt/ed448.h>
-//#include <wolfssl/wolfcrypt/ed25519.h>
+#include <wolfssl/wolfcrypt/curve25519.h>
+#include <wolfssl/wolfcrypt/curve448.h>
+#include <wolfssl/wolfcrypt/ed448.h>
+#include <wolfssl/wolfcrypt/ed25519.h>
 #include <wolfssl/wolfcrypt/ecc.h>
 #include <wolfssl/wolfcrypt/dh.h>
 #include <wolfssl/wolfcrypt/dsa.h>
@@ -25,10 +30,12 @@
 //#define REPEAT
 #define REP_TIMES 15
 
-//#define RSAK
+#define RSAK
 //#define DSAK
 //#define DHK
-#define ECCK
+//#define ECCK
+//#define ED25519K
+//#define ED448K
 
 
 void test_RSA(word32 key_len,word32* data, word32 size) //Teste para chaves que nao sao de 2048bits ta com problema
@@ -39,8 +46,8 @@ void test_RSA(word32 key_len,word32* data, word32 size) //Teste para chaves que 
   struct timespec tick,tock;
   double spent;
 
-  byte out[256];
-  byte decrypt[256];
+  byte out[512];
+  byte decrypt[512];
   word32 sizeout;
 
   int ret;  
@@ -261,18 +268,21 @@ void test_ECC(word32 key_len, word32*data, word32 size) //Crasha quando tento li
   wc_ecc_init(&key);
   
   sig_len = sizeof(sig);
+  out_len = sizeof(out);
   clock_gettime(CLOCK_MONOTONIC,&tick);
   ret = wc_ecc_make_key(&rng,key_len,&key);
-  printf("%d",ret);
+ 
   clock_gettime(CLOCK_MONOTONIC,&tock);
+  printf("%d",ret);
   spent = (double)(tock.tv_sec - tick.tv_sec)*1e9;
   spent = (spent + (tock.tv_nsec - tick.tv_nsec)) * 1e-9;
   printf("Key Generation time: %lf seconds\n", spent);
   
   clock_gettime(CLOCK_MONOTONIC,&tick);
   ret = wc_ecc_sign_hash((byte*)data,size,sig,&sig_len,&rng,&key);
-  printf("%d",ret);
+  
   clock_gettime(CLOCK_MONOTONIC,&tock);
+  printf("%d",ret);
   spent = (double)(tock.tv_sec - tick.tv_sec)*1e9;
   spent = (spent + (tock.tv_nsec - tick.tv_nsec)) * 1e-9;
   printf("Data sign time: %lf seconds\n", spent);
@@ -282,30 +292,114 @@ void test_ECC(word32 key_len, word32*data, word32 size) //Crasha quando tento li
   
   clock_gettime(CLOCK_MONOTONIC,&tick);
   ret = wc_ecc_verify_hash(sig,sig_len,(byte*)data,size,&stat,&key);
-  printf("%d",ret);
+  
   clock_gettime(CLOCK_MONOTONIC,&tock);
+  printf("%d",ret);
   spent = (double)(tock.tv_sec - tick.tv_sec)*1e9;
   spent = (spent + (tock.tv_nsec - tick.tv_nsec)) * 1e-9;
   printf("Data verify time: %lf seconds\n", spent);
 
- // sig_len = sizeof(sig);
- // clock_gettime(CLOCK_MONOTONIC,&tick);
- // wc_ecc_encrypt(&key,&key,data,size,sig,&sig_len,NULL);
- // printf("%d",ret);
- // clock_gettime(CLOCK_MONOTONIC,&tock);
- // spent = (double)(tock.tv_sec - tick.tv_sec)*1e9;
- // spent = (spent + (tock.tv_nsec - tick.tv_nsec)) * 1e-9;
- // printf("Data verify time: %lf seconds\n", spent);
-//
- // clock_gettime(CLOCK_MONOTONIC,&tick);
- // wc_ecc_decrypt(&key,&key,sig,sig_len,out,&out_len,NULL);
- // printf("%d",ret);
- // clock_gettime(CLOCK_MONOTONIC,&tock);
- // spent = (double)(tock.tv_sec - tick.tv_sec)*1e9;
- // spent = (spent + (tock.tv_nsec - tick.tv_nsec)) * 1e-9;
- // printf("Data verify time: %lf seconds\n", spent);
+  sig_len = sizeof(sig);
+  clock_gettime(CLOCK_MONOTONIC,&tick);
+  wc_ecc_encrypt(&key,&key,data,size,sig,&sig_len,NULL);
+  printf("%d",ret);
+  clock_gettime(CLOCK_MONOTONIC,&tock);
+  spent = (double)(tock.tv_sec - tick.tv_sec)*1e9;
+  spent = (spent + (tock.tv_nsec - tick.tv_nsec)) * 1e-9;
+  printf("Data encrypt time: %lf seconds\n", spent);
+
+  clock_gettime(CLOCK_MONOTONIC,&tick);
+  wc_ecc_decrypt(&key,&key,sig,sig_len,out,&out_len,NULL);
+  printf("%d",ret);
+  clock_gettime(CLOCK_MONOTONIC,&tock);
+  spent = (double)(tock.tv_sec - tick.tv_sec)*1e9;
+  spent = (spent + (tock.tv_nsec - tick.tv_nsec)) * 1e-9;
+  printf("Data decrypt time: %lf seconds\n", spent);
 
   wc_ecc_key_free(&key);
+}
+
+void test_ED25519(word32*data,word32 size)
+{
+  ed25519_key key;
+  WC_RNG  rng;
+  struct timespec tick,tock;
+  double spent;
+  int ret,sig_len, ans;
+  byte sig[64];
+  sig_len = sizeof(sig);
+  wc_InitRng(&rng);
+  ret = wc_ed25519_init(&key);
+  printf("%d",ret);
+
+  clock_gettime(CLOCK_MONOTONIC,&tick);
+  ret = wc_ed25519_make_key(&rng,32,&key);
+  clock_gettime(CLOCK_MONOTONIC,&tock);
+  printf("%d",ret);
+  spent = (double)(tock.tv_sec - tick.tv_sec)*1e9;
+  spent = (spent + (tock.tv_nsec - tick.tv_nsec)) * 1e-9;
+  printf("Key Generation time: %lf seconds\n", spent);
+
+  clock_gettime(CLOCK_MONOTONIC,&tick);
+  ret = wc_ed25519_sign_msg((byte*)data,size,sig,&sig_len,&key);
+  clock_gettime(CLOCK_MONOTONIC,&tock);
+  printf("%d",ret);
+  spent = (double)(tock.tv_sec - tick.tv_sec)*1e9;
+  spent = (spent + (tock.tv_nsec - tick.tv_nsec)) * 1e-9;
+  printf("Data sign time: %lf seconds\n", spent);
+
+  clock_gettime(CLOCK_MONOTONIC,&tick);
+  ret = wc_ed25519_verify_msg(sig,sig_len,(byte*)data,size,&ans ,&key);
+  clock_gettime(CLOCK_MONOTONIC,&tock);
+  printf("%d %d",ret,ans);
+  spent = (double)(tock.tv_sec - tick.tv_sec)*1e9;
+  spent = (spent + (tock.tv_nsec - tick.tv_nsec)) * 1e-9;
+  printf("Data verify time: %lf seconds\n", spent);
+
+  wc_ed25519_free(&key); 
+
+}
+
+void test_ED448(word32*data,word32 size)
+{
+  ed448_key key;
+  WC_RNG  rng;
+  struct timespec tick,tock;
+  double spent;
+  int ret, ans;
+  word32 sig_len;
+  byte sig[128];
+  sig_len = sizeof(sig);
+  wc_InitRng(&rng);
+  ret = wc_ed448_init(&key);
+  printf("%d",ret);
+
+  clock_gettime(CLOCK_MONOTONIC,&tick);
+  ret = wc_ed448_make_key(&rng,57,&key);
+  clock_gettime(CLOCK_MONOTONIC,&tock);
+  printf("%d",ret);
+  spent = (double)(tock.tv_sec - tick.tv_sec)*1e9;
+  spent = (spent + (tock.tv_nsec - tick.tv_nsec)) * 1e-9;
+  printf("Key Generation time: %lf seconds\n", spent);
+
+  clock_gettime(CLOCK_MONOTONIC,&tick);
+  ret = wc_ed448_sign_msg((byte*)data,size,sig,&sig_len,&key,(byte*)data,size);
+  clock_gettime(CLOCK_MONOTONIC,&tock);
+  printf("%d",ret);
+  spent = (double)(tock.tv_sec - tick.tv_sec)*1e9;
+  spent = (spent + (tock.tv_nsec - tick.tv_nsec)) * 1e-9;
+  printf("Data sign time: %lf seconds\n", spent);
+
+  clock_gettime(CLOCK_MONOTONIC,&tick);
+  ret = wc_ed448_verify_msg(sig,sig_len,(byte*)data,size,&ans ,&key,(byte*)data,size);
+  clock_gettime(CLOCK_MONOTONIC,&tock);
+  printf("%d %d",ret,ans);
+  spent = (double)(tock.tv_sec - tick.tv_sec)*1e9;
+  spent = (spent + (tock.tv_nsec - tick.tv_nsec)) * 1e-9;
+  printf("Data verify time: %lf seconds\n", spent);
+
+  wc_ed448_free(&key); 
+
 }
 int ret;
 char data[] = "The quick brown fox jumps over the lazy dog";
@@ -323,28 +417,29 @@ int main() {
   //  #endif
   //test_RSA(512,in,16);
   //printf("Finished RSA 512bit key\n");
- // printf("#######################\n");
- // printf("Starting RSA 1024bit key\n");
- //   #ifdef REPEAT
- // for(int i = 0;i < REP_TIMES;i++)
- //   #endif
- // test_RSA(1024,in,16);
- // printf("Finished RSA 1024bit key\n");
- // printf("#######################\n");
+    printf("#######################\n");
+    printf("Starting RSA 3072bit key\n");
+      #ifdef REPEAT
+    for(int i = 0;i < REP_TIMES;i++)
+      #endif
+    test_RSA(3072,in,16);
+    printf("Finished RSA 3072bit key\n");
+    printf("#######################\n");
     printf("Starting RSA 2048bit key\n");
       #ifdef REPEAT
     for(int i = 0;i < REP_TIMES;i++)
       #endif
     test_RSA(2048,in,16);
     printf("Finished RSA 2048bit key\n");
-//  printf("#######################\n");
-//  printf("Starting RSA 4096bit key\n");
-//    #ifdef REPEAT
-//  for(int i = 0;i < REP_TIMES;i++)
-//    #endif
-//  test_RSA(4096,in,16);
-//  printf("Finished RSA 4096bit key\n");
-  #endif
+    
+//    printf("#######################\n");
+//    printf("Starting RSA 4096bit key\n");
+//      #ifdef REPEAT
+//    for(int i = 0;i < REP_TIMES;i++)
+//      #endif
+//    test_RSA(4096,in,16);
+//    printf("Finished RSA 4096bit key\n");
+//  #endif
   #ifdef DSAK
     printf("Starting DSA 2048\n");
       #ifdef REPEAT
@@ -390,6 +485,24 @@ int main() {
 //      #endif
 //    test_ECC(24,in,16);
 //    printf("Finished ECC192\n");
+  #endif
+  #ifdef ED25519K
+    printf("#######################\n");
+    printf("Starting ED25519\n");
+      #ifdef REPEAT
+    for(int i = 0;i < REP_TIMES;i++)
+      #endif
+    test_ED25519(in,16);
+    printf("Finished ED25519\n");
+  #endif
+  #ifdef ED448K
+    printf("#######################\n");
+    printf("Starting ED448\n");
+      #ifdef REPEAT
+    for(int i = 0;i < REP_TIMES;i++)
+      #endif
+    test_ED448(in,16);
+    printf("Finished ED448\n");
   #endif
   return 0;
 }

@@ -36,13 +36,23 @@ Discarded input sections
  .text          0x00000000        0x0 Build/public_key_test.o
  .data          0x00000000        0x0 Build/public_key_test.o
  .bss           0x00000000        0x0 Build/public_key_test.o
- .text.test_RSA
-                0x00000000      0x3b8 Build/public_key_test.o
  .rodata.test_DSA.str1.1
                 0x00000000       0x23 Build/public_key_test.o
  .text.test_DSA
                 0x00000000      0x13c Build/public_key_test.o
+ .rodata.test_DH.str1.1
+                0x00000000       0x27 Build/public_key_test.o
  .text.test_DH  0x00000000      0x19c Build/public_key_test.o
+ .rodata.test_ECC.str1.1
+                0x00000000       0x40 Build/public_key_test.o
+ .text.test_ECC
+                0x00000000      0x248 Build/public_key_test.o
+ .rodata.test_ED25519.str1.1
+                0x00000000        0x6 Build/public_key_test.o
+ .text.test_ED25519
+                0x00000000      0x16c Build/public_key_test.o
+ .text.test_ED448
+                0x00000000      0x17c Build/public_key_test.o
  .bss.result    0x00000000       0x20 Build/public_key_test.o
  .bss.ret       0x00000000        0x4 Build/public_key_test.o
  .data.data     0x00000000       0x2c Build/public_key_test.o
@@ -1599,12 +1609,26 @@ Discarded input sections
  .text          0x00000000        0x0 Build/ecc.o
  .data          0x00000000        0x0 Build/ecc.o
  .bss           0x00000000        0x0 Build/ecc.o
+ .text.alt_fp_init
+                0x00000000        0x8 Build/ecc.o
  .text.wc_ecc_del_point_ex.part.0
                 0x00000000       0x20 Build/ecc.o
  .text.wc_ecc_cmp_param
                 0x00000000       0xb4 Build/ecc.o
  .text.wc_ecc_new_point_ex.constprop.0.isra.0
                 0x00000000       0x40 Build/ecc.o
+ .text.wc_ecc_curve_cache_load_item
+                0x00000000       0x4a Build/ecc.o
+ .text.wc_ecc_curve_free
+                0x00000000       0x90 Build/ecc.o
+ .text.wc_ecc_curve_load
+                0x00000000       0x9e Build/ecc.o
+ .text.ecc_make_pub_ex.constprop.0
+                0x00000000       0xf0 Build/ecc.o
+ .text.wc_ecc_set_curve
+                0x00000000       0x60 Build/ecc.o
+ .text._ecc_make_key_ex
+                0x00000000       0x58 Build/ecc.o
  .text.wc_ecc_import_raw_private
                 0x00000000      0x120 Build/ecc.o
  .text.wc_ecc_mulmod_ex
@@ -1627,6 +1651,8 @@ Discarded input sections
                 0x00000000       0x30 Build/ecc.o
  .text.wc_ecc_cmp_point
                 0x00000000       0x30 Build/ecc.o
+ .text.wc_ecc_is_valid_idx
+                0x00000000        0xc Build/ecc.o
  .text.wc_ecc_get_curve_idx
                 0x00000000       0x20 Build/ecc.o
  .text.wc_ecc_get_name
@@ -1665,10 +1691,30 @@ Discarded input sections
                 0x00000000        0x4 Build/ecc.o
  .text.wc_ecc_make_key_ex2
                 0x00000000        0x4 Build/ecc.o
+ .text.wc_ecc_make_key_ex
+                0x00000000        0xe Build/ecc.o
+ .text.wc_ecc_make_key
+                0x00000000        0x6 Build/ecc.o
+ .text.wc_ecc_init_ex
+                0x00000000       0x52 Build/ecc.o
  .text.wc_ecc_key_new
                 0x00000000       0x2c Build/ecc.o
+ .text.wc_ecc_init
+                0x00000000        0xa Build/ecc.o
  .text.wc_ecc_set_flags
                 0x00000000       0x12 Build/ecc.o
+ .text.wc_ecc_sign_hash_ex
+                0x00000000       0x68 Build/ecc.o
+ .text.wc_ecc_sign_hash
+                0x00000000       0xc6 Build/ecc.o
+ .text.wc_ecc_free
+                0x00000000       0x24 Build/ecc.o
+ .text.wc_ecc_key_free
+                0x00000000       0x28 Build/ecc.o
+ .text.wc_ecc_verify_hash_ex
+                0x00000000      0x11c Build/ecc.o
+ .text.wc_ecc_verify_hash
+                0x00000000       0xee Build/ecc.o
  .text.wc_ecc_import_point_der_ex
                 0x00000000       0xc8 Build/ecc.o
  .text.wc_ecc_import_point_der
@@ -1747,10 +1793,25 @@ Discarded input sections
                 0x00000000      0x2f4 Build/ecc.o
  .text.wc_ecc_get_oid
                 0x00000000       0x4c Build/ecc.o
+ .rodata.str1.1
+                0x00000000      0x860 Build/ecc.o
+ .rodata.ecc_oid_secp224r1
+                0x00000000        0x5 Build/ecc.o
+ .rodata.ecc_oid_secp256r1
+                0x00000000        0x8 Build/ecc.o
+ .rodata.ecc_oid_secp384r1
+                0x00000000        0x5 Build/ecc.o
+ .rodata.ecc_oid_secp521r1
+                0x00000000        0x5 Build/ecc.o
+ .rodata.ecc_sets
+                0x00000000      0x104 Build/ecc.o
  .rodata.ecc_sets_count
                 0x00000000        0x4 Build/ecc.o
+ .comment       0x00000000       0x2f Build/ecc.o
  .note.GNU-stack
                 0x00000000        0x0 Build/ecc.o
+ .ARM.attributes
+                0x00000000       0x37 Build/ecc.o
  .text          0x00000000        0x0 Build/hmac.o
  .data          0x00000000        0x0 Build/hmac.o
  .bss           0x00000000        0x0 Build/hmac.o
@@ -1772,7 +1833,12 @@ Discarded input sections
                 0x00000000      0x274 Build/hmac.o
  .text.wolfSSL_GetHmacMaxSize
                 0x00000000        0x4 Build/hmac.o
- .rodata.CSWTCH.4
+ .text.wc_HKDF_Extract
+                0x00000000       0x72 Build/hmac.o
+ .text.wc_HKDF_Expand
+                0x00000000      0x106 Build/hmac.o
+ .text.wc_HKDF  0x00000000       0x4e Build/hmac.o
+ .rodata.CSWTCH.12
                 0x00000000       0x16 Build/hmac.o
  .comment       0x00000000       0x2f Build/hmac.o
  .note.GNU-stack
@@ -1803,68 +1869,18 @@ Discarded input sections
  .text          0x00000000        0x0 Build/rsa.o
  .data          0x00000000        0x0 Build/rsa.o
  .bss           0x00000000        0x0 Build/rsa.o
- .text.ctMaskNotEq
-                0x00000000       0x16 Build/rsa.o
- .text.wc_RsaCleanup
-                0x00000000       0x4e Build/rsa.o
  .text.RsaGetValue
                 0x00000000       0x2a Build/rsa.o
- .text._CheckProbablePrime
-                0x00000000      0x184 Build/rsa.o
- .text.RsaMGF1.constprop.0
-                0x00000000       0xde Build/rsa.o
- .text.RsaMGF.isra.0
-                0x00000000       0x5a Build/rsa.o
- .text.wc_InitRsaKey_ex
-                0x00000000       0x8e Build/rsa.o
- .text.wc_InitRsaKey
-                0x00000000        0x8 Build/rsa.o
- .text.wc_FreeRsaKey
-                0x00000000       0x96 Build/rsa.o
- .text.wc_RsaPad_ex
-                0x00000000      0x276 Build/rsa.o
- .text.wc_RsaUnPad_ex
-                0x00000000      0x1ea Build/rsa.o
- .text.wc_hash2mgf
-                0x00000000       0x14 Build/rsa.o
- .text.wc_RsaEncryptSize
-                0x00000000        0xc Build/rsa.o
- .text.wc_RsaFunction_ex
-                0x00000000      0x224 Build/rsa.o
- .text.wc_RsaFunction
-                0x00000000       0x1a Build/rsa.o
- .text.RsaPrivateDecryptEx
-                0x00000000      0x1e6 Build/rsa.o
  .text.wc_RsaPrivateDecryptInline
                 0x00000000       0x36 Build/rsa.o
  .text.wc_RsaPrivateDecryptInline_ex
                 0x00000000       0x42 Build/rsa.o
- .text.wc_RsaPrivateDecrypt
-                0x00000000       0x32 Build/rsa.o
  .text.wc_RsaPrivateDecrypt_ex
                 0x00000000       0x3e Build/rsa.o
- .text.wc_RsaSSL_VerifyInline
-                0x00000000       0x32 Build/rsa.o
- .text.wc_RsaSSL_Verify_ex2
-                0x00000000       0x50 Build/rsa.o
- .text.wc_RsaSSL_Verify_ex
-                0x00000000       0x16 Build/rsa.o
- .text.wc_RsaSSL_Verify
-                0x00000000       0x12 Build/rsa.o
- .text.RsaPublicEncryptEx.constprop.0
-                0x00000000      0x116 Build/rsa.o
- .text.wc_RsaSSL_Sign
-                0x00000000       0x2a Build/rsa.o
- .rodata._ifc_pairwise_consistency_test.str1.1
-                0x00000000       0x1a Build/rsa.o
- .text._ifc_pairwise_consistency_test
-                0x00000000       0x9c Build/rsa.o
  .text.wc_CheckRsaKey
-                0x00000000      0x186 Build/rsa.o
+                0x00000000      0x18e Build/rsa.o
  .text.wc_RsaPublicEncrypt_ex
                 0x00000000       0x34 Build/rsa.o
- .text.wc_RsaPublicEncrypt
-                0x00000000       0x26 Build/rsa.o
  .text.wc_RsaFlattenPublicKey
                 0x00000000       0x66 Build/rsa.o
  .text.wc_RsaExportKey
@@ -1873,62 +1889,26 @@ Discarded input sections
                 0x00000000       0xfa Build/rsa.o
  .text.wc_CheckProbablePrime
                 0x00000000       0x20 Build/rsa.o
- .text.wc_MakeRsaKey
-                0x00000000      0x4b0 Build/rsa.o
- .text.wc_RsaSetRNG
-                0x00000000       0x16 Build/rsa.o
- .rodata.CSWTCH.134
-                0x00000000        0x5 Build/rsa.o
- .rodata.lower_bound
-                0x00000000      0x100 Build/rsa.o
- .comment       0x00000000       0x2f Build/rsa.o
  .note.GNU-stack
                 0x00000000        0x0 Build/rsa.o
- .ARM.attributes
-                0x00000000       0x37 Build/rsa.o
  .text          0x00000000        0x0 Build/sha.o
  .data          0x00000000        0x0 Build/sha.o
  .bss           0x00000000        0x0 Build/sha.o
- .text.ByteReverseWords
-                0x00000000       0x18 Build/sha.o
- .text.Transform
-                0x00000000      0xdb0 Build/sha.o
- .text.wc_InitSha_ex
-                0x00000000       0x40 Build/sha.o
- .text.wc_ShaUpdate
-                0x00000000       0xce Build/sha.o
  .text.wc_ShaFinalRaw
                 0x00000000       0x2c Build/sha.o
- .text.wc_ShaFinal
-                0x00000000       0xe4 Build/sha.o
  .text.wc_InitSha
                 0x00000000        0xa Build/sha.o
- .text.wc_ShaFree
-                0x00000000        0x2 Build/sha.o
  .text.wc_ShaCopy
                 0x00000000       0x1c Build/sha.o
  .text.wc_ShaGetHash
                 0x00000000       0x24 Build/sha.o
- .comment       0x00000000       0x2f Build/sha.o
  .note.GNU-stack
                 0x00000000        0x0 Build/sha.o
- .ARM.attributes
-                0x00000000       0x37 Build/sha.o
  .text          0x00000000        0x0 Build/sha256.o
  .data          0x00000000        0x0 Build/sha256.o
  .bss           0x00000000        0x0 Build/sha256.o
  .text.wc_Sha256FinalRaw
                 0x00000000       0x2a Build/sha256.o
- .text.wc_InitSha224_ex
-                0x00000000       0x64 Build/sha256.o
- .text.wc_Sha224Update
-                0x00000000       0x10 Build/sha256.o
- .text.wc_Sha224Final
-                0x00000000       0x80 Build/sha256.o
- .text.wc_InitSha224
-                0x00000000        0xa Build/sha256.o
- .text.wc_Sha224Free
-                0x00000000        0x2 Build/sha256.o
  .text.wc_Sha256Copy
                 0x00000000       0x1c Build/sha256.o
  .text.wc_Sha256GetHash
@@ -1942,80 +1922,26 @@ Discarded input sections
  .text          0x00000000        0x0 Build/sha512.o
  .data          0x00000000        0x0 Build/sha512.o
  .bss           0x00000000        0x0 Build/sha512.o
- .text.InitSha512
-                0x00000000       0xb0 Build/sha512.o
- .text.InitSha512_224
-                0x00000000       0xb0 Build/sha512.o
- .text.InitSha512_256
-                0x00000000       0xb0 Build/sha512.o
- .text.ByteReverseWords64
-                0x00000000       0x20 Build/sha512.o
  .text.Sha512FinalRaw
                 0x00000000       0x2c Build/sha512.o
- .text._Transform_Sha512
-                0x00000000     0x1fe4 Build/sha512.o
- .text.Sha512Final
-                0x00000000       0xb8 Build/sha512.o
- .text.Sha512_Family_Final
-                0x00000000       0x32 Build/sha512.o
- .text.wc_Sha512Final
-                0x00000000        0xc Build/sha512.o
- .text.wc_Sha512_224Final
-                0x00000000        0xc Build/sha512.o
- .text.wc_Sha512_256Final
-                0x00000000        0xc Build/sha512.o
- .text.wc_InitSha512_ex
-                0x00000000       0x10 Build/sha512.o
- .text.wc_InitSha512_224_ex
-                0x00000000       0x10 Build/sha512.o
- .text.wc_InitSha512_256_ex
-                0x00000000       0x10 Build/sha512.o
- .text.wc_Sha512Update
-                0x00000000       0xd2 Build/sha512.o
  .text.wc_Sha512FinalRaw
                 0x00000000        0x6 Build/sha512.o
- .text.wc_InitSha512
-                0x00000000        0xa Build/sha512.o
- .text.wc_Sha512Free
-                0x00000000        0x2 Build/sha512.o
- .text.wc_Sha384Update
-                0x00000000        0x4 Build/sha512.o
  .text.wc_Sha384FinalRaw
                 0x00000000       0x2a Build/sha512.o
- .text.wc_Sha384Final
-                0x00000000       0xd0 Build/sha512.o
- .text.wc_InitSha384_ex
-                0x00000000       0xb8 Build/sha512.o
- .text.wc_InitSha384
-                0x00000000        0xa Build/sha512.o
- .text.wc_Sha384Free
-                0x00000000        0x2 Build/sha512.o
  .text.wc_Sha512Copy
                 0x00000000       0x1c Build/sha512.o
  .text.Sha512_Family_GetHash
                 0x00000000       0x24 Build/sha512.o
  .text.wc_Sha512GetHash
                 0x00000000        0xc Build/sha512.o
- .text.wc_InitSha512_224
-                0x00000000        0xa Build/sha512.o
- .text.wc_Sha512_224Update
-                0x00000000        0x4 Build/sha512.o
  .text.wc_Sha512_224FinalRaw
                 0x00000000        0x6 Build/sha512.o
- .text.wc_Sha512_224Free
-                0x00000000        0x2 Build/sha512.o
  .text.wc_Sha512_224GetHash
                 0x00000000        0xc Build/sha512.o
  .text.wc_Sha512_224Copy
                 0x00000000        0x4 Build/sha512.o
- .text.wc_InitSha512_256
-                0x00000000        0xa Build/sha512.o
- .text.wc_Sha512_256Update
-                0x00000000        0x4 Build/sha512.o
  .text.wc_Sha512_256FinalRaw
                 0x00000000        0x6 Build/sha512.o
- .text.wc_Sha512_256Free
-                0x00000000        0x2 Build/sha512.o
  .text.wc_Sha512_256GetHash
                 0x00000000        0xc Build/sha512.o
  .text.wc_Sha512_256Copy
@@ -2024,80 +1950,43 @@ Discarded input sections
                 0x00000000       0x24 Build/sha512.o
  .text.wc_Sha384Copy
                 0x00000000        0x4 Build/sha512.o
- .rodata.K512   0x00000000      0x280 Build/sha512.o
- .comment       0x00000000       0x2f Build/sha512.o
  .note.GNU-stack
                 0x00000000        0x0 Build/sha512.o
- .ARM.attributes
-                0x00000000       0x37 Build/sha512.o
  .text          0x00000000        0x0 Build/sha3.o
  .data          0x00000000        0x0 Build/sha3.o
  .bss           0x00000000        0x0 Build/sha3.o
- .text.BlockSha3
-                0x00000000      0xf88 Build/sha3.o
- .text.wc_Sha3Update
-                0x00000000       0xe2 Build/sha3.o
  .text.wc_Sha3Copy
                 0x00000000       0x1e Build/sha3.o
- .text.wc_Sha3Final
-                0x00000000       0xaa Build/sha3.o
  .text.wc_Sha3GetHash
                 0x00000000       0x2c Build/sha3.o
- .text.wc_InitSha3_224
-                0x00000000       0x2c Build/sha3.o
- .text.wc_Sha3_224_Update
-                0x00000000        0x6 Build/sha3.o
- .text.wc_Sha3_224_Final
-                0x00000000        0x8 Build/sha3.o
- .text.wc_Sha3_224_Free
-                0x00000000        0x2 Build/sha3.o
  .text.wc_Sha3_224_GetHash
                 0x00000000        0x8 Build/sha3.o
  .text.wc_Sha3_224_Copy
                 0x00000000        0x4 Build/sha3.o
- .text.wc_InitSha3_256
-                0x00000000       0x2c Build/sha3.o
- .text.wc_Sha3_256_Update
-                0x00000000        0x6 Build/sha3.o
- .text.wc_Sha3_256_Final
-                0x00000000        0x8 Build/sha3.o
- .text.wc_Sha3_256_Free
-                0x00000000        0x2 Build/sha3.o
  .text.wc_Sha3_256_GetHash
                 0x00000000        0x8 Build/sha3.o
  .text.wc_Sha3_256_Copy
                 0x00000000        0x4 Build/sha3.o
- .text.wc_InitSha3_384
-                0x00000000       0x2c Build/sha3.o
- .text.wc_Sha3_384_Update
-                0x00000000        0x6 Build/sha3.o
- .text.wc_Sha3_384_Final
-                0x00000000        0x8 Build/sha3.o
- .text.wc_Sha3_384_Free
-                0x00000000        0x2 Build/sha3.o
  .text.wc_Sha3_384_GetHash
                 0x00000000        0x8 Build/sha3.o
  .text.wc_Sha3_384_Copy
                 0x00000000        0x4 Build/sha3.o
- .text.wc_InitSha3_512
-                0x00000000       0x2c Build/sha3.o
- .text.wc_Sha3_512_Update
-                0x00000000        0x6 Build/sha3.o
- .text.wc_Sha3_512_Final
-                0x00000000        0x8 Build/sha3.o
- .text.wc_Sha3_512_Free
-                0x00000000        0x2 Build/sha3.o
  .text.wc_Sha3_512_GetHash
                 0x00000000        0x8 Build/sha3.o
  .text.wc_Sha3_512_Copy
                 0x00000000        0x4 Build/sha3.o
- .rodata.hash_keccak_r
-                0x00000000       0xc0 Build/sha3.o
- .comment       0x00000000       0x2f Build/sha3.o
+ .text.wc_InitShake256
+                0x00000000       0x10 Build/sha3.o
+ .text.wc_Shake256_Update
+                0x00000000       0x26 Build/sha3.o
+ .text.wc_Shake256_Final
+                0x00000000       0x2a Build/sha3.o
+ .text.wc_Shake256_Free
+                0x00000000        0x2 Build/sha3.o
+ .text.wc_Shake256_Copy
+                0x00000000        0x4 Build/sha3.o
  .note.GNU-stack
                 0x00000000        0x0 Build/sha3.o
- .ARM.attributes
-                0x00000000       0x37 Build/sha3.o
  .text          0x00000000        0x0 Build/asm.o
  .data          0x00000000        0x0 Build/asm.o
  .bss           0x00000000        0x0 Build/asm.o
@@ -2126,11 +2015,23 @@ Discarded input sections
                 0x00000000       0x18 Build/asn.o
  .text.SetASNLength
                 0x00000000       0x42 Build/asn.o
+ .text.GetLength_ex
+                0x00000000       0x7c Build/asn.o
  .text.GetLength
                 0x00000000        0xe Build/asn.o
  .text.GetDateInfo
                 0x00000000       0x84 Build/asn.o
+ .text.GetASNTag
+                0x00000000       0x26 Build/asn.o
+ .text.GetASNHeader_ex
+                0x00000000       0x56 Build/asn.o
+ .text.GetASNInt
+                0x00000000       0x5c Build/asn.o
  .text.SkipInt  0x00000000       0x20 Build/asn.o
+ .text.GetIntPositive
+                0x00000000       0x5e Build/asn.o
+ .text.GetSequence
+                0x00000000       0x16 Build/asn.o
  .text.GetSequence_ex
                 0x00000000       0x16 Build/asn.o
  .text.GetSet   0x00000000       0x16 Build/asn.o
@@ -2210,12 +2111,22 @@ Discarded input sections
                 0x00000000       0x16 Build/asn.o
  .text.wc_GetDateAsCalendarTime
                 0x00000000       0x20 Build/asn.o
+ .text.SetLength
+                0x00000000       0x4c Build/asn.o
+ .text.SetASNInt
+                0x00000000       0x32 Build/asn.o
+ .text.SetASNIntMP
+                0x00000000       0x64 Build/asn.o
  .text.SetBitString
                 0x00000000       0x24 Build/asn.o
  .text.SetObjectId
                 0x00000000       0x12 Build/asn.o
  .text.SetCurve
                 0x00000000       0x34 Build/asn.o
+ .text.SetHeader
+                0x00000000       0x16 Build/asn.o
+ .text.SetSequence
+                0x00000000        0xa Build/asn.o
  .text.DsaKeyIntsToDer
                 0x00000000      0x158 Build/asn.o
  .text.wc_DsaKeyToDer
@@ -2318,10 +2229,14 @@ Discarded input sections
                 0x00000000       0x10 Build/asn.o
  .text.wc_EccPublicKeyDerSize
                 0x00000000        0xc Build/asn.o
+ .text.StoreECC_DSA_Sig
+                0x00000000       0x78 Build/asn.o
  .text.StoreECC_DSA_Sig_Bin
                 0x00000000       0xd8 Build/asn.o
  .text.DecodeECC_DSA_Sig_Bin
                 0x00000000       0xa6 Build/asn.o
+ .text.DecodeECC_DSA_Sig
+                0x00000000       0x70 Build/asn.o
  .text.wc_EccPrivateKeyDecode
                 0x00000000      0x1ae Build/asn.o
  .text.wc_CheckPrivateKey
@@ -2616,8 +2531,11 @@ Discarded input sections
                 0x00000000        0x9 Build/asn.o
  .rodata.wrapAes256Oid
                 0x00000000        0x9 Build/asn.o
+ .comment       0x00000000       0x2f Build/asn.o
  .note.GNU-stack
                 0x00000000        0x0 Build/asn.o
+ .ARM.attributes
+                0x00000000       0x37 Build/asn.o
  .text          0x00000000        0x0 Build/blake2s.o
  .data          0x00000000        0x0 Build/blake2s.o
  .bss           0x00000000        0x0 Build/blake2s.o
@@ -2775,19 +2693,135 @@ Discarded input sections
  .text          0x00000000        0x0 Build/ed25519.o
  .data          0x00000000        0x0 Build/ed25519.o
  .bss           0x00000000        0x0 Build/ed25519.o
+ .text.ed25519_hash
+                0x00000000       0x4a Build/ed25519.o
+ .text.wc_ed25519_make_public
+                0x00000000       0x54 Build/ed25519.o
+ .text.wc_ed25519_make_key
+                0x00000000       0x5c Build/ed25519.o
+ .text.wc_ed25519_sign_msg_ex
+                0x00000000      0x204 Build/ed25519.o
+ .text.wc_ed25519_sign_msg
+                0x00000000       0x18 Build/ed25519.o
+ .text.wc_ed25519ctx_sign_msg
+                0x00000000       0x1c Build/ed25519.o
+ .text.wc_ed25519ph_sign_hash
+                0x00000000       0x1c Build/ed25519.o
+ .text.wc_ed25519ph_sign_msg
+                0x00000000       0x38 Build/ed25519.o
+ .text.wc_ed25519_verify_msg_ex
+                0x00000000      0x1ac Build/ed25519.o
+ .text.wc_ed25519_verify_msg
+                0x00000000       0x1e Build/ed25519.o
+ .text.wc_ed25519ctx_verify_msg
+                0x00000000       0x22 Build/ed25519.o
+ .text.wc_ed25519ph_verify_hash
+                0x00000000       0x22 Build/ed25519.o
+ .text.wc_ed25519ph_verify_msg
+                0x00000000       0x3c Build/ed25519.o
+ .text.wc_ed25519_init_ex
+                0x00000000       0x20 Build/ed25519.o
+ .text.wc_ed25519_init
+                0x00000000        0xa Build/ed25519.o
+ .text.wc_ed25519_free
+                0x00000000       0x14 Build/ed25519.o
+ .text.wc_ed25519_export_public
+                0x00000000       0x30 Build/ed25519.o
+ .text.wc_ed25519_import_public
+                0x00000000       0x66 Build/ed25519.o
+ .text.wc_ed25519_import_private_only
+                0x00000000       0x20 Build/ed25519.o
+ .text.wc_ed25519_import_private_key
+                0x00000000       0x50 Build/ed25519.o
+ .text.wc_ed25519_export_private_only
+                0x00000000       0x32 Build/ed25519.o
+ .text.wc_ed25519_export_private
+                0x00000000       0x32 Build/ed25519.o
+ .text.wc_ed25519_export_key
+                0x00000000       0x1e Build/ed25519.o
+ .text.wc_ed25519_check_key
+                0x00000000       0x2c Build/ed25519.o
+ .text.wc_ed25519_size
+                0x00000000        0xc Build/ed25519.o
+ .text.wc_ed25519_priv_size
+                0x00000000        0xc Build/ed25519.o
+ .text.wc_ed25519_pub_size
+                0x00000000        0xc Build/ed25519.o
+ .text.wc_ed25519_sig_size
+                0x00000000        0xc Build/ed25519.o
+ .rodata.ed25519Ctx
+                0x00000000       0x21 Build/ed25519.o
+ .rodata.ed25519_low_order
+                0x00000000       0x10 Build/ed25519.o
  .comment       0x00000000       0x2f Build/ed25519.o
  .note.GNU-stack
                 0x00000000        0x0 Build/ed25519.o
  .ARM.attributes
-                0x00000000       0x3e Build/ed25519.o
+                0x00000000       0x37 Build/ed25519.o
  .text          0x00000000        0x0 Build/ed448.o
  .data          0x00000000        0x0 Build/ed448.o
  .bss           0x00000000        0x0 Build/ed448.o
+ .text.ed448_hash
+                0x00000000       0x4e Build/ed448.o
+ .text.wc_ed448_make_public
+                0x00000000       0x58 Build/ed448.o
+ .text.wc_ed448_make_key
+                0x00000000       0x5c Build/ed448.o
+ .text.wc_ed448_sign_msg_ex
+                0x00000000      0x200 Build/ed448.o
+ .text.wc_ed448_sign_msg
+                0x00000000       0x1c Build/ed448.o
+ .text.wc_ed448ph_sign_hash
+                0x00000000       0x1c Build/ed448.o
+ .text.wc_ed448ph_sign_msg
+                0x00000000       0x38 Build/ed448.o
+ .text.wc_ed448_verify_msg_ex
+                0x00000000      0x17c Build/ed448.o
+ .text.wc_ed448_verify_msg
+                0x00000000       0x22 Build/ed448.o
+ .text.wc_ed448ph_verify_hash
+                0x00000000       0x22 Build/ed448.o
+ .text.wc_ed448ph_verify_msg
+                0x00000000       0x3c Build/ed448.o
+ .text.wc_ed448_init_ex
+                0x00000000       0x22 Build/ed448.o
+ .text.wc_ed448_init
+                0x00000000        0xa Build/ed448.o
+ .text.wc_ed448_free
+                0x00000000       0x14 Build/ed448.o
+ .text.wc_ed448_export_public
+                0x00000000       0x30 Build/ed448.o
+ .text.wc_ed448_import_public
+                0x00000000       0x64 Build/ed448.o
+ .text.wc_ed448_import_private_only
+                0x00000000       0x20 Build/ed448.o
+ .text.wc_ed448_import_private_key
+                0x00000000       0x50 Build/ed448.o
+ .text.wc_ed448_export_private_only
+                0x00000000       0x32 Build/ed448.o
+ .text.wc_ed448_export_private
+                0x00000000       0x32 Build/ed448.o
+ .text.wc_ed448_export_key
+                0x00000000       0x1e Build/ed448.o
+ .text.wc_ed448_check_key
+                0x00000000       0x34 Build/ed448.o
+ .text.wc_ed448_size
+                0x00000000        0xc Build/ed448.o
+ .text.wc_ed448_priv_size
+                0x00000000        0xc Build/ed448.o
+ .text.wc_ed448_pub_size
+                0x00000000        0xc Build/ed448.o
+ .text.wc_ed448_sig_size
+                0x00000000        0xc Build/ed448.o
+ .rodata.ed448Ctx
+                0x00000000        0x9 Build/ed448.o
+ .rodata.ed448_order
+                0x00000000       0x39 Build/ed448.o
  .comment       0x00000000       0x2f Build/ed448.o
  .note.GNU-stack
                 0x00000000        0x0 Build/ed448.o
  .ARM.attributes
-                0x00000000       0x3e Build/ed448.o
+                0x00000000       0x37 Build/ed448.o
  .text          0x00000000        0x0 Build/error.o
  .data          0x00000000        0x0 Build/error.o
  .bss           0x00000000        0x0 Build/error.o
@@ -2809,19 +2843,100 @@ Discarded input sections
  .text          0x00000000        0x0 Build/fe_448.o
  .data          0x00000000        0x0 Build/fe_448.o
  .bss           0x00000000        0x0 Build/fe_448.o
+ .text.fe448_cswap
+                0x00000000      0x1dc Build/fe_448.o
+ .text.fe448_mul_8
+                0x00000000      0x39e Build/fe_448.o
+ .text.fe448_sqr_8
+                0x00000000      0x2da Build/fe_448.o
+ .text.fe448_init
+                0x00000000        0x2 Build/fe_448.o
+ .text.fe448_from_bytes
+                0x00000000      0x1c8 Build/fe_448.o
+ .text.fe448_to_bytes
+                0x00000000      0x2a8 Build/fe_448.o
+ .text.fe448_1  0x00000000       0x26 Build/fe_448.o
+ .text.fe448_0  0x00000000       0x24 Build/fe_448.o
+ .text.fe448_copy
+                0x00000000       0x42 Build/fe_448.o
+ .text.fe448_add
+                0x00000000       0x84 Build/fe_448.o
+ .text.fe448_sub
+                0x00000000       0x84 Build/fe_448.o
+ .text.fe448_reduce
+                0x00000000       0xc8 Build/fe_448.o
+ .text.fe448_mul39081
+                0x00000000      0x1a8 Build/fe_448.o
+ .text.fe448_mul
+                0x00000000      0x1a6 Build/fe_448.o
+ .text.fe448_sqr
+                0x00000000      0x15c Build/fe_448.o
+ .text.fe448_invert
+                0x00000000      0x186 Build/fe_448.o
+ .text.curve448
+                0x00000000      0x138 Build/fe_448.o
+ .text.fe448_isnonzero
+                0x00000000       0x26 Build/fe_448.o
+ .text.fe448_isnegative
+                0x00000000       0x1a Build/fe_448.o
+ .text.fe448_neg
+                0x00000000       0x62 Build/fe_448.o
+ .text.fe448_pow_2_446_222_1
+                0x00000000      0x1fc Build/fe_448.o
+ .text.fe448_cmov
+                0x00000000      0x11a Build/fe_448.o
  .comment       0x00000000       0x2f Build/fe_448.o
  .note.GNU-stack
                 0x00000000        0x0 Build/fe_448.o
  .ARM.attributes
-                0x00000000       0x3e Build/fe_448.o
+                0x00000000       0x37 Build/fe_448.o
  .text          0x00000000        0x0 Build/fe_low_mem.o
  .data          0x00000000        0x0 Build/fe_low_mem.o
  .bss           0x00000000        0x0 Build/fe_low_mem.o
+ .text.raw_add  0x00000000       0x22 Build/fe_low_mem.o
+ .text.lm_copy  0x00000000       0x14 Build/fe_low_mem.o
+ .text.fprime_copy
+                0x00000000        0x4 Build/fe_low_mem.o
+ .text.fe_init  0x00000000        0x2 Build/fe_low_mem.o
+ .text.fe_load  0x00000000       0x1e Build/fe_low_mem.o
+ .text.fe_select
+                0x00000000       0x1c Build/fe_low_mem.o
+ .text.fe_normalize
+                0x00000000       0x62 Build/fe_low_mem.o
+ .text.raw_try_sub
+                0x00000000       0x38 Build/fe_low_mem.o
+ .text.fprime_add
+                0x00000000       0x16 Build/fe_low_mem.o
+ .text.fprime_sub
+                0x00000000       0x20 Build/fe_low_mem.o
+ .text.fprime_mul
+                0x00000000       0xbe Build/fe_low_mem.o
+ .text.fprime_select
+                0x00000000        0x4 Build/fe_low_mem.o
+ .text.lm_add   0x00000000       0x46 Build/fe_low_mem.o
+ .text.lm_sub   0x00000000       0x46 Build/fe_low_mem.o
+ .text.lm_neg   0x00000000       0x48 Build/fe_low_mem.o
+ .text.fe_mul__distinct
+                0x00000000       0x70 Build/fe_low_mem.o
+ .text.xc_diffadd
+                0x00000000       0x94 Build/fe_low_mem.o
+ .text.lm_mul   0x00000000       0x18 Build/fe_low_mem.o
+ .text.fe_mul_c
+                0x00000000       0x40 Build/fe_low_mem.o
+ .text.fe_inv__distinct
+                0x00000000       0x88 Build/fe_low_mem.o
+ .text.curve25519
+                0x00000000      0x14c Build/fe_low_mem.o
+ .text.lm_invert
+                0x00000000       0x18 Build/fe_low_mem.o
+ .text.fe_sqrt  0x00000000       0x9a Build/fe_low_mem.o
+ .rodata.f25519_one
+                0x00000000       0x20 Build/fe_low_mem.o
  .comment       0x00000000       0x2f Build/fe_low_mem.o
  .note.GNU-stack
                 0x00000000        0x0 Build/fe_low_mem.o
  .ARM.attributes
-                0x00000000       0x3e Build/fe_low_mem.o
+                0x00000000       0x37 Build/fe_low_mem.o
  .text          0x00000000        0x0 Build/fe_operations.o
  .data          0x00000000        0x0 Build/fe_operations.o
  .bss           0x00000000        0x0 Build/fe_operations.o
@@ -2833,19 +2948,88 @@ Discarded input sections
  .text          0x00000000        0x0 Build/ge_448.o
  .data          0x00000000        0x0 Build/ge_448.o
  .bss           0x00000000        0x0 Build/ge_448.o
+ .text.slide    0x00000000       0x98 Build/ge_448.o
+ .text.ge448_dbl
+                0x00000000       0xa4 Build/ge_448.o
+ .text.cmov     0x00000000       0x26 Build/ge_448.o
+ .text.ge448_select
+                0x00000000       0xc8 Build/ge_448.o
+ .text.ge448_madd
+                0x00000000       0xee Build/ge_448.o
+ .text.ge448_add
+                0x00000000       0xfa Build/ge_448.o
+ .text.ge448_sub
+                0x00000000       0xfc Build/ge_448.o
+ .text.ge448_msub
+                0x00000000       0xf2 Build/ge_448.o
+ .text.sc448_reduce
+                0x00000000     0x1178 Build/ge_448.o
+ .text.sc448_muladd
+                0x00000000     0x1c9c Build/ge_448.o
+ .text.ge448_to_bytes
+                0x00000000       0x3e Build/ge_448.o
+ .text.ge448_compress_key
+                0x00000000       0x48 Build/ge_448.o
+ .text.ge448_scalarmult_base
+                0x00000000       0xd2 Build/ge_448.o
+ .text.ge448_double_scalarmult_vartime
+                0x00000000      0x22c Build/ge_448.o
+ .text.ge448_from_bytes_negate_vartime
+                0x00000000       0xf8 Build/ge_448.o
+ .rodata.base   0x00000000     0xe800 Build/ge_448.o
+ .rodata.base_i
+                0x00000000      0x800 Build/ge_448.o
  .comment       0x00000000       0x2f Build/ge_448.o
  .note.GNU-stack
                 0x00000000        0x0 Build/ge_448.o
  .ARM.attributes
-                0x00000000       0x3e Build/ge_448.o
+                0x00000000       0x37 Build/ge_448.o
  .text          0x00000000        0x0 Build/ge_low_mem.o
  .data          0x00000000        0x0 Build/ge_low_mem.o
  .bss           0x00000000        0x0 Build/ge_low_mem.o
+ .text.reduce_add_sub
+                0x00000000       0x4c Build/ge_low_mem.o
+ .text.ge_compress_key
+                0x00000000       0x40 Build/ge_low_mem.o
+ .text.sc_reduce
+                0x00000000      0x16c Build/ge_low_mem.o
+ .text.sc_muladd
+                0x00000000       0x54 Build/ge_low_mem.o
+ .text.ed25519_add
+                0x00000000       0xe0 Build/ge_low_mem.o
+ .text.ed25519_double
+                0x00000000       0xb4 Build/ge_low_mem.o
+ .text.ed25519_smult
+                0x00000000       0x84 Build/ge_low_mem.o
+ .text.ge_scalarmult_base
+                0x00000000        0xc Build/ge_low_mem.o
+ .text.ge_p3_tobytes
+                0x00000000       0x52 Build/ge_low_mem.o
+ .text.ge_tobytes
+                0x00000000       0x52 Build/ge_low_mem.o
+ .text.ge_frombytes_negate_vartime
+                0x00000000       0xf8 Build/ge_low_mem.o
+ .text.ge_double_scalarmult_vartime
+                0x00000000       0x5c Build/ge_low_mem.o
+ .rodata.ed25519_base
+                0x00000000       0x80 Build/ge_low_mem.o
+ .rodata.ed25519_d
+                0x00000000       0x20 Build/ge_low_mem.o
+ .rodata.ed25519_k
+                0x00000000       0x20 Build/ge_low_mem.o
+ .rodata.ed25519_neutral
+                0x00000000       0x80 Build/ge_low_mem.o
+ .rodata.ed25519_order
+                0x00000000       0x20 Build/ge_low_mem.o
+ .rodata.f25519_one
+                0x00000000       0x20 Build/ge_low_mem.o
+ .rodata.mod    0x00000000       0x80 Build/ge_low_mem.o
+ .rodata.mu     0x00000000       0x84 Build/ge_low_mem.o
  .comment       0x00000000       0x2f Build/ge_low_mem.o
  .note.GNU-stack
                 0x00000000        0x0 Build/ge_low_mem.o
  .ARM.attributes
-                0x00000000       0x3e Build/ge_low_mem.o
+                0x00000000       0x37 Build/ge_low_mem.o
  .text          0x00000000        0x0 Build/ge_operations.o
  .data          0x00000000        0x0 Build/ge_operations.o
  .bss           0x00000000        0x0 Build/ge_operations.o
@@ -2863,8 +3047,6 @@ Discarded input sections
                 0x00000000       0x18 Build/hash.o
  .text.wc_OidGetHash
                 0x00000000       0x5e Build/hash.o
- .text.wc_HashGetDigestSize
-                0x00000000       0x18 Build/hash.o
  .text.wc_HashGetBlockSize
                 0x00000000       0x18 Build/hash.o
  .text.wc_HashInit_ex
@@ -2877,42 +3059,12 @@ Discarded input sections
                 0x00000000       0x58 Build/hash.o
  .text.wc_HashFree
                 0x00000000       0x6e Build/hash.o
- .text.wc_Md5Hash
-                0x00000000       0x4c Build/hash.o
- .text.wc_ShaHash
-                0x00000000       0x52 Build/hash.o
- .text.wc_Sha224Hash
-                0x00000000       0x4c Build/hash.o
- .text.wc_Sha256Hash
-                0x00000000       0x52 Build/hash.o
- .text.wc_Sha512Hash
-                0x00000000       0x4c Build/hash.o
- .text.wc_Sha512_224Hash
-                0x00000000       0x4c Build/hash.o
- .text.wc_Sha512_256Hash
-                0x00000000       0x4c Build/hash.o
- .text.wc_Sha384Hash
-                0x00000000       0x4c Build/hash.o
- .text.wc_Sha3_224Hash
-                0x00000000       0x54 Build/hash.o
- .text.wc_Sha3_256Hash
-                0x00000000       0x54 Build/hash.o
- .text.wc_Sha3_384Hash
-                0x00000000       0x54 Build/hash.o
- .text.wc_Sha3_512Hash
-                0x00000000       0x54 Build/hash.o
- .text.wc_Hash  0x00000000       0xde Build/hash.o
  .rodata.CSWTCH.3
                 0x00000000       0x26 Build/hash.o
- .rodata.CSWTCH.6
-                0x00000000       0x22 Build/hash.o
  .rodata.CSWTCH.8
                 0x00000000       0x22 Build/hash.o
- .comment       0x00000000       0x2f Build/hash.o
  .note.GNU-stack
                 0x00000000        0x0 Build/hash.o
- .ARM.attributes
-                0x00000000       0x37 Build/hash.o
  .text          0x00000000        0x0 Build/kdf.o
  .data          0x00000000        0x0 Build/kdf.o
  .bss           0x00000000        0x0 Build/kdf.o
@@ -2957,27 +3109,12 @@ Discarded input sections
  .text          0x00000000        0x0 Build/md5.o
  .data          0x00000000        0x0 Build/md5.o
  .bss           0x00000000        0x0 Build/md5.o
- .text.Transform
-                0x00000000      0x6d8 Build/md5.o
- .text.wc_InitMd5_ex
-                0x00000000       0x38 Build/md5.o
- .text.wc_Md5Update
-                0x00000000       0xc0 Build/md5.o
- .text.wc_Md5Final
-                0x00000000       0xc0 Build/md5.o
- .text.wc_InitMd5
-                0x00000000       0x12 Build/md5.o
- .text.wc_Md5Free
-                0x00000000        0x2 Build/md5.o
  .text.wc_Md5Copy
                 0x00000000       0x1c Build/md5.o
  .text.wc_Md5GetHash
                 0x00000000       0x24 Build/md5.o
- .comment       0x00000000       0x2f Build/md5.o
  .note.GNU-stack
                 0x00000000        0x0 Build/md5.o
- .ARM.attributes
-                0x00000000       0x37 Build/md5.o
  .text          0x00000000        0x0 Build/memory.o
  .data          0x00000000        0x0 Build/memory.o
  .bss           0x00000000        0x0 Build/memory.o
@@ -3132,164 +3269,120 @@ Discarded input sections
  .text          0x00000000        0x0 Build/sp_cortexm.o
  .data          0x00000000        0x0 Build/sp_cortexm.o
  .bss           0x00000000        0x0 Build/sp_cortexm.o
- .text.sp_2048_to_bin_64
-                0x00000000       0x2c Build/sp_cortexm.o
- .text.sp_2048_add_64
-                0x00000000       0x3e Build/sp_cortexm.o
- .text.sp_2048_sub_in_place_64
-                0x00000000       0x38 Build/sp_cortexm.o
- .text.sp_2048_sqr_64
-                0x00000000       0xf0 Build/sp_cortexm.o
- .text.sp_2048_add_32
-                0x00000000       0x3e Build/sp_cortexm.o
- .text.sp_2048_sub_in_place_32
-                0x00000000       0x38 Build/sp_cortexm.o
- .text.sp_2048_sqr_32
-                0x00000000       0xdc Build/sp_cortexm.o
- .text.sp_2048_mul_d_64
-                0x00000000       0x40 Build/sp_cortexm.o
- .text.sp_2048_mul_d_32
-                0x00000000       0x40 Build/sp_cortexm.o
- .text.sp_2048_cmp_32
-                0x00000000       0x54 Build/sp_cortexm.o
- .text.sp_2048_cmp_64
-                0x00000000       0x54 Build/sp_cortexm.o
- .text.sp_2048_cond_add_32
-                0x00000000       0x3a Build/sp_cortexm.o
  .text.sp_2048_lshift_64
                 0x00000000      0x52c Build/sp_cortexm.o
- .text.sp_3072_to_bin_96
-                0x00000000       0x2c Build/sp_cortexm.o
- .text.sp_3072_add_96
+ .text.sp_256_mul_8
+                0x00000000      0x576 Build/sp_cortexm.o
+ .text.sp_256_sqr_8
+                0x00000000      0x40a Build/sp_cortexm.o
+ .text.sp_256_add_8
                 0x00000000       0x3e Build/sp_cortexm.o
- .text.sp_3072_sub_in_place_96
-                0x00000000       0x38 Build/sp_cortexm.o
- .text.sp_3072_sqr_96
-                0x00000000       0xfc Build/sp_cortexm.o
- .text.sp_3072_add_48
-                0x00000000       0x3e Build/sp_cortexm.o
- .text.sp_3072_sub_in_place_48
-                0x00000000       0x38 Build/sp_cortexm.o
- .text.sp_3072_sqr_48
-                0x00000000       0xf4 Build/sp_cortexm.o
- .text.sp_3072_mul_d_96
-                0x00000000       0x40 Build/sp_cortexm.o
- .text.sp_3072_mul_d_48
-                0x00000000       0x40 Build/sp_cortexm.o
- .text.sp_3072_cmp_48
+ .text.sp_256_cmp_8
                 0x00000000       0x54 Build/sp_cortexm.o
- .text.sp_3072_cmp_96
-                0x00000000       0x5c Build/sp_cortexm.o
- .text.sp_3072_cond_add_48
+ .text.sp_256_cmp_equal_8
+                0x00000000       0x48 Build/sp_cortexm.o
+ .text.sp_256_iszero_8
+                0x00000000       0x26 Build/sp_cortexm.o
+ .text.sp_256_get_point_16_8
+                0x00000000      0x1d0 Build/sp_cortexm.o
+ .text.sp_256_add_one_8
                 0x00000000       0x3a Build/sp_cortexm.o
+ .text.sp_256_sub_in_place_8
+                0x00000000       0x38 Build/sp_cortexm.o
+ .text.sp_256_mul_d_8
+                0x00000000       0x40 Build/sp_cortexm.o
  .text.sp_256_point_from_ecc_point_8
                 0x00000000       0x50 Build/sp_cortexm.o
- .text.sp_2048_mul_64
-                0x00000000       0xb0 Build/sp_cortexm.o
- .text.sp_2048_mul_32
-                0x00000000       0xa0 Build/sp_cortexm.o
- .text.sp_3072_mul_96
+ .text.sp_256_ecc_gen_k_8
+                0x00000000       0x40 Build/sp_cortexm.o
+ .text.sp_256_to_mp
+                0x00000000       0x36 Build/sp_cortexm.o
+ .text.sp_256_get_entry_16_8.constprop.0
+                0x00000000      0x158 Build/sp_cortexm.o
+ .text.sp_256_div2_8.constprop.0
+                0x00000000       0xe8 Build/sp_cortexm.o
+ .text.sp_256_mont_sub_8.constprop.0
                 0x00000000       0xbc Build/sp_cortexm.o
- .text.sp_3072_mul_48
-                0x00000000       0xa8 Build/sp_cortexm.o
- .text.sp_2048_to_mp
-                0x00000000       0x38 Build/sp_cortexm.o
- .text.sp_3072_to_mp
-                0x00000000       0x38 Build/sp_cortexm.o
- .text.sp_3072_sub_96.isra.0
-                0x00000000       0x38 Build/sp_cortexm.o
- .text.sp_3072_div_96_cond.constprop.0
-                0x00000000       0xca Build/sp_cortexm.o
- .text.sp_3072_cond_sub_96.isra.0
-                0x00000000       0x3e Build/sp_cortexm.o
- .text.sp_3072_mont_reduce_96
-                0x00000000       0xd8 Build/sp_cortexm.o
- .text.sp_3072_mont_sqr_96
-                0x00000000       0x18 Build/sp_cortexm.o
- .text.sp_3072_mont_mul_96
-                0x00000000       0x1a Build/sp_cortexm.o
- .text.sp_3072_cond_sub_48.isra.0
-                0x00000000       0x36 Build/sp_cortexm.o
- .text.sp_3072_mont_reduce_48
-                0x00000000       0xd6 Build/sp_cortexm.o
- .text.sp_3072_mont_sqr_48
-                0x00000000       0x18 Build/sp_cortexm.o
- .text.sp_3072_mont_mul_48
-                0x00000000       0x1a Build/sp_cortexm.o
- .text.sp_2048_sub_64.isra.0
+ .text.sp_256_mont_tpl_8.constprop.0
+                0x00000000       0xf6 Build/sp_cortexm.o
+ .text.sp_256_mont_dbl_8.constprop.0
+                0x00000000       0x80 Build/sp_cortexm.o
+ .text.sp_256_mont_add_8.constprop.0
+                0x00000000       0xc0 Build/sp_cortexm.o
+ .text.sp_256_mont_reduce_8.constprop.0
+                0x00000000      0x10a Build/sp_cortexm.o
+ .text.sp_256_mont_sqr_8.constprop.0
+                0x00000000      0x5f8 Build/sp_cortexm.o
+ .text.sp_256_mont_mul_8.constprop.0
+                0x00000000      0x7ac Build/sp_cortexm.o
+ .text.sp_256_proj_point_dbl_8
+                0x00000000       0xba Build/sp_cortexm.o
+ .text.sp_256_mod_mul_norm_8.constprop.0
+                0x00000000      0x2ea Build/sp_cortexm.o
+ .text.sp_256_sub_8.constprop.0.isra.0
                 0x00000000       0x34 Build/sp_cortexm.o
- .text.sp_2048_div_64_cond.constprop.0
-                0x00000000       0xc8 Build/sp_cortexm.o
- .text.sp_2048_cond_sub_64.isra.0
-                0x00000000       0x3a Build/sp_cortexm.o
- .text.sp_2048_mont_reduce_64
-                0x00000000       0xd8 Build/sp_cortexm.o
- .text.sp_2048_mont_sqr_64
-                0x00000000       0x18 Build/sp_cortexm.o
- .text.sp_2048_mont_mul_64
-                0x00000000       0x1a Build/sp_cortexm.o
- .text.sp_2048_cond_sub_32.isra.0
+ .text.sp_256_proj_point_add_8
+                0x00000000      0x284 Build/sp_cortexm.o
+ .text.sp_256_point_to_ecc_point_8
+                0x00000000       0x2a Build/sp_cortexm.o
+ .text.sp_256_cond_sub_8.isra.0
                 0x00000000       0x36 Build/sp_cortexm.o
- .text.sp_2048_mont_reduce_32
-                0x00000000       0xd6 Build/sp_cortexm.o
- .text.sp_2048_mont_sqr_32
-                0x00000000       0x18 Build/sp_cortexm.o
- .text.sp_2048_mont_mul_32
-                0x00000000       0x1a Build/sp_cortexm.o
- .text.sp_2048_mont_setup.isra.0
-                0x00000000       0x28 Build/sp_cortexm.o
+ .text.sp_256_mont_reduce_order_8.constprop.0
+                0x00000000       0xe0 Build/sp_cortexm.o
+ .text.sp_256_mont_mul_order_8
+                0x00000000        0xe Build/sp_cortexm.o
+ .text.sp_256_mont_inv_order_8
+                0x00000000       0x58 Build/sp_cortexm.o
+ .text.sp_256_map_8
+                0x00000000       0xf4 Build/sp_cortexm.o
+ .text.sp_256_ecc_mulmod_stripe_8.constprop.0
+                0x00000000      0x370 Build/sp_cortexm.o
+ .text.sp_256_ecc_mulmod_fast_8.constprop.0
+                0x00000000      0x2bc Build/sp_cortexm.o
+ .text.sp_256_mod_8
+                0x00000000       0xc4 Build/sp_cortexm.o
  .text.sp_256_ecc_is_point_8.constprop.0
                 0x00000000       0x88 Build/sp_cortexm.o
- .text.sp_3072_div_96.constprop.0
-                0x00000000       0xce Build/sp_cortexm.o
- .text.sp_3072_mod_exp_96.constprop.0
-                0x00000000      0x248 Build/sp_cortexm.o
- .text.sp_3072_div_48.constprop.0
-                0x00000000       0xcc Build/sp_cortexm.o
- .text.sp_3072_mod_exp_48
-                0x00000000      0x304 Build/sp_cortexm.o
- .text.sp_2048_div_64.constprop.0
-                0x00000000       0xcc Build/sp_cortexm.o
- .text.sp_2048_mod_exp_64.constprop.0
-                0x00000000      0x248 Build/sp_cortexm.o
- .text.sp_2048_div_32.constprop.0
-                0x00000000       0xc8 Build/sp_cortexm.o
- .text.sp_2048_mod_exp_32
-                0x00000000      0x304 Build/sp_cortexm.o
- .text.sp_RsaPublic_2048
-                0x00000000      0x20e Build/sp_cortexm.o
- .text.sp_RsaPrivate_2048
-                0x00000000      0x162 Build/sp_cortexm.o
- .text.sp_ModExp_2048
-                0x00000000       0xa0 Build/sp_cortexm.o
  .text.sp_DhExp_2048
                 0x00000000      0x29e Build/sp_cortexm.o
- .text.sp_ModExp_1024
-                0x00000000       0xc8 Build/sp_cortexm.o
- .text.sp_RsaPublic_3072
-                0x00000000      0x210 Build/sp_cortexm.o
- .text.sp_RsaPrivate_3072
-                0x00000000      0x164 Build/sp_cortexm.o
- .text.sp_ModExp_3072
-                0x00000000       0xa0 Build/sp_cortexm.o
  .text.sp_DhExp_3072
                 0x00000000       0xc2 Build/sp_cortexm.o
- .text.sp_ModExp_1536
-                0x00000000       0xc8 Build/sp_cortexm.o
  .text.sp_ecc_mulmod_256
                 0x00000000       0x6e Build/sp_cortexm.o
  .text.sp_ecc_mulmod_add_256
                 0x00000000       0xda Build/sp_cortexm.o
+ .text.sp_ecc_mulmod_base_256
+                0x00000000       0x5e Build/sp_cortexm.o
  .text.sp_ecc_mulmod_base_add_256
                 0x00000000       0xce Build/sp_cortexm.o
+ .text.sp_ecc_make_key_256
+                0x00000000       0x6e Build/sp_cortexm.o
  .text.sp_ecc_secret_gen_256
                 0x00000000       0x9c Build/sp_cortexm.o
+ .text.sp_ecc_sign_256
+                0x00000000      0x1d4 Build/sp_cortexm.o
+ .text.sp_ecc_verify_256
+                0x00000000      0x218 Build/sp_cortexm.o
  .text.sp_ecc_is_point_256
                 0x00000000       0x54 Build/sp_cortexm.o
  .text.sp_ecc_check_key_256
                 0x00000000      0x160 Build/sp_cortexm.o
  .rodata.p256_b
                 0x00000000       0x20 Build/sp_cortexm.o
+ .rodata.p256_mod
+                0x00000000       0x20 Build/sp_cortexm.o
+ .rodata.p256_mod_minus_2
+                0x00000000       0x20 Build/sp_cortexm.o
+ .rodata.p256_norm_mod
+                0x00000000       0x20 Build/sp_cortexm.o
+ .rodata.p256_norm_order
+                0x00000000       0x20 Build/sp_cortexm.o
+ .rodata.p256_order
+                0x00000000       0x20 Build/sp_cortexm.o
+ .rodata.p256_order2
+                0x00000000       0x20 Build/sp_cortexm.o
+ .rodata.p256_table
+                0x00000000      0x400 Build/sp_cortexm.o
  .note.GNU-stack
                 0x00000000        0x0 Build/sp_cortexm.o
  .text          0x00000000        0x0 Build/sp_dsp32.o
@@ -3303,70 +3396,22 @@ Discarded input sections
  .text          0x00000000        0x0 Build/sp_int.o
  .data          0x00000000        0x0 Build/sp_int.o
  .bss           0x00000000        0x0 Build/sp_int.o
- .text._sp_sub_d
-                0x00000000       0x6a Build/sp_int.o
- .text._sp_mul_d
-                0x00000000       0x7c Build/sp_int.o
- .text._sp_sub_off
-                0x00000000       0xac Build/sp_int.o
- .text.sp_lshb  0x00000000       0xaa Build/sp_int.o
- .text.sp_mod_d
-                0x00000000       0x90 Build/sp_int.o
- .text._sp_add_off.constprop.0
-                0x00000000       0xd0 Build/sp_int.o
- .text.sp_div_2.isra.0
-                0x00000000       0x4a Build/sp_int.o
- .text.sp_init_size
-                0x00000000        0xe Build/sp_int.o
  .text.sp_free  0x00000000        0x2 Build/sp_int.o
- .text.sp_copy  0x00000000       0x30 Build/sp_int.o
+ .text.sp_zero  0x00000000        0xa Build/sp_int.o
  .text.sp_exch  0x00000000       0x90 Build/sp_int.o
  .text.sp_cond_swap_ct
                 0x00000000       0xa4 Build/sp_int.o
  .text.sp_is_bit_set
                 0x00000000       0x22 Build/sp_int.o
- .text.sp_set_bit
-                0x00000000       0x4a Build/sp_int.o
- .text.sp_2expt
-                0x00000000       0x12 Build/sp_int.o
- .text.sp_set   0x00000000       0x16 Build/sp_int.o
- .text.sp_set_int
-                0x00000000       0x16 Build/sp_int.o
- .text.sp_cmp_d
-                0x00000000       0x2e Build/sp_int.o
- .text.sp_add_d
-                0x00000000       0x80 Build/sp_int.o
- .text.sp_sub_d
-                0x00000000       0x14 Build/sp_int.o
- .text.sp_mul_d
-                0x00000000       0x22 Build/sp_int.o
+ .text.sp_leading_bit
+                0x00000000       0x1e Build/sp_int.o
  .text.sp_div_d
                 0x00000000      0x102 Build/sp_int.o
  .text.sp_add   0x00000000       0x24 Build/sp_int.o
- .text.sp_sub   0x00000000       0x1c Build/sp_int.o
  .text.sp_lshd  0x00000000       0x54 Build/sp_int.o
  .text.sp_rshd  0x00000000       0x2e Build/sp_int.o
- .text.sp_rshb  0x00000000       0x7e Build/sp_int.o
- .text.sp_div   0x00000000      0x376 Build/sp_int.o
  .text._sp_mont_red
                 0x00000000      0x180 Build/sp_int.o
- .text.sp_mod   0x00000000       0x14 Build/sp_int.o
- .text.sp_mul   0x00000000      0x118 Build/sp_int.o
- .text.sp_mulmod
-                0x00000000       0x76 Build/sp_int.o
- .text.sp_invmod
-                0x00000000      0x28a Build/sp_int.o
- .text.sp_sqr   0x00000000        0x8 Build/sp_int.o
- .text.sp_sqrmod
-                0x00000000       0x32 Build/sp_int.o
- .text._sp_exptmod_ex
-                0x00000000      0x174 Build/sp_int.o
- .text.sp_exptmod_ex
-                0x00000000      0x162 Build/sp_int.o
- .text.sp_exptmod
-                0x00000000       0x1e Build/sp_int.o
- .text.sp_prime_miller_rabin_ex
-                0x00000000      0x120 Build/sp_int.o
  .text.sp_mont_red
                 0x00000000       0x24 Build/sp_int.o
  .text.sp_mont_setup
@@ -3375,6 +3420,12 @@ Discarded input sections
                 0x00000000       0x6c Build/sp_int.o
  .text.sp_exptmod_nct
                 0x00000000      0x1d2 Build/sp_int.o
+ .text.sp_to_unsigned_bin_len
+                0x00000000       0x50 Build/sp_int.o
+ .text.sp_to_unsigned_bin
+                0x00000000       0x14 Build/sp_int.o
+ .text.sp_read_radix
+                0x00000000       0xa8 Build/sp_int.o
  .text.sp_tohex
                 0x00000000       0x98 Build/sp_int.o
  .text.sp_todecimal
@@ -3383,25 +3434,14 @@ Discarded input sections
                 0x00000000       0x1a Build/sp_int.o
  .text.sp_radix_size
                 0x00000000       0x98 Build/sp_int.o
- .text.sp_prime_is_prime
-                0x00000000      0x178 Build/sp_int.o
- .text.sp_prime_is_prime_ex
-                0x00000000      0x224 Build/sp_int.o
  .text.sp_rand_prime
                 0x00000000       0x8c Build/sp_int.o
- .text.sp_gcd   0x00000000      0x168 Build/sp_int.o
  .text.CheckRunTimeSettings
                 0x00000000        0x4 Build/sp_int.o
  .text.CheckRunTimeFastMath
                 0x00000000        0x4 Build/sp_int.o
  .rodata.kHexChar.0
                 0x00000000       0x10 Build/sp_int.o
- .rodata.sp_lnz
-                0x00000000       0x40 Build/sp_int.o
- .rodata.sp_off_on_addr
-                0x00000000        0x8 Build/sp_int.o
- .rodata.sp_primes
-                0x00000000      0x400 Build/sp_int.o
  .note.GNU-stack
                 0x00000000        0x0 Build/sp_int.o
  .text          0x00000000        0x0 Build/sp_x86_64.o
@@ -3737,24 +3777,16 @@ Discarded input sections
  .text          0x00000000        0x0 Build/wolfmath.o
  .data          0x00000000        0x0 Build/wolfmath.o
  .bss           0x00000000        0x0 Build/wolfmath.o
- .text.get_digit_count
-                0x00000000        0x6 Build/wolfmath.o
  .text.get_digit
                 0x00000000       0x18 Build/wolfmath.o
  .text.mp_cond_copy
                 0x00000000       0xaa Build/wolfmath.o
- .text.get_rand_digit
-                0x00000000        0x6 Build/wolfmath.o
- .text.mp_rand  0x00000000       0x52 Build/wolfmath.o
  .text.wc_export_int
                 0x00000000       0x6e Build/wolfmath.o
  .rodata.wc_off_on_addr
                 0x00000000        0x8 Build/wolfmath.o
- .comment       0x00000000       0x2f Build/wolfmath.o
  .note.GNU-stack
                 0x00000000        0x0 Build/wolfmath.o
- .ARM.attributes
-                0x00000000       0x37 Build/wolfmath.o
  .text          0x00000000        0x0 Build/arc4.o
  .data          0x00000000        0x0 Build/arc4.o
  .bss           0x00000000        0x0 Build/arc4.o
@@ -3896,29 +3928,19 @@ Discarded input sections
                 0x00000000        0x0 Build/ripemd.o
  .ARM.attributes
                 0x00000000       0x3e Build/ripemd.o
- .text          0x00000000       0x3c /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o)
  .data          0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o)
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o)
  .note.GNU-stack
                 0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o)
- .ARM.attributes
-                0x00000000       0x1d /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o)
- .text          0x00000000       0x10 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_dvmd_lnx.o)
  .data          0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_dvmd_lnx.o)
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_dvmd_lnx.o)
  .note.GNU-stack
                 0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_dvmd_lnx.o)
- .ARM.attributes
-                0x00000000       0x1d /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_dvmd_lnx.o)
- .text          0x00000000      0x120 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
  .data          0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
  .ARM.extab     0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
- .ARM.exidx     0x00000000        0x8 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
  .note.GNU-stack
                 0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
- .ARM.attributes
-                0x00000000       0x2f /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
  .text          0x00000000       0x64 /usr/lib/arm-linux-gnueabihf/libc_nonshared.a(elf-init.oS)
  .data          0x00000000        0x0 /usr/lib/arm-linux-gnueabihf/libc_nonshared.a(elf-init.oS)
  .bss           0x00000000        0x0 /usr/lib/arm-linux-gnueabihf/libc_nonshared.a(elf-init.oS)
@@ -4057,73 +4079,73 @@ END GROUP
 LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
 LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
                 [!provide]                PROVIDE (__executable_start = SEGMENT_START ("text-segment", 0x10000))
-                0x00010134                . = (SEGMENT_START ("text-segment", 0x10000) + SIZEOF_HEADERS)
+                0x00010154                . = (SEGMENT_START ("text-segment", 0x10000) + SIZEOF_HEADERS)
 
-.interp         0x00010134       0x19
+.interp         0x00010154       0x19
  *(.interp)
- .interp        0x00010134       0x19 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .interp        0x00010154       0x19 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
 
 .note.gnu.build-id
-                0x00010150       0x24
+                0x00010170       0x24
  *(.note.gnu.build-id)
  .note.gnu.build-id
-                0x00010150       0x24 linker stubs
+                0x00010170       0x24 linker stubs
 
-.note.ABI-tag   0x00010174       0x20
- .note.ABI-tag  0x00010174       0x20 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+.note.ABI-tag   0x00010194       0x20
+ .note.ABI-tag  0x00010194       0x20 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
 
 .hash
  *(.hash)
 
-.gnu.hash       0x00010194       0x44
+.gnu.hash       0x000101b4       0x4c
  *(.gnu.hash)
- .gnu.hash      0x00010194       0x44 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .gnu.hash      0x000101b4       0x4c /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
 
-.dynsym         0x000101d8       0xa0
+.dynsym         0x00010200       0xc0
  *(.dynsym)
- .dynsym        0x000101d8       0xa0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .dynsym        0x00010200       0xc0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
 
-.dynstr         0x00010278       0x6c
+.dynstr         0x000102c0       0x79
  *(.dynstr)
- .dynstr        0x00010278       0x6c /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .dynstr        0x000102c0       0x79 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
 
-.gnu.version    0x000102e4       0x14
+.gnu.version    0x0001033a       0x18
  *(.gnu.version)
- .gnu.version   0x000102e4       0x14 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .gnu.version   0x0001033a       0x18 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
 
-.gnu.version_d  0x000102f8        0x0
+.gnu.version_d  0x00010354        0x0
  *(.gnu.version_d)
  .gnu.version_d
-                0x000102f8        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+                0x00010354        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
 
-.gnu.version_r  0x000102f8       0x30
+.gnu.version_r  0x00010354       0x30
  *(.gnu.version_r)
  .gnu.version_r
-                0x000102f8       0x30 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+                0x00010354       0x30 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
 
-.rel.dyn        0x00010328        0x8
+.rel.dyn        0x00010384        0x8
  *(.rel.init)
  *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
  *(.rel.fini)
  *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
  *(.rel.data.rel.ro .rel.data.rel.ro.* .rel.gnu.linkonce.d.rel.ro.*)
  .rel.data.rel.ro
-                0x00010328        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+                0x00010384        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
  *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
  *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
  *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
  *(.rel.ctors)
  *(.rel.dtors)
  *(.rel.got)
- .rel.got       0x00010328        0x8 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .rel.got       0x00010384        0x8 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
  *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
- .rel.bss       0x00010330        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .rel.bss       0x0001038c        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
                 [!provide]                PROVIDE (__rel_iplt_start = .)
  *(.rel.iplt)
- .rel.iplt      0x00010330        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .rel.iplt      0x0001038c        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
                 [!provide]                PROVIDE (__rel_iplt_end = .)
 
-.rela.dyn       0x00010330        0x0
+.rela.dyn       0x0001038c        0x0
  *(.rela.init)
  *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
  *(.rela.fini)
@@ -4139,409 +4161,758 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
  *(.rela.iplt)
                 [!provide]                PROVIDE (__rela_iplt_end = .)
 
-.rel.plt        0x00010330       0x40
+.rel.plt        0x0001038c       0x50
  *(.rel.plt)
- .rel.plt       0x00010330       0x40 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .rel.plt       0x0001038c       0x50 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
 
 .rela.plt
  *(.rela.plt)
 
-.init           0x00010370        0xc
+.init           0x000103dc        0xc
  *(SORT_NONE(.init))
- .init          0x00010370        0x8 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o
-                0x00010370                _init
- .init          0x00010378        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
+ .init          0x000103dc        0x8 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o
+                0x000103dc                _init
+ .init          0x000103e4        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
 
-.plt            0x0001037c       0x7c
+.plt            0x000103e8       0x8c
  *(.plt)
- .plt           0x0001037c       0x7c /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
-                0x00010390                printf@@GLIBC_2.4
-                0x000103a0                free@@GLIBC_2.4
-                0x000103ac                clock_gettime@@GLIBC_2.17
-                0x000103bc                memcpy@@GLIBC_2.4
-                0x000103c8                malloc@@GLIBC_2.4
-                0x000103e0                strlen@@GLIBC_2.4
-                0x000103ec                memset@@GLIBC_2.4
+ .plt           0x000103e8       0x8c /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+                0x000103fc                raise@@GLIBC_2.4
+                0x00010408                printf@@GLIBC_2.4
+                0x00010414                free@@GLIBC_2.4
+                0x00010420                clock_gettime@@GLIBC_2.17
+                0x0001042c                memcpy@@GLIBC_2.4
+                0x00010438                memcmp@@GLIBC_2.4
+                0x00010444                malloc@@GLIBC_2.4
+                0x0001045c                strlen@@GLIBC_2.4
+                0x00010468                memset@@GLIBC_2.4
 
-.iplt           0x000103f8        0x0
+.iplt           0x00010474        0x0
  *(.iplt)
- .iplt          0x000103f8        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .iplt          0x00010474        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
 
-.text           0x000103f8     0x55c4
+.text           0x00010478     0xc4c4
  *(.text.unlikely .text.*_unlikely .text.unlikely.*)
  *(.text.exit .text.exit.*)
  *(.text.startup .text.startup.*)
  .text.startup.main
-                0x000103f8       0x34 Build/public_key_test.o
-                0x000103f8                main
+                0x00010478       0x84 Build/public_key_test.o
+                0x00010478                main
  *(.text.hot .text.hot.*)
  *(SORT_BY_NAME(.text.sorted.*))
  *(.text .stub .text.* .gnu.linkonce.t.*)
- .text          0x0001042c       0x24 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o
- .text          0x00010450       0x90 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
- .text.test_ECC
-                0x000104e0      0x168 Build/public_key_test.o
-                0x000104e0                test_ECC
- .text.hw_rand  0x00010648       0x10 Build/wolf_main.o
-                0x00010648                hw_rand
+ .text          0x000104fc       0x24 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o
+ .text          0x00010520       0x90 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+ .text.test_RSA
+                0x000105b0      0x3b8 Build/public_key_test.o
+                0x000105b0                test_RSA
+ .text.hw_rand  0x00010968       0x10 Build/wolf_main.o
+                0x00010968                hw_rand
  .text.my_rng_seed_gen
-                0x00010658        0x4 Build/wolf_main.o
-                0x00010658                my_rng_seed_gen
+                0x00010978        0x4 Build/wolf_main.o
+                0x00010978                my_rng_seed_gen
  .text.reset_handler
-                0x0001065c        0x8 Build/armtarget.o
-                0x0001065c                reset_handler
- .text.alt_fp_init
-                0x00010664        0x8 Build/ecc.o
- .text.wc_ecc_curve_cache_load_item
-                0x0001066c       0x4a Build/ecc.o
- .text.wc_ecc_curve_free
-                0x000106b6       0x90 Build/ecc.o
- .text.wc_ecc_curve_load
-                0x00010746       0x9e Build/ecc.o
- .text.ecc_make_pub_ex.constprop.0
-                0x000107e4       0xf0 Build/ecc.o
- .text.wc_ecc_set_curve
-                0x000108d4       0x60 Build/ecc.o
-                0x000108d4                wc_ecc_set_curve
- .text._ecc_make_key_ex
-                0x00010934       0x58 Build/ecc.o
- .text.wc_ecc_is_valid_idx
-                0x0001098c        0xc Build/ecc.o
-                0x0001098c                wc_ecc_is_valid_idx
- .text.wc_ecc_make_key_ex
-                0x00010998        0xe Build/ecc.o
-                0x00010998                wc_ecc_make_key_ex
- .text.wc_ecc_make_key
-                0x000109a6        0x6 Build/ecc.o
-                0x000109a6                wc_ecc_make_key
- .text.wc_ecc_init_ex
-                0x000109ac       0x52 Build/ecc.o
-                0x000109ac                wc_ecc_init_ex
- .text.wc_ecc_init
-                0x000109fe        0xa Build/ecc.o
-                0x000109fe                wc_ecc_init
- .text.wc_ecc_sign_hash_ex
-                0x00010a08       0x68 Build/ecc.o
-                0x00010a08                wc_ecc_sign_hash_ex
- .text.wc_ecc_sign_hash
-                0x00010a70       0xc6 Build/ecc.o
-                0x00010a70                wc_ecc_sign_hash
- .text.wc_ecc_free
-                0x00010b36       0x24 Build/ecc.o
-                0x00010b36                wc_ecc_free
- .text.wc_ecc_key_free
-                0x00010b5a       0x28 Build/ecc.o
-                0x00010b5a                wc_ecc_key_free
- *fill*         0x00010b82        0x2 
- .text.wc_ecc_verify_hash_ex
-                0x00010b84      0x11c Build/ecc.o
-                0x00010b84                wc_ecc_verify_hash_ex
- .text.wc_ecc_verify_hash
-                0x00010ca0       0xee Build/ecc.o
-                0x00010ca0                wc_ecc_verify_hash
+                0x0001097c        0x8 Build/armtarget.o
+                0x0001097c                reset_handler
  .text.ForceZero
-                0x00010d8e       0x10 Build/random.o
+                0x00010984       0x10 Build/random.o
  .text.ConstantCompare
-                0x00010d9e       0x1a Build/random.o
+                0x00010994       0x1a Build/random.o
  .text.Hash_DRBG_Uninstantiate
-                0x00010db8       0x24 Build/random.o
+                0x000109ae       0x24 Build/random.o
  .text.array_add.part.0.constprop.0
-                0x00010ddc       0x44 Build/random.o
+                0x000109d2       0x44 Build/random.o
+ *fill*         0x00010a16        0x2 
  .text.Hash_DRBG_Generate
-                0x00010e20      0x1a4 Build/random.o
+                0x00010a18      0x1a4 Build/random.o
  .text.Hash_df.constprop.0
-                0x00010fc4       0xf4 Build/random.o
+                0x00010bbc       0xf4 Build/random.o
  .text.Hash_DRBG_Instantiate.constprop.0
-                0x000110b8       0x56 Build/random.o
+                0x00010cb0       0x56 Build/random.o
  .text.Hash_DRBG_Reseed
-                0x0001110e       0x68 Build/random.o
+                0x00010d06       0x68 Build/random.o
  .text.wc_RNG_TestSeed
-                0x00011176       0x40 Build/random.o
-                0x00011176                wc_RNG_TestSeed
+                0x00010d6e       0x40 Build/random.o
+                0x00010d6e                wc_RNG_TestSeed
  .text.wc_RNG_HealthTest_ex
-                0x000111b6       0xaa Build/random.o
-                0x000111b6                wc_RNG_HealthTest_ex
+                0x00010dae       0xaa Build/random.o
+                0x00010dae                wc_RNG_HealthTest_ex
  .text.wc_RNG_HealthTest
-                0x00011260       0x2c Build/random.o
-                0x00011260                wc_RNG_HealthTest
+                0x00010e58       0x2c Build/random.o
+                0x00010e58                wc_RNG_HealthTest
  .text.wc_GenerateSeed
-                0x0001128c       0x3c Build/random.o
-                0x0001128c                wc_GenerateSeed
+                0x00010e84       0x3c Build/random.o
+                0x00010e84                wc_GenerateSeed
  .text.wc_RNG_GenerateBlock
-                0x000112c8       0xec Build/random.o
-                0x000112c8                wc_RNG_GenerateBlock
+                0x00010ec0       0xec Build/random.o
+                0x00010ec0                wc_RNG_GenerateBlock
  .text._InitRng.isra.0
-                0x000113b4      0x138 Build/random.o
+                0x00010fac      0x138 Build/random.o
  .text.wc_InitRng
-                0x000114ec        0xa Build/random.o
-                0x000114ec                wc_InitRng
+                0x000110e4        0xa Build/random.o
+                0x000110e4                wc_InitRng
+ .text.ctMaskNotEq
+                0x000110ee       0x16 Build/rsa.o
+ .text.wc_RsaCleanup
+                0x00011104       0x4e Build/rsa.o
+ *fill*         0x00011152        0x2 
+ .text._CheckProbablePrime
+                0x00011154      0x184 Build/rsa.o
+ .text.RsaMGF1.constprop.0
+                0x000112d8       0xde Build/rsa.o
+ .text.RsaMGF.isra.0
+                0x000113b6       0x5a Build/rsa.o
+ .text.wc_InitRsaKey_ex
+                0x00011410       0x8c Build/rsa.o
+                0x00011410                wc_InitRsaKey_ex
+ .text.wc_InitRsaKey
+                0x0001149c        0x8 Build/rsa.o
+                0x0001149c                wc_InitRsaKey
+ .text.wc_FreeRsaKey
+                0x000114a4       0x98 Build/rsa.o
+                0x000114a4                wc_FreeRsaKey
+ .text.wc_RsaPad_ex
+                0x0001153c      0x276 Build/rsa.o
+                0x0001153c                wc_RsaPad_ex
+ .text.wc_RsaUnPad_ex
+                0x000117b2      0x1ea Build/rsa.o
+                0x000117b2                wc_RsaUnPad_ex
+ .text.wc_hash2mgf
+                0x0001199c       0x14 Build/rsa.o
+                0x0001199c                wc_hash2mgf
+ .text.wc_RsaEncryptSize
+                0x000119b0        0xc Build/rsa.o
+                0x000119b0                wc_RsaEncryptSize
+ .text.wc_RsaFunction_ex
+                0x000119bc      0x2ae Build/rsa.o
+ .text.wc_RsaFunction
+                0x00011c6a       0x1a Build/rsa.o
+                0x00011c6a                wc_RsaFunction
+ .text.RsaPrivateDecryptEx
+                0x00011c84      0x1e6 Build/rsa.o
+ .text.wc_RsaPrivateDecrypt
+                0x00011e6a       0x32 Build/rsa.o
+                0x00011e6a                wc_RsaPrivateDecrypt
+ .text.wc_RsaSSL_VerifyInline
+                0x00011e9c       0x32 Build/rsa.o
+                0x00011e9c                wc_RsaSSL_VerifyInline
+ .text.wc_RsaSSL_Verify_ex2
+                0x00011ece       0x50 Build/rsa.o
+                0x00011ece                wc_RsaSSL_Verify_ex2
+ .text.wc_RsaSSL_Verify_ex
+                0x00011f1e       0x16 Build/rsa.o
+                0x00011f1e                wc_RsaSSL_Verify_ex
+ .text.wc_RsaSSL_Verify
+                0x00011f34       0x12 Build/rsa.o
+                0x00011f34                wc_RsaSSL_Verify
+ .text.RsaPublicEncryptEx.constprop.0
+                0x00011f46      0x116 Build/rsa.o
+ .text.wc_RsaSSL_Sign
+                0x0001205c       0x2a Build/rsa.o
+                0x0001205c                wc_RsaSSL_Sign
+ *fill*         0x00012086        0x2 
+ .text._ifc_pairwise_consistency_test
+                0x00012088       0x9c Build/rsa.o
+ .text.wc_RsaPublicEncrypt
+                0x00012124       0x26 Build/rsa.o
+                0x00012124                wc_RsaPublicEncrypt
+ .text.wc_MakeRsaKey
+                0x0001214a      0x49e Build/rsa.o
+                0x0001214a                wc_MakeRsaKey
+ .text.wc_RsaSetRNG
+                0x000125e8       0x16 Build/rsa.o
+                0x000125e8                wc_RsaSetRNG
  .text.ByteReverseWords
-                0x000114f6       0x18 Build/sha256.o
- *fill*         0x0001150e        0x2 
+                0x000125fe       0x18 Build/sha.o
+ *fill*         0x00012616        0x2 
+ .text.Transform
+                0x00012618      0xdb0 Build/sha.o
+ .text.wc_InitSha_ex
+                0x000133c8       0x40 Build/sha.o
+                0x000133c8                wc_InitSha_ex
+ .text.wc_ShaUpdate
+                0x00013408       0xce Build/sha.o
+                0x00013408                wc_ShaUpdate
+ *fill*         0x000134d6        0x2 
+ .text.wc_ShaFinal
+                0x000134d8       0xe4 Build/sha.o
+                0x000134d8                wc_ShaFinal
+ .text.wc_ShaFree
+                0x000135bc        0x2 Build/sha.o
+                0x000135bc                wc_ShaFree
+ .text.ByteReverseWords
+                0x000135be       0x18 Build/sha256.o
+ *fill*         0x000135d6        0x2 
  .text.Transform_Sha256
-                0x00011510      0x330 Build/sha256.o
+                0x000135d8      0x330 Build/sha256.o
  .text.Sha256Update
-                0x00011840       0xae Build/sha256.o
+                0x00013908       0xae Build/sha256.o
  .text.Sha256Final
-                0x000118ee       0x94 Build/sha256.o
- *fill*         0x00011982        0x2 
+                0x000139b6       0x94 Build/sha256.o
+ *fill*         0x00013a4a        0x2 
  .text.wc_InitSha256_ex
-                0x00011984       0x68 Build/sha256.o
-                0x00011984                wc_InitSha256_ex
+                0x00013a4c       0x68 Build/sha256.o
+                0x00013a4c                wc_InitSha256_ex
  .text.wc_Sha256Update
-                0x000119ec       0x24 Build/sha256.o
-                0x000119ec                wc_Sha256Update
+                0x00013ab4       0x24 Build/sha256.o
+                0x00013ab4                wc_Sha256Update
  .text.wc_Sha256Final
-                0x00011a10       0x84 Build/sha256.o
-                0x00011a10                wc_Sha256Final
+                0x00013ad8       0x84 Build/sha256.o
+                0x00013ad8                wc_Sha256Final
+ .text.wc_InitSha224_ex
+                0x00013b5c       0x64 Build/sha256.o
+                0x00013b5c                wc_InitSha224_ex
+ .text.wc_Sha224Update
+                0x00013bc0       0x10 Build/sha256.o
+                0x00013bc0                wc_Sha224Update
+ .text.wc_Sha224Final
+                0x00013bd0       0x80 Build/sha256.o
+                0x00013bd0                wc_Sha224Final
+ .text.wc_InitSha224
+                0x00013c50        0xa Build/sha256.o
+                0x00013c50                wc_InitSha224
+ .text.wc_Sha224Free
+                0x00013c5a        0x2 Build/sha256.o
+                0x00013c5a                wc_Sha224Free
  .text.wc_InitSha256
-                0x00011a94        0xa Build/sha256.o
-                0x00011a94                wc_InitSha256
+                0x00013c5c        0xa Build/sha256.o
+                0x00013c5c                wc_InitSha256
  .text.wc_Sha256Free
-                0x00011a9e        0x2 Build/sha256.o
-                0x00011a9e                wc_Sha256Free
- .text.GetLength_ex
-                0x00011aa0       0x7c Build/asn.o
-                0x00011aa0                GetLength_ex
- .text.GetASNTag
-                0x00011b1c       0x26 Build/asn.o
-                0x00011b1c                GetASNTag
- .text.GetASNHeader_ex
-                0x00011b42       0x56 Build/asn.o
- .text.GetASNInt
-                0x00011b98       0x5c Build/asn.o
- .text.GetIntPositive
-                0x00011bf4       0x5e Build/asn.o
- .text.GetSequence
-                0x00011c52       0x16 Build/asn.o
-                0x00011c52                GetSequence
- .text.SetLength
-                0x00011c68       0x4c Build/asn.o
-                0x00011c68                SetLength
- .text.SetASNInt
-                0x00011cb4       0x32 Build/asn.o
-                0x00011cb4                SetASNInt
- .text.SetASNIntMP
-                0x00011ce6       0x64 Build/asn.o
- .text.SetHeader
-                0x00011d4a       0x16 Build/asn.o
- .text.SetSequence
-                0x00011d60        0xa Build/asn.o
-                0x00011d60                SetSequence
- .text.StoreECC_DSA_Sig
-                0x00011d6a       0x78 Build/asn.o
-                0x00011d6a                StoreECC_DSA_Sig
- .text.DecodeECC_DSA_Sig
-                0x00011de2       0x70 Build/asn.o
-                0x00011de2                DecodeECC_DSA_Sig
+                0x00013c66        0x2 Build/sha256.o
+                0x00013c66                wc_Sha256Free
+ .text.InitSha512
+                0x00013c68       0xb0 Build/sha512.o
+ .text.InitSha512_224
+                0x00013d18       0xb0 Build/sha512.o
+ .text.InitSha512_256
+                0x00013dc8       0xb0 Build/sha512.o
+ .text.ByteReverseWords64
+                0x00013e78       0x20 Build/sha512.o
+ .text._Transform_Sha512
+                0x00013e98     0x1fe4 Build/sha512.o
+ .text.Sha512Final
+                0x00015e7c       0xb8 Build/sha512.o
+ .text.Sha512_Family_Final
+                0x00015f34       0x32 Build/sha512.o
+ *fill*         0x00015f66        0x2 
+ .text.wc_Sha512Final
+                0x00015f68        0xc Build/sha512.o
+                0x00015f68                wc_Sha512Final
+ .text.wc_Sha512_224Final
+                0x00015f74        0xc Build/sha512.o
+                0x00015f74                wc_Sha512_224Final
+ .text.wc_Sha512_256Final
+                0x00015f80        0xc Build/sha512.o
+                0x00015f80                wc_Sha512_256Final
+ .text.wc_InitSha512_ex
+                0x00015f8c       0x10 Build/sha512.o
+                0x00015f8c                wc_InitSha512_ex
+ .text.wc_InitSha512_224_ex
+                0x00015f9c       0x10 Build/sha512.o
+                0x00015f9c                wc_InitSha512_224_ex
+ .text.wc_InitSha512_256_ex
+                0x00015fac       0x10 Build/sha512.o
+                0x00015fac                wc_InitSha512_256_ex
+ .text.wc_Sha512Update
+                0x00015fbc       0xd2 Build/sha512.o
+                0x00015fbc                wc_Sha512Update
+ .text.wc_InitSha512
+                0x0001608e        0xa Build/sha512.o
+                0x0001608e                wc_InitSha512
+ .text.wc_Sha512Free
+                0x00016098        0x2 Build/sha512.o
+                0x00016098                wc_Sha512Free
+ .text.wc_Sha384Update
+                0x0001609a        0x4 Build/sha512.o
+                0x0001609a                wc_Sha384Update
+ *fill*         0x0001609e        0x2 
+ .text.wc_Sha384Final
+                0x000160a0       0xd0 Build/sha512.o
+                0x000160a0                wc_Sha384Final
+ .text.wc_InitSha384_ex
+                0x00016170       0xb8 Build/sha512.o
+                0x00016170                wc_InitSha384_ex
+ .text.wc_InitSha384
+                0x00016228        0xa Build/sha512.o
+                0x00016228                wc_InitSha384
+ .text.wc_Sha384Free
+                0x00016232        0x2 Build/sha512.o
+                0x00016232                wc_Sha384Free
+ .text.wc_InitSha512_224
+                0x00016234        0xa Build/sha512.o
+                0x00016234                wc_InitSha512_224
+ .text.wc_Sha512_224Update
+                0x0001623e        0x4 Build/sha512.o
+                0x0001623e                wc_Sha512_224Update
+ .text.wc_Sha512_224Free
+                0x00016242        0x2 Build/sha512.o
+                0x00016242                wc_Sha512_224Free
+ .text.wc_InitSha512_256
+                0x00016244        0xa Build/sha512.o
+                0x00016244                wc_InitSha512_256
+ .text.wc_Sha512_256Update
+                0x0001624e        0x4 Build/sha512.o
+                0x0001624e                wc_Sha512_256Update
+ .text.wc_Sha512_256Free
+                0x00016252        0x2 Build/sha512.o
+                0x00016252                wc_Sha512_256Free
+ .text.BlockSha3
+                0x00016254      0xf88 Build/sha3.o
+ .text.InitSha3
+                0x000171dc       0x20 Build/sha3.o
+ .text.Sha3Update
+                0x000171fc       0xca Build/sha3.o
+ .text.wc_Sha3Update
+                0x000172c6       0x20 Build/sha3.o
+ .text.Sha3Final
+                0x000172e6       0xaa Build/sha3.o
+ .text.wc_Sha3Final
+                0x00017390       0x2a Build/sha3.o
+ .text.wc_InitSha3_224
+                0x000173ba       0x10 Build/sha3.o
+                0x000173ba                wc_InitSha3_224
+ .text.wc_Sha3_224_Update
+                0x000173ca        0x6 Build/sha3.o
+                0x000173ca                wc_Sha3_224_Update
+ .text.wc_Sha3_224_Final
+                0x000173d0        0x8 Build/sha3.o
+                0x000173d0                wc_Sha3_224_Final
+ .text.wc_Sha3_224_Free
+                0x000173d8        0x2 Build/sha3.o
+                0x000173d8                wc_Sha3_224_Free
+ .text.wc_InitSha3_256
+                0x000173da       0x10 Build/sha3.o
+                0x000173da                wc_InitSha3_256
+ .text.wc_Sha3_256_Update
+                0x000173ea        0x6 Build/sha3.o
+                0x000173ea                wc_Sha3_256_Update
+ .text.wc_Sha3_256_Final
+                0x000173f0        0x8 Build/sha3.o
+                0x000173f0                wc_Sha3_256_Final
+ .text.wc_Sha3_256_Free
+                0x000173f8        0x2 Build/sha3.o
+                0x000173f8                wc_Sha3_256_Free
+ .text.wc_InitSha3_384
+                0x000173fa       0x10 Build/sha3.o
+                0x000173fa                wc_InitSha3_384
+ .text.wc_Sha3_384_Update
+                0x0001740a        0x6 Build/sha3.o
+                0x0001740a                wc_Sha3_384_Update
+ .text.wc_Sha3_384_Final
+                0x00017410        0x8 Build/sha3.o
+                0x00017410                wc_Sha3_384_Final
+ .text.wc_Sha3_384_Free
+                0x00017418        0x2 Build/sha3.o
+                0x00017418                wc_Sha3_384_Free
+ .text.wc_InitSha3_512
+                0x0001741a       0x10 Build/sha3.o
+                0x0001741a                wc_InitSha3_512
+ .text.wc_Sha3_512_Update
+                0x0001742a        0x6 Build/sha3.o
+                0x0001742a                wc_Sha3_512_Update
+ .text.wc_Sha3_512_Final
+                0x00017430        0x8 Build/sha3.o
+                0x00017430                wc_Sha3_512_Final
+ .text.wc_Sha3_512_Free
+                0x00017438        0x2 Build/sha3.o
+                0x00017438                wc_Sha3_512_Free
+ *fill*         0x0001743a        0x2 
+ .text.wc_HashGetDigestSize
+                0x0001743c       0x18 Build/hash.o
+                0x0001743c                wc_HashGetDigestSize
+ .text.wc_Md5Hash
+                0x00017454       0x4c Build/hash.o
+                0x00017454                wc_Md5Hash
+ .text.wc_ShaHash
+                0x000174a0       0x52 Build/hash.o
+                0x000174a0                wc_ShaHash
+ .text.wc_Sha224Hash
+                0x000174f2       0x4c Build/hash.o
+                0x000174f2                wc_Sha224Hash
+ .text.wc_Sha256Hash
+                0x0001753e       0x52 Build/hash.o
+                0x0001753e                wc_Sha256Hash
+ .text.wc_Sha512Hash
+                0x00017590       0x4c Build/hash.o
+                0x00017590                wc_Sha512Hash
+ .text.wc_Sha512_224Hash
+                0x000175dc       0x4c Build/hash.o
+                0x000175dc                wc_Sha512_224Hash
+ .text.wc_Sha512_256Hash
+                0x00017628       0x4c Build/hash.o
+                0x00017628                wc_Sha512_256Hash
+ .text.wc_Sha384Hash
+                0x00017674       0x4c Build/hash.o
+                0x00017674                wc_Sha384Hash
+ .text.wc_Sha3_224Hash
+                0x000176c0       0x54 Build/hash.o
+                0x000176c0                wc_Sha3_224Hash
+ .text.wc_Sha3_256Hash
+                0x00017714       0x54 Build/hash.o
+                0x00017714                wc_Sha3_256Hash
+ .text.wc_Sha3_384Hash
+                0x00017768       0x54 Build/hash.o
+                0x00017768                wc_Sha3_384Hash
+ .text.wc_Sha3_512Hash
+                0x000177bc       0x54 Build/hash.o
+                0x000177bc                wc_Sha3_512Hash
+ .text.wc_Hash  0x00017810       0xde Build/hash.o
+                0x00017810                wc_Hash
+ *fill*         0x000178ee        0x2 
+ .text.Transform
+                0x000178f0      0x6d8 Build/md5.o
+ .text.wc_InitMd5_ex
+                0x00017fc8       0x38 Build/md5.o
+                0x00017fc8                wc_InitMd5_ex
+ .text.wc_Md5Update
+                0x00018000       0xc0 Build/md5.o
+                0x00018000                wc_Md5Update
+ .text.wc_Md5Final
+                0x000180c0       0xc0 Build/md5.o
+                0x000180c0                wc_Md5Final
+ .text.wc_InitMd5
+                0x00018180       0x12 Build/md5.o
+                0x00018180                wc_InitMd5
+ .text.wc_Md5Free
+                0x00018192        0x2 Build/md5.o
+                0x00018192                wc_Md5Free
  .text.ForceZero
-                0x00011e52       0x10 Build/sp_cortexm.o
+                0x00018194       0x10 Build/sp_cortexm.o
  .text.sp_2048_from_bin
-                0x00011e62       0x72 Build/sp_cortexm.o
+                0x000181a4       0x72 Build/sp_cortexm.o
+ .text.sp_2048_to_bin_64
+                0x00018216       0x2c Build/sp_cortexm.o
+ .text.sp_2048_add_64
+                0x00018242       0x3e Build/sp_cortexm.o
+ .text.sp_2048_sub_in_place_64
+                0x00018280       0x38 Build/sp_cortexm.o
+ .text.sp_2048_sqr_64
+                0x000182b8       0xf0 Build/sp_cortexm.o
+ .text.sp_2048_add_32
+                0x000183a8       0x3e Build/sp_cortexm.o
+ .text.sp_2048_sub_in_place_32
+                0x000183e6       0x38 Build/sp_cortexm.o
+ .text.sp_2048_sqr_32
+                0x0001841e       0xdc Build/sp_cortexm.o
+ .text.sp_2048_mul_d_64
+                0x000184fa       0x40 Build/sp_cortexm.o
+ .text.sp_2048_mul_d_32
+                0x0001853a       0x40 Build/sp_cortexm.o
  .text.div_2048_word_32
-                0x00011ed4       0x72 Build/sp_cortexm.o
- .text.sp_256_mul_8
-                0x00011f46      0x576 Build/sp_cortexm.o
- .text.sp_256_sqr_8
-                0x000124bc      0x40a Build/sp_cortexm.o
- .text.sp_256_add_8
-                0x000128c6       0x3e Build/sp_cortexm.o
- .text.sp_256_cmp_8
-                0x00012904       0x54 Build/sp_cortexm.o
- .text.sp_256_cmp_equal_8
-                0x00012958       0x48 Build/sp_cortexm.o
- .text.sp_256_iszero_8
-                0x000129a0       0x26 Build/sp_cortexm.o
- .text.sp_256_get_point_16_8
-                0x000129c6      0x1d0 Build/sp_cortexm.o
- .text.sp_256_add_one_8
-                0x00012b96       0x3a Build/sp_cortexm.o
- .text.sp_256_sub_in_place_8
-                0x00012bd0       0x38 Build/sp_cortexm.o
- .text.sp_256_mul_d_8
-                0x00012c08       0x40 Build/sp_cortexm.o
+                0x0001857a       0x72 Build/sp_cortexm.o
+ .text.sp_2048_cmp_32
+                0x000185ec       0x54 Build/sp_cortexm.o
+ .text.sp_2048_cmp_64
+                0x00018640       0x54 Build/sp_cortexm.o
+ .text.sp_2048_cond_add_32
+                0x00018694       0x3a Build/sp_cortexm.o
+ .text.sp_3072_to_bin_96
+                0x000186ce       0x2c Build/sp_cortexm.o
+ .text.sp_3072_add_96
+                0x000186fa       0x3e Build/sp_cortexm.o
+ .text.sp_3072_sub_in_place_96
+                0x00018738       0x38 Build/sp_cortexm.o
+ .text.sp_3072_sqr_96
+                0x00018770       0xfc Build/sp_cortexm.o
+ .text.sp_3072_add_48
+                0x0001886c       0x3e Build/sp_cortexm.o
+ .text.sp_3072_sub_in_place_48
+                0x000188aa       0x38 Build/sp_cortexm.o
+ .text.sp_3072_sqr_48
+                0x000188e2       0xf4 Build/sp_cortexm.o
+ .text.sp_3072_mul_d_96
+                0x000189d6       0x40 Build/sp_cortexm.o
+ .text.sp_3072_mul_d_48
+                0x00018a16       0x40 Build/sp_cortexm.o
+ .text.sp_3072_cmp_48
+                0x00018a56       0x54 Build/sp_cortexm.o
+ .text.sp_3072_cmp_96
+                0x00018aaa       0x5c Build/sp_cortexm.o
+ .text.sp_3072_cond_add_48
+                0x00018b06       0x3a Build/sp_cortexm.o
  .text.sp_2048_from_mp
-                0x00012c48       0x26 Build/sp_cortexm.o
- *fill*         0x00012c6e        0x2 
- .text.sp_256_ecc_gen_k_8
-                0x00012c70       0x40 Build/sp_cortexm.o
- .text.sp_256_to_mp
-                0x00012cb0       0x36 Build/sp_cortexm.o
- *fill*         0x00012ce6        0x2 
- .text.sp_256_get_entry_16_8.constprop.0
-                0x00012ce8      0x158 Build/sp_cortexm.o
- .text.sp_256_div2_8.constprop.0
-                0x00012e40       0xe8 Build/sp_cortexm.o
- .text.sp_256_mont_sub_8.constprop.0
-                0x00012f28       0xbc Build/sp_cortexm.o
- .text.sp_256_mont_tpl_8.constprop.0
-                0x00012fe4       0xf6 Build/sp_cortexm.o
- .text.sp_256_mont_dbl_8.constprop.0
-                0x000130da       0x80 Build/sp_cortexm.o
- .text.sp_256_mont_add_8.constprop.0
-                0x0001315a       0xc0 Build/sp_cortexm.o
- .text.sp_256_mont_reduce_8.constprop.0
-                0x0001321a      0x10a Build/sp_cortexm.o
- .text.sp_256_mont_sqr_8.constprop.0
-                0x00013324      0x5f8 Build/sp_cortexm.o
- .text.sp_256_mont_mul_8.constprop.0
-                0x0001391c      0x7ac Build/sp_cortexm.o
- .text.sp_256_proj_point_dbl_8
-                0x000140c8       0xba Build/sp_cortexm.o
- .text.sp_256_mod_mul_norm_8.constprop.0
-                0x00014182      0x2ea Build/sp_cortexm.o
- .text.sp_256_sub_8.constprop.0.isra.0
-                0x0001446c       0x34 Build/sp_cortexm.o
- .text.sp_256_proj_point_add_8
-                0x000144a0      0x284 Build/sp_cortexm.o
- .text.sp_256_point_to_ecc_point_8
-                0x00014724       0x2a Build/sp_cortexm.o
- .text.sp_256_cond_sub_8.isra.0
-                0x0001474e       0x36 Build/sp_cortexm.o
- .text.sp_256_mont_reduce_order_8.constprop.0
-                0x00014784       0xe0 Build/sp_cortexm.o
- .text.sp_256_mont_mul_order_8
-                0x00014864        0xe Build/sp_cortexm.o
- *fill*         0x00014872        0x2 
- .text.sp_256_mont_inv_order_8
-                0x00014874       0x58 Build/sp_cortexm.o
- .text.sp_256_map_8
-                0x000148cc       0xf4 Build/sp_cortexm.o
- .text.sp_256_ecc_mulmod_stripe_8.constprop.0
-                0x000149c0      0x370 Build/sp_cortexm.o
- .text.sp_256_ecc_mulmod_fast_8.constprop.0
-                0x00014d30      0x2bc Build/sp_cortexm.o
- .text.sp_256_mod_8
-                0x00014fec       0xc4 Build/sp_cortexm.o
- .text.sp_ecc_mulmod_base_256
-                0x000150b0       0x5e Build/sp_cortexm.o
-                0x000150b0                sp_ecc_mulmod_base_256
- .text.sp_ecc_make_key_256
-                0x0001510e       0x6e Build/sp_cortexm.o
-                0x0001510e                sp_ecc_make_key_256
- .text.sp_ecc_sign_256
-                0x0001517c      0x1d4 Build/sp_cortexm.o
-                0x0001517c                sp_ecc_sign_256
- .text.sp_ecc_verify_256
-                0x00015350      0x218 Build/sp_cortexm.o
-                0x00015350                sp_ecc_verify_256
+                0x00018b40       0x26 Build/sp_cortexm.o
+ .text.sp_2048_mul_64
+                0x00018b66       0xb0 Build/sp_cortexm.o
+ .text.sp_2048_mul_32
+                0x00018c16       0xa0 Build/sp_cortexm.o
+ .text.sp_3072_mul_96
+                0x00018cb6       0xbc Build/sp_cortexm.o
+ .text.sp_3072_mul_48
+                0x00018d72       0xa8 Build/sp_cortexm.o
+ .text.sp_2048_to_mp
+                0x00018e1a       0x38 Build/sp_cortexm.o
+ .text.sp_3072_to_mp
+                0x00018e52       0x38 Build/sp_cortexm.o
+ .text.sp_3072_sub_96.isra.0
+                0x00018e8a       0x38 Build/sp_cortexm.o
+ .text.sp_3072_div_96_cond.constprop.0
+                0x00018ec2       0xca Build/sp_cortexm.o
+ .text.sp_3072_cond_sub_96.isra.0
+                0x00018f8c       0x3e Build/sp_cortexm.o
+ .text.sp_3072_mont_reduce_96
+                0x00018fca       0xd8 Build/sp_cortexm.o
+ .text.sp_3072_mont_sqr_96
+                0x000190a2       0x18 Build/sp_cortexm.o
+ .text.sp_3072_mont_mul_96
+                0x000190ba       0x1a Build/sp_cortexm.o
+ .text.sp_3072_cond_sub_48.isra.0
+                0x000190d4       0x36 Build/sp_cortexm.o
+ .text.sp_3072_mont_reduce_48
+                0x0001910a       0xd6 Build/sp_cortexm.o
+ .text.sp_3072_mont_sqr_48
+                0x000191e0       0x18 Build/sp_cortexm.o
+ .text.sp_3072_mont_mul_48
+                0x000191f8       0x1a Build/sp_cortexm.o
+ .text.sp_2048_sub_64.isra.0
+                0x00019212       0x34 Build/sp_cortexm.o
+ .text.sp_2048_div_64_cond.constprop.0
+                0x00019246       0xc8 Build/sp_cortexm.o
+ .text.sp_2048_cond_sub_64.isra.0
+                0x0001930e       0x3a Build/sp_cortexm.o
+ .text.sp_2048_mont_reduce_64
+                0x00019348       0xd8 Build/sp_cortexm.o
+ .text.sp_2048_mont_sqr_64
+                0x00019420       0x18 Build/sp_cortexm.o
+ .text.sp_2048_mont_mul_64
+                0x00019438       0x1a Build/sp_cortexm.o
+ .text.sp_2048_cond_sub_32.isra.0
+                0x00019452       0x36 Build/sp_cortexm.o
+ .text.sp_2048_mont_reduce_32
+                0x00019488       0xd6 Build/sp_cortexm.o
+ .text.sp_2048_mont_sqr_32
+                0x0001955e       0x18 Build/sp_cortexm.o
+ .text.sp_2048_mont_mul_32
+                0x00019576       0x1a Build/sp_cortexm.o
+ .text.sp_2048_mont_setup.isra.0
+                0x00019590       0x28 Build/sp_cortexm.o
+ .text.sp_3072_div_96.constprop.0
+                0x000195b8       0xce Build/sp_cortexm.o
+ .text.sp_3072_mod_exp_96.constprop.0
+                0x00019686      0x248 Build/sp_cortexm.o
+ .text.sp_3072_div_48.constprop.0
+                0x000198ce       0xcc Build/sp_cortexm.o
+ .text.sp_3072_mod_exp_48
+                0x0001999a      0x304 Build/sp_cortexm.o
+ .text.sp_2048_div_64.constprop.0
+                0x00019c9e       0xcc Build/sp_cortexm.o
+ .text.sp_2048_mod_exp_64.constprop.0
+                0x00019d6a      0x248 Build/sp_cortexm.o
+ .text.sp_2048_div_32.constprop.0
+                0x00019fb2       0xc8 Build/sp_cortexm.o
+ .text.sp_2048_mod_exp_32
+                0x0001a07a      0x304 Build/sp_cortexm.o
+ .text.sp_RsaPublic_2048
+                0x0001a37e      0x20e Build/sp_cortexm.o
+                0x0001a37e                sp_RsaPublic_2048
+ .text.sp_RsaPrivate_2048
+                0x0001a58c      0x162 Build/sp_cortexm.o
+                0x0001a58c                sp_RsaPrivate_2048
+ .text.sp_ModExp_2048
+                0x0001a6ee       0xa0 Build/sp_cortexm.o
+                0x0001a6ee                sp_ModExp_2048
+ .text.sp_ModExp_1024
+                0x0001a78e       0xc8 Build/sp_cortexm.o
+                0x0001a78e                sp_ModExp_1024
+ .text.sp_RsaPublic_3072
+                0x0001a856      0x210 Build/sp_cortexm.o
+                0x0001a856                sp_RsaPublic_3072
+ .text.sp_RsaPrivate_3072
+                0x0001aa66      0x164 Build/sp_cortexm.o
+                0x0001aa66                sp_RsaPrivate_3072
+ .text.sp_ModExp_3072
+                0x0001abca       0xa0 Build/sp_cortexm.o
+                0x0001abca                sp_ModExp_3072
+ .text.sp_ModExp_1536
+                0x0001ac6a       0xc8 Build/sp_cortexm.o
+                0x0001ac6a                sp_ModExp_1536
  .text._sp_cmp_abs
-                0x00015568       0x36 Build/sp_int.o
- .text.sp_init  0x0001559e       0x16 Build/sp_int.o
-                0x0001559e                sp_init
+                0x0001ad32       0x36 Build/sp_int.o
+ .text._sp_sub_d
+                0x0001ad68       0x6a Build/sp_int.o
+ .text._sp_mul_d
+                0x0001add2       0x7c Build/sp_int.o
+ .text._sp_sub_off
+                0x0001ae4e       0xac Build/sp_int.o
+ .text.sp_lshb  0x0001aefa       0xaa Build/sp_int.o
+ .text.sp_mod_d
+                0x0001afa4       0x90 Build/sp_int.o
+ .text._sp_add_off.constprop.0
+                0x0001b034       0xd0 Build/sp_int.o
+ .text.sp_div_2.isra.0
+                0x0001b104       0x4a Build/sp_int.o
+ .text.sp_init  0x0001b14e       0x16 Build/sp_int.o
+                0x0001b14e                sp_init
+ .text.sp_init_size
+                0x0001b164        0xe Build/sp_int.o
+                0x0001b164                sp_init_size
  .text.sp_init_multi
-                0x000155b4       0x52 Build/sp_int.o
-                0x000155b4                sp_init_multi
- .text.sp_grow  0x00015606       0x2a Build/sp_int.o
-                0x00015606                sp_grow
- .text.sp_zero  0x00015630        0xa Build/sp_int.o
-                0x00015630                sp_zero
+                0x0001b172       0x52 Build/sp_int.o
+                0x0001b172                sp_init_multi
+ .text.sp_grow  0x0001b1c4       0x2a Build/sp_int.o
+                0x0001b1c4                sp_grow
  .text.sp_clear
-                0x0001563a       0x20 Build/sp_int.o
-                0x0001563a                sp_clear
+                0x0001b1ee       0x20 Build/sp_int.o
+                0x0001b1ee                sp_clear
  .text.sp_forcezero
-                0x0001565a       0x1e Build/sp_int.o
-                0x0001565a                sp_forcezero
- .text.sp_cmp   0x00015678       0x1a Build/sp_int.o
-                0x00015678                sp_cmp
+                0x0001b20e       0x1e Build/sp_int.o
+                0x0001b20e                sp_forcezero
+ .text.sp_copy  0x0001b22c       0x30 Build/sp_int.o
+                0x0001b22c                sp_copy
+ .text.sp_cmp   0x0001b25c       0x1a Build/sp_int.o
+                0x0001b25c                sp_cmp
  .text.sp_count_bits
-                0x00015692       0x3c Build/sp_int.o
-                0x00015692                sp_count_bits
- .text.sp_leading_bit
-                0x000156ce       0x1e Build/sp_int.o
-                0x000156ce                sp_leading_bit
+                0x0001b276       0x3c Build/sp_int.o
+                0x0001b276                sp_count_bits
+ .text.sp_set_bit
+                0x0001b2b2       0x4a Build/sp_int.o
+                0x0001b2b2                sp_set_bit
+ .text.sp_2expt
+                0x0001b2fc       0x12 Build/sp_int.o
+                0x0001b2fc                sp_2expt
+ .text.sp_set   0x0001b30e       0x16 Build/sp_int.o
+                0x0001b30e                sp_set
+ .text.sp_set_int
+                0x0001b324       0x16 Build/sp_int.o
+                0x0001b324                sp_set_int
+ .text.sp_cmp_d
+                0x0001b33a       0x2e Build/sp_int.o
+                0x0001b33a                sp_cmp_d
+ .text.sp_add_d
+                0x0001b368       0x80 Build/sp_int.o
+                0x0001b368                sp_add_d
+ .text.sp_sub_d
+                0x0001b3e8       0x14 Build/sp_int.o
+                0x0001b3e8                sp_sub_d
+ .text.sp_mul_d
+                0x0001b3fc       0x22 Build/sp_int.o
+                0x0001b3fc                sp_mul_d
+ .text.sp_sub   0x0001b41e       0x1c Build/sp_int.o
+                0x0001b41e                sp_sub
+ .text.sp_rshb  0x0001b43a       0x7e Build/sp_int.o
+                0x0001b43a                sp_rshb
+ .text.sp_div   0x0001b4b8      0x376 Build/sp_int.o
+ .text.sp_mod   0x0001b82e       0x14 Build/sp_int.o
+                0x0001b82e                sp_mod
+ .text.sp_mul   0x0001b842      0x118 Build/sp_int.o
+                0x0001b842                sp_mul
+ .text.sp_mulmod
+                0x0001b95a       0x76 Build/sp_int.o
+                0x0001b95a                sp_mulmod
+ .text.sp_invmod
+                0x0001b9d0      0x28a Build/sp_int.o
+                0x0001b9d0                sp_invmod
+ .text.sp_sqr   0x0001bc5a        0x8 Build/sp_int.o
+                0x0001bc5a                sp_sqr
+ .text.sp_sqrmod
+                0x0001bc62       0x32 Build/sp_int.o
+                0x0001bc62                sp_sqrmod
+ .text._sp_exptmod_ex
+                0x0001bc94      0x174 Build/sp_int.o
+ .text.sp_exptmod_ex
+                0x0001be08      0x162 Build/sp_int.o
+                0x0001be08                sp_exptmod_ex
+ .text.sp_exptmod
+                0x0001bf6a       0x1e Build/sp_int.o
+                0x0001bf6a                sp_exptmod
+ .text.sp_prime_miller_rabin_ex
+                0x0001bf88      0x120 Build/sp_int.o
  .text.sp_unsigned_bin_size
-                0x000156ec       0x14 Build/sp_int.o
-                0x000156ec                sp_unsigned_bin_size
+                0x0001c0a8       0x14 Build/sp_int.o
+                0x0001c0a8                sp_unsigned_bin_size
  .text.sp_read_unsigned_bin
-                0x00015700       0xa2 Build/sp_int.o
-                0x00015700                sp_read_unsigned_bin
- .text.sp_to_unsigned_bin_len
-                0x000157a2       0x50 Build/sp_int.o
-                0x000157a2                sp_to_unsigned_bin_len
- .text.sp_to_unsigned_bin
-                0x000157f2       0x14 Build/sp_int.o
-                0x000157f2                sp_to_unsigned_bin
- .text.sp_read_radix
-                0x00015806       0xa8 Build/sp_int.o
-                0x00015806                sp_read_radix
- *fill*         0x000158ae        0x2 
- .text.gmtime   0x000158b0      0x10c Build/wc_port.o
-                0x000158b0                gmtime
+                0x0001c0bc       0xa2 Build/sp_int.o
+                0x0001c0bc                sp_read_unsigned_bin
+ *fill*         0x0001c15e        0x2 
+ .text.sp_prime_is_prime
+                0x0001c160      0x178 Build/sp_int.o
+                0x0001c160                sp_prime_is_prime
+ .text.sp_prime_is_prime_ex
+                0x0001c2d8      0x224 Build/sp_int.o
+                0x0001c2d8                sp_prime_is_prime_ex
+ .text.sp_gcd   0x0001c4fc      0x168 Build/sp_int.o
+                0x0001c4fc                sp_gcd
+ .text.gmtime   0x0001c664      0x10c Build/wc_port.o
+                0x0001c664                gmtime
+ .text.get_digit_count
+                0x0001c770        0x6 Build/wolfmath.o
+                0x0001c770                get_digit_count
+ .text.get_rand_digit
+                0x0001c776        0x6 Build/wolfmath.o
+                0x0001c776                get_rand_digit
+ .text.mp_rand  0x0001c77c       0x52 Build/wolfmath.o
+                0x0001c77c                mp_rand
+ *fill*         0x0001c7ce        0x2 
+ .text          0x0001c7d0       0x3c /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o)
+                0x0001c7d0                __aeabi_uldivmod
+ .text          0x0001c80c       0x10 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_dvmd_lnx.o)
+                0x0001c80c                __aeabi_ldiv0
+                0x0001c80c                __aeabi_idiv0
+ .text          0x0001c81c      0x120 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
+                0x0001c81c                __udivmoddi4
  *(.gnu.warning)
  *(.glue_7t)
- .glue_7t       0x000159bc        0x0 linker stubs
+ .glue_7t       0x0001c93c        0x0 linker stubs
  *(.glue_7)
- .glue_7        0x000159bc        0x0 linker stubs
+ .glue_7        0x0001c93c        0x0 linker stubs
  *(.vfp11_veneer)
- .vfp11_veneer  0x000159bc        0x0 linker stubs
+ .vfp11_veneer  0x0001c93c        0x0 linker stubs
  *(.v4_bx)
- .v4_bx         0x000159bc        0x0 linker stubs
+ .v4_bx         0x0001c93c        0x0 linker stubs
 
-.fini           0x000159bc        0x8
+.fini           0x0001c93c        0x8
  *(SORT_NONE(.fini))
- .fini          0x000159bc        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o
-                0x000159bc                _fini
- .fini          0x000159c0        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
+ .fini          0x0001c93c        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crti.o
+                0x0001c93c                _fini
+ .fini          0x0001c940        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
                 [!provide]                PROVIDE (__etext = .)
                 [!provide]                PROVIDE (_etext = .)
                 [!provide]                PROVIDE (etext = .)
 
-.rodata         0x000159c4     0x12f8
+.rodata         0x0001c948      0xddc
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.test_RSA.str1.1
-                0x000159c4      0x17b Build/public_key_test.o
- .rodata.test_DH.str1.1
-                0x00015b3f       0x24 Build/public_key_test.o
-                                 0x27 (size before relaxing)
+                0x0001c948      0x17b Build/public_key_test.o
  .rodata.main.str1.1
-                0x00015b63       0x3b Build/public_key_test.o
- .rodata.str1.1
-                0x00015b9e      0x860 Build/ecc.o
- .rodata.ecc_oid_secp224r1
-                0x000163fe        0x5 Build/ecc.o
- .rodata.ecc_oid_secp256r1
-                0x00016403        0x8 Build/ecc.o
- .rodata.ecc_oid_secp384r1
-                0x0001640b        0x5 Build/ecc.o
- .rodata.ecc_oid_secp521r1
-                0x00016410        0x5 Build/ecc.o
- *fill*         0x00016415        0x3 
- .rodata.ecc_sets
-                0x00016418      0x104 Build/ecc.o
-                0x00016418                ecc_sets
+                0x0001cac3       0xb5 Build/public_key_test.o
  .rodata.outputA_data
-                0x0001651c       0x80 Build/random.o
-                0x0001651c                outputA_data
+                0x0001cb78       0x80 Build/random.o
+                0x0001cb78                outputA_data
  .rodata.outputB_data
-                0x0001659c       0x80 Build/random.o
-                0x0001659c                outputB_data
+                0x0001cbf8       0x80 Build/random.o
+                0x0001cbf8                outputB_data
  .rodata.reseedSeedA_data
-                0x0001661c       0x20 Build/random.o
-                0x0001661c                reseedSeedA_data
+                0x0001cc78       0x20 Build/random.o
+                0x0001cc78                reseedSeedA_data
  .rodata.seedA_data
-                0x0001663c       0x30 Build/random.o
-                0x0001663c                seedA_data
+                0x0001cc98       0x30 Build/random.o
+                0x0001cc98                seedA_data
  .rodata.seedB_data
-                0x0001666c       0x30 Build/random.o
-                0x0001666c                seedB_data
- .rodata.K      0x0001669c      0x100 Build/sha256.o
- .rodata.p256_mod
-                0x0001679c       0x20 Build/sp_cortexm.o
- .rodata.p256_mod_minus_2
-                0x000167bc       0x20 Build/sp_cortexm.o
- .rodata.p256_norm_mod
-                0x000167dc       0x20 Build/sp_cortexm.o
- .rodata.p256_norm_order
-                0x000167fc       0x20 Build/sp_cortexm.o
- .rodata.p256_order
-                0x0001681c       0x20 Build/sp_cortexm.o
- .rodata.p256_order2
-                0x0001683c       0x20 Build/sp_cortexm.o
- .rodata.p256_table
-                0x0001685c      0x400 Build/sp_cortexm.o
+                0x0001ccc8       0x30 Build/random.o
+                0x0001ccc8                seedB_data
+ .rodata._ifc_pairwise_consistency_test.str1.1
+                0x0001ccf8       0x1a Build/rsa.o
+ .rodata.CSWTCH.134
+                0x0001cd12        0x5 Build/rsa.o
+ .rodata.lower_bound
+                0x0001cd17      0x100 Build/rsa.o
+ *fill*         0x0001ce17        0x1 
+ .rodata.K      0x0001ce18      0x100 Build/sha256.o
+ .rodata.K512   0x0001cf18      0x280 Build/sha512.o
+ .rodata.hash_keccak_r
+                0x0001d198       0xc0 Build/sha3.o
+ .rodata.CSWTCH.6
+                0x0001d258       0x22 Build/hash.o
+ *fill*         0x0001d27a        0x2 
+ .rodata.sp_lnz
+                0x0001d27c       0x40 Build/sp_int.o
+ .rodata.sp_off_on_addr
+                0x0001d2bc        0x8 Build/sp_int.o
+                0x0001d2bc                sp_off_on_addr
+ .rodata.sp_primes
+                0x0001d2c4      0x400 Build/sp_int.o
  .rodata._ytab.0
-                0x00016c5c       0x60 Build/wc_port.o
+                0x0001d6c4       0x60 Build/wc_port.o
 
 .rodata1
  *(.rodata1)
@@ -4549,18 +4920,19 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM.exidx      0x00016cbc        0x0
+.ARM.exidx      0x0001d724        0x8
                 [!provide]                PROVIDE (__exidx_start = .)
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+ .ARM.exidx     0x0001d724        0x8 /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
                 [!provide]                PROVIDE (__exidx_end = .)
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
  *(.eh_frame_entry .eh_frame_entry.*)
 
-.eh_frame       0x00016cbc        0x4
+.eh_frame       0x0001d72c        0x4
  *(.eh_frame)
- .eh_frame      0x00016cbc        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
+ .eh_frame      0x0001d72c        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
  *(.eh_frame.*)
 
 .gcc_except_table
@@ -4571,7 +4943,7 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
 
 .exception_ranges
  *(.exception_ranges*)
-                0x00026f10                . = DATA_SEGMENT_ALIGN (CONSTANT (MAXPAGESIZE), CONSTANT (COMMONPAGESIZE))
+                0x0002df10                . = DATA_SEGMENT_ALIGN (CONSTANT (MAXPAGESIZE), CONSTANT (COMMONPAGESIZE))
 
 .eh_frame
  *(.eh_frame)
@@ -4586,7 +4958,7 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
 .exception_ranges
  *(.exception_ranges*)
 
-.tdata          0x00026f10        0x0
+.tdata          0x0002df10        0x0
                 [!provide]                PROVIDE (__tdata_start = .)
  *(.tdata .tdata.* .gnu.linkonce.td.*)
 
@@ -4594,23 +4966,23 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
  *(.tbss .tbss.* .gnu.linkonce.tb.*)
  *(.tcommon)
 
-.preinit_array  0x00026f10        0x0
+.preinit_array  0x0002df10        0x0
                 [!provide]                PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
                 [!provide]                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x00026f10        0x4
-                0x00026f10                PROVIDE (__init_array_start = .)
+.init_array     0x0002df10        0x4
+                0x0002df10                PROVIDE (__init_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
  *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
- .init_array    0x00026f10        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
-                0x00026f14                PROVIDE (__init_array_end = .)
+ .init_array    0x0002df10        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+                0x0002df14                PROVIDE (__init_array_end = .)
 
-.fini_array     0x00026f14        0x4
+.fini_array     0x0002df14        0x4
                 [!provide]                PROVIDE (__fini_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
  *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
- .fini_array    0x00026f14        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+ .fini_array    0x0002df14        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
                 [!provide]                PROVIDE (__fini_array_end = .)
 
 .ctors
@@ -4630,68 +5002,68 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
 .jcr
  *(.jcr)
 
-.data.rel.ro    0x00026f18        0x0
+.data.rel.ro    0x0002df18        0x0
  *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
  *(.data.rel.ro .data.rel.ro.* .gnu.linkonce.d.rel.ro.*)
- .data.rel.ro   0x00026f18        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .data.rel.ro   0x0002df18        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
 
-.dynamic        0x00026f18       0xe8
+.dynamic        0x0002df18       0xe8
  *(.dynamic)
- .dynamic       0x00026f18       0xe8 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
-                0x00026f18                _DYNAMIC
-                0x00027000                . = DATA_SEGMENT_RELRO_END (., 0x0)
+ .dynamic       0x0002df18       0xe8 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+                0x0002df18                _DYNAMIC
+                0x0002e000                . = DATA_SEGMENT_RELRO_END (., 0x0)
 
-.got            0x00027000       0x30
+.got            0x0002e000       0x38
  *(.got.plt)
- .got.plt       0x00027000       0x2c /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
-                0x00027000                _GLOBAL_OFFSET_TABLE_
+ .got.plt       0x0002e000       0x34 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+                0x0002e000                _GLOBAL_OFFSET_TABLE_
  *(.igot.plt)
- .igot.plt      0x0002702c        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .igot.plt      0x0002e034        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
  *(.got)
- .got           0x0002702c        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .got           0x0002e034        0x4 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
  *(.igot)
 
-.data           0x00027030       0x10
+.data           0x0002e038       0x10
                 [!provide]                PROVIDE (__data_start = .)
  *(.data .data.* .gnu.linkonce.d.*)
- .data.in       0x00027030       0x10 Build/public_key_test.o
-                0x00027030                in
+ .data.in       0x0002e038       0x10 Build/public_key_test.o
+                0x0002e038                in
 
 .tm_clone_table
-                0x00027040        0x0
+                0x0002e048        0x0
  .tm_clone_table
-                0x00027040        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+                0x0002e048        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
  .tm_clone_table
-                0x00027040        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
+                0x0002e048        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
 
 .data1
  *(.data1)
-                0x00027040                _edata = .
+                0x0002e048                _edata = .
                 [!provide]                PROVIDE (edata = .)
-                0x00027040                . = .
-                0x00027040                __bss_start = .
-                0x00027040                __bss_start__ = .
+                0x0002e048                . = .
+                0x0002e048                __bss_start = .
+                0x0002e048                __bss_start__ = .
 
-.bss            0x00027040       0x34
+.bss            0x0002e048       0x34
  *(.dynbss)
- .dynbss        0x00027040        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
+ .dynbss        0x0002e048        0x0 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crt1.o
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x00027040        0x1 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
- *fill*         0x00027041        0x3 
- .bss.gCounter  0x00027044        0x4 Build/wolf_main.o
+ .bss           0x0002e048        0x1 /usr/lib/gcc/arm-linux-gnueabihf/10/crtbegin.o
+ *fill*         0x0002e049        0x3 
+ .bss.gCounter  0x0002e04c        0x4 Build/wolf_main.o
  .bss.st_time.1
-                0x00027048       0x2c Build/wc_port.o
+                0x0002e050       0x2c Build/wc_port.o
  *(COMMON)
-                0x00027074                . = ALIGN ((. != 0x0)?0x4:0x1)
-                0x00027074                _bss_end__ = .
-                0x00027074                __bss_end__ = .
-                0x00027074                . = ALIGN (0x4)
-                0x00027074                . = SEGMENT_START ("ldata-segment", .)
-                0x00027074                . = ALIGN (0x4)
-                0x00027074                __end__ = .
-                0x00027074                _end = .
+                0x0002e07c                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x0002e07c                _bss_end__ = .
+                0x0002e07c                __bss_end__ = .
+                0x0002e07c                . = ALIGN (0x4)
+                0x0002e07c                . = SEGMENT_START ("ldata-segment", .)
+                0x0002e07c                . = ALIGN (0x4)
+                0x0002e07c                __end__ = .
+                0x0002e07c                _end = .
                 [!provide]                PROVIDE (end = .)
-                0x00027074                . = DATA_SEGMENT_END (.)
+                0x0002e07c                . = DATA_SEGMENT_END (.)
 
 .stab
  *(.stab)
@@ -4718,13 +5090,18 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
  .comment       0x0000002e       0x2f Build/public_key_test.o
  .comment       0x0000002e       0x2f Build/wolf_main.o
  .comment       0x0000002e       0x2f Build/armtarget.o
- .comment       0x0000002e       0x2f Build/ecc.o
  .comment       0x0000002e       0x2f Build/random.o
+ .comment       0x0000002e       0x2f Build/rsa.o
+ .comment       0x0000002e       0x2f Build/sha.o
  .comment       0x0000002e       0x2f Build/sha256.o
- .comment       0x0000002e       0x2f Build/asn.o
+ .comment       0x0000002e       0x2f Build/sha512.o
+ .comment       0x0000002e       0x2f Build/sha3.o
+ .comment       0x0000002e       0x2f Build/hash.o
+ .comment       0x0000002e       0x2f Build/md5.o
  .comment       0x0000002e       0x2f Build/sp_cortexm.o
  .comment       0x0000002e       0x2f Build/sp_int.o
  .comment       0x0000002e       0x2f Build/wc_port.o
+ .comment       0x0000002e       0x2f Build/wolfmath.o
  .comment       0x0000002e       0x2f /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
 
 .ARM.attributes
@@ -4740,23 +5117,39 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
  .ARM.attributes
                 0x000000c0       0x37 Build/armtarget.o
  .ARM.attributes
-                0x000000f7       0x37 Build/ecc.o
+                0x000000f7       0x37 Build/random.o
  .ARM.attributes
-                0x0000012e       0x37 Build/random.o
+                0x0000012e       0x37 Build/rsa.o
  .ARM.attributes
-                0x00000165       0x37 Build/sha256.o
+                0x00000165       0x37 Build/sha.o
  .ARM.attributes
-                0x0000019c       0x37 Build/asn.o
+                0x0000019c       0x37 Build/sha256.o
  .ARM.attributes
-                0x000001d3       0x37 Build/sp_cortexm.o
+                0x000001d3       0x37 Build/sha512.o
  .ARM.attributes
-                0x0000020a       0x37 Build/sp_int.o
+                0x0000020a       0x37 Build/sha3.o
  .ARM.attributes
-                0x00000241       0x37 Build/wc_port.o
+                0x00000241       0x37 Build/hash.o
  .ARM.attributes
-                0x00000278       0x2f /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
+                0x00000278       0x37 Build/md5.o
  .ARM.attributes
-                0x000002a7       0x23 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
+                0x000002af       0x37 Build/sp_cortexm.o
+ .ARM.attributes
+                0x000002e6       0x37 Build/sp_int.o
+ .ARM.attributes
+                0x0000031d       0x37 Build/wc_port.o
+ .ARM.attributes
+                0x00000354       0x37 Build/wolfmath.o
+ .ARM.attributes
+                0x0000038b       0x1d /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x000003a8       0x1d /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_dvmd_lnx.o)
+ .ARM.attributes
+                0x000003c5       0x2f /usr/lib/gcc/arm-linux-gnueabihf/10/libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x000003f4       0x2f /usr/lib/gcc/arm-linux-gnueabihf/10/crtend.o
+ .ARM.attributes
+                0x00000423       0x23 /usr/lib/gcc/arm-linux-gnueabihf/10/../../../arm-linux-gnueabihf/crtn.o
 
 .gnu.build.attributes
  *(.gnu.build.attributes .gnu.build.attributes.*)

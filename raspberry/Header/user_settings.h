@@ -263,7 +263,7 @@ extern "C" {
 
 /* DES3 */
 #undef NO_DES3
-#if 0
+#if 1
 #else
     #define NO_DES3
 #endif
@@ -271,7 +271,7 @@ extern "C" {
 /* ChaCha20 / Poly1305 */
 #undef HAVE_CHACHA
 #undef HAVE_POLY1305
-#if 0
+#if 1
     #define HAVE_CHACHA
     #define HAVE_POLY1305
 
@@ -283,7 +283,7 @@ extern "C" {
 /* Ed25519 / Curve25519 */
 #undef HAVE_CURVE25519
 #undef HAVE_ED25519
-#if 0
+#if 1
     #define HAVE_CURVE25519
     #define HAVE_ED25519 /* ED25519 Requires SHA512 */
 
@@ -654,6 +654,8 @@ extern unsigned int my_rng_seed_gen(void);
 #define HAVE_ECC_ENCRYPT
 #define HAVE_HKDF
 #undef NO_KDF
+#define HAVE_CURVE25519
+#define HAVE_ED25519 /* ED25519 Requires SHA512 */
 #ifdef __cplusplus
 }
 #endif
