@@ -191,7 +191,8 @@ void wolfCryptDemo(const void* argument)
 	  wolfCrypt_Cleanup();
 	  wolfCrypt_Init();
 
-	  printf("Starting SHA2-512\n");
+	  sprintf("Starting SHA2-512\n");
+	  HAL_UART_Transmit(&HAL_CONSOLE_UART,print_string, strlen(print_string), 60);
 	#ifdef REPEAT
 	  for(int i = 0;i<REP_TIMES;i++)
 	#endif
@@ -200,6 +201,7 @@ void wolfCryptDemo(const void* argument)
 	  HAL_UART_Transmit(&HAL_CONSOLE_UART,print_string, strlen(print_string), 60);
 	 // HAL_UART_Transmit("################################\n");
 	  wolfCrypt_Cleanup();
+	  wolfCrypt_Init();
 
 	  sprintf(print_string,"Starting SHA3-224\n");
 	  HAL_UART_Transmit(&HAL_CONSOLE_UART,print_string, strlen(print_string), 60);
