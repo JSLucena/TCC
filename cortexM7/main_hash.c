@@ -76,18 +76,54 @@ static void CPU_CACHE_Enable(void);
 static void Error_Handler(void);
 
 /* Private functions ---------------------------------------------------------*/
+/* DWT (Data Watchpoint and Trace) registers, only exists on ARM Cortex with a DWT unit */
+#define KIN1_DWT_CONTROL             (*((volatile uint32_t*)0xE0001000))
+/*!< DWT Control register */
+#define KIN1_DWT_CYCCNTENA_BIT       (1UL<<0)
+/*!< CYCCNTENA bit in DWT_CONTROL register */
+#define KIN1_DWT_CYCCNT              (*((volatile uint32_t*)0xE0001004))
+/*!< DWT Cycle Counter register */
+#define KIN1_DEMCR                   (*((volatile uint32_t*)0xE000EDFC))
+/*!< DEMCR: Debug Exception and Monitor Control Register */
+#define KIN1_TRCENA_BIT              (1UL<<24)
+/*!< Trace enable bit in DEMCR register */
+
+#define KIN1_InitCycleCounter() \
+KIN1_DEMCR |= KIN1_TRCENA_BIT
+/*!< TRCENA: Enable trace and debug block DEMCR (Debug Exception and Monitor Control Register */
+
+#define KIN1_ResetCycleCounter() \
+KIN1_DWT_CYCCNT = 0
+/*!< Reset cycle counter */
+
+#define KIN1_EnableCycleCounter() \
+KIN1_DWT_CONTROL |= KIN1_DWT_CYCCNTENA_BIT
+/*!< Enable cycle counter */
+
+#define KIN1_DisableCycleCounter() \
+KIN1_DWT_CONTROL &= ~KIN1_DWT_CYCCNTENA_BIT
+/*!< Disable cycle counter */
+
+#define KIN1_GetCycleCounter() \
+KIN1_DWT_CYCCNT
+/*!< Read cycle counter register */
+
+uint32_t cycles; /* number of cycles */
+
+
+
 char print_string[200];
 
 void hash_data(enum wc_HashType type,char* data){
 
 byte result[512];
-clock_t tick,tock;
-long spent;
+uint32_t tick,tock;
+uint32_t spent;
 word32 hash_len = wc_HashGetDigestSize(type);
 int i, ret;
 int byte_value;
 
- tick =  clock();
+ tick = KIN1_GetCycleCounter();
  ret = wc_Hash(type,(byte*)data,strlen(data),result,hash_len);
  
   sprintf(print_string,"%d\n\r",ret);
@@ -95,7 +131,7 @@ int byte_value;
   HAL_UART_Transmit(&UartHandle, (uint8_t*)print_string, strlen(print_string), 1000);
   HAL_Delay(500);
      
- tock = clock();
+ tock = KIN1_GetCycleCounter();
  spent = (tock - tick);
   sprintf(print_string,"Elapsed time: %ld clock cycles\n\r", spent);
   HAL_UART_Transmit(&UartHandle, (uint8_t*)print_string, strlen(print_string), 1000);
@@ -120,9 +156,9 @@ void hash_blake2b(char* data, int digestsize)
 
   
   // initialize Blake2b structure with 64 byte digest
-  clock_t tick,tock;
-  double spent;
-  tick =  clock();
+  uint32_t tick,tock;
+  uint32_t spent;
+  tick = KIN1_GetCycleCounter();
   ret = wc_InitBlake2b(&b2b, digestsize);
 
   ret = wc_Blake2bUpdate(&b2b,(byte*)data,strlen(data));
@@ -130,9 +166,9 @@ void hash_blake2b(char* data, int digestsize)
   ret = wc_Blake2bFinal(&b2b, hash, digestsize);
   
  
-  tock = clock();
-  spent = (int)(tock - tick)*1000 / CLOCKS_PER_SEC;
-  sprintf(print_string,"Elapsed time: %ld clock cycles\n\r", spent);
+  tock = KIN1_GetCycleCounter();
+  spent = (tock - tick);
+  sprintf(print_string,"Elapsed time: %u clock cycles\n\r", spent);
   HAL_UART_Transmit(&UartHandle, (uint8_t*)print_string, strlen(print_string), 1000);
   HAL_Delay(500);
   #ifdef DEBUG
@@ -141,7 +177,7 @@ void hash_blake2b(char* data, int digestsize)
       byte_value = hash[i];
       sprintf(print_string,"%x",byte_value);
       HAL_UART_Transmit(&UartHandle, (uint8_t*)print_string, strlen(print_string), 1000);
-      HAL_Delay(500);
+      HAL_Delay(100);
     }
    // sprintf("\n\r");
   #endif
@@ -155,9 +191,9 @@ void hash_blake2s(char* data, int digestsize)
   byte hash[64];
   byte result[512];
   // initialize Blake2b structure with 64 byte digest
-  clock_t tick,tock;
-  double spent;
-  tick =  clock();
+  uint32_t tick,tock;
+  uint32_t spent;
+  tick = KIN1_GetCycleCounter();
   wc_InitBlake2s(&b2s, digestsize);
   wc_Blake2sUpdate(&b2s,(byte*)data,strlen(data));
   ret = wc_Blake2sFinal(&b2s, hash, digestsize);
@@ -165,8 +201,8 @@ void hash_blake2s(char* data, int digestsize)
 	  sprintf(print_string,"ERROR\n\r");
     HAL_UART_Transmit(&UartHandle, (uint8_t*)print_string, strlen(print_string), 1000);
   }
-  tock = clock();
-  spent = (float)(tock - tick) / CLOCKS_PER_SEC;
+  tock = KIN1_GetCycleCounter();
+  spent = (tock - tick);
   sprintf(print_string,"Elapsed time: %ld clock cycles\n\r", spent);
   HAL_UART_Transmit(&UartHandle, (uint8_t*)print_string, strlen(print_string), 1000);
   HAL_Delay(500);
@@ -214,6 +250,9 @@ int main(void)
        - Low Level Initialization
      */
   HAL_Init();
+
+
+
   wolfCrypt_Init();
   /* Configure the system clock to 400 MHz */
   SystemClock_Config();
@@ -274,6 +313,11 @@ int main(void)
     Error_Handler();
   }
 
+
+  KIN1_InitCycleCounter(); /* enable DWT hardware */
+
+	KIN1_ResetCycleCounter(); /* reset cycle counter */
+  KIN1_EnableCycleCounter(); /* start counting */
   /* Infinite loop */
   while (1)
   {
@@ -449,49 +493,48 @@ int main(void)
 	  wolfCrypt_Cleanup();
 	  wolfCrypt_Init();
 */
-    sprintf(print_string,"Starting BLAKE2B-224\n");
+    sprintf(print_string,"Starting BLAKE2B-224\n\r");
 	  HAL_UART_Transmit(&UartHandle, (uint8_t*)print_string, strlen(print_string), 1000);
 	#ifdef REPEAT
 	  for(int i = 0;i<REP_TIMES;i++)
 	#endif
 	  hash_blake2b(data,28);
-	  sprintf(print_string,"Finished BLAKE2B-224\n");
+	  sprintf(print_string,"Finished BLAKE2B-224\n\r");
 	  HAL_UART_Transmit(&UartHandle, (uint8_t*)print_string, strlen(print_string), 1000);
 	  //HAL_UART_Transmit("################################\n");
 	  wolfCrypt_Cleanup();
 	  wolfCrypt_Init();
 
-	  sprintf(print_string,"Starting BLAKE2B-256\n");
+	  sprintf(print_string,"Starting BLAKE2B-256\n\r");
 	  HAL_UART_Transmit(&UartHandle, (uint8_t*)print_string, strlen(print_string), 1000);
 	#ifdef REPEAT
 	  for(int i = 0;i<REP_TIMES;i++)
 	#endif
 	  hash_blake2b(data,32);
-	  sprintf(print_string,"Finished BLAKE2B-256\n");
+	  sprintf(print_string,"Finished BLAKE2B-256\n\r");
 	  HAL_UART_Transmit(&UartHandle, (uint8_t*)print_string, strlen(print_string), 1000);
 	 // HAL_UART_Transmit("################################\n");
 	  wolfCrypt_Cleanup();
 	  wolfCrypt_Init();
 
-	  sprintf(print_string,"Starting BLAKE2B-384\n");
+	  sprintf(print_string,"Starting BLAKE2B-384\n\r");
 	  HAL_UART_Transmit(&UartHandle, (uint8_t*)print_string, strlen(print_string), 1000);
 	#ifdef REPEAT
 	  for(int i = 0;i<REP_TIMES;i++)
 	#endif
 	  hash_blake2b(data,48);
-	  sprintf(print_string,"Finished BLAKE2B-384\n");
+	  sprintf(print_string,"Finished BLAKE2B-384\n\r");
 	  HAL_UART_Transmit(&UartHandle, (uint8_t*)print_string, strlen(print_string), 1000);
 	  //printf("################################\n");
 	  wolfCrypt_Cleanup();
 	  wolfCrypt_Init();
-
-	  sprintf(print_string,"Starting BLAKE2B-512\n");
+	  sprintf(print_string,"Starting BLAKE2B-512\n\r");
 	  HAL_UART_Transmit(&UartHandle, (uint8_t*)print_string, strlen(print_string), 1000);
 	#ifdef REPEAT
 	  for(int i = 0;i<REP_TIMES;i++)
 	#endif
 	  hash_blake2b(data,64);
-	  sprintf(print_string,"Finished BLAKE2B-512\n");
+	  sprintf(print_string,"Finished BLAKE2B-512\n\r");
 	  HAL_UART_Transmit(&UartHandle, (uint8_t*)print_string, strlen(print_string), 1000);
 	//  printf("################################\n");
 	  wolfCrypt_Cleanup();
